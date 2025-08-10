@@ -1,45 +1,410 @@
-<!DOCTYPE HTML>
-<html>
+<!doctype html>
+<html lang="en" class="scroll-smooth">
 
 <head>
-	<title>OCCASIA</title>
 	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<link href="images/logo.png" rel="icon" type="image/x-icon"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Occasia – Empower Your Events</title>
+
+	<!-- Tailwind CSS -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+		rel="stylesheet" />
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script>
+		tailwind.config = {
+			theme: {
+				extend: {
+					fontFamily: {
+						sans: ["Inter", "ui-sans-serif", "system-ui"],
+					},
+					colors: {
+						brand: {
+							DEFAULT: "#111827", // gray-900
+							accent: "#0EA5E9", // sky-500
+						},
+					},
+					boxShadow: {
+						card: "0 4px 14px rgb(0 0 0 / 8%)",
+					},
+				},
+			},
+			future: { hoverOnlyWhenSupported: true },
+		};
+	</script>
+	<meta name="description"
+		content="Occasia is the ultimate platform for event organizers – from ticketing and payments to analytics and marketing." />
 </head>
 
-<body class="is-preload">
-
-	<!-- Header -->
-	<header id="header">
-		<h1>OCCASIA</h1>
-		<p>A simple way to organize events.<br />
-			Coming soon.</p>
+<body class="min-h-screen bg-white text-gray-800 font-sans antialiased selection:bg-black selection:text-white">
+	<!-- Navigation -->
+	<header id="top" class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-gray-100">
+		<nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+			<a href="#top" class="flex items-center gap-2 font-extrabold tracking-tight text-xl">
+				<span class="inline-block bg-black text-white px-2 py-1 rounded">Occasia</span>
+			</a>
+			<div class="hidden md:flex items-center gap-8 text-sm text-gray-600">
+				<a href="#features" class="hover:text-black transition" data-i18n="nav.features">Features</a>
+				<a href="#pricing" class="hover:text-black transition" data-i18n="nav.pricing">Pricing</a>
+				<a href="#contact" class="hover:text-black transition" data-i18n="nav.contact">Contact</a>
+			</div>
+			<div class="flex items-center gap-3">
+				<button id="lang-toggle" type="button"
+					class="inline-flex items-center rounded-md border border-gray-300 bg-white px-3 py-1.5 text-xs font-semibold text-gray-900 hover:bg-gray-50">EN</button>
+				<a href="https://app.occasia.tech"
+					class="inline-flex items-center rounded-md bg-black px-4 py-2 text-sm font-semibold text-white shadow hover:bg-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-black/20"
+					data-i18n="nav.signup">Sign Up</a>
+			</div>
+		</nav>
 	</header>
 
-	<!-- Signup Form -->
-	<form id="signup-form" method="post" action="#">
-		<input type="email" name="email" id="email" placeholder="Email Address" />
-		<input type="submit" value="Sign Up" />
-	</form>
+	<!-- Hero -->
+	<section class="bg-gray-50">
+		<div
+			class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
+			<div>
+				<h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-gray-900 leading-tight"
+					data-i18n="hero.title" data-i18n-html="true">Empower Your<br />Events with Occasia.</h1>
+				<p class="mt-6 text-gray-600 max-w-xl" data-i18n="hero.desc">Occasia is the ultimate platform designed
+					for professional event organizers. From seamless event creation to powerful analytics and secure
+					payment processing, manage every detail with ease.</p>
+				<div class="mt-8 flex flex-wrap items-center gap-3">
+					<a href="https://app.occasia.tech"
+						class="inline-flex items-center justify-center rounded-md bg-black px-5 py-2.5 text-white text-sm font-semibold shadow hover:bg-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-black/20"
+						data-i18n="hero.signup">Sign Up for Free</a>
+					<a href="#features"
+						class="inline-flex items-center justify-center rounded-md border border-gray-300 px-5 py-2.5 text-sm font-semibold text-gray-900 hover:bg-gray-100"
+						data-i18n="hero.explore">Explore Features</a>
+				</div>
+			</div>
+			<div class="relative">
+				<div class="aspect-[4/3] w-full overflow-hidden rounded-xl border border-gray-200 bg-white shadow-card">
+					<img src="/images/occasia-dashboard.png?q=80&w=1600&auto=format&fit=crop"
+						alt="Occasia dashboard on a laptop" class="h-full w-full object-cover" loading="lazy" />
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Low fees banner -->
+	<section id="pricing" class="bg-black text-white scroll-mt-16">
+		<div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-16 text-center">
+			<h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight" data-i18n="fees.title">Very low fees</h2>
+			<p class="mt-4 text-gray-300" data-i18n="fees.desc">Just $1 per ticket sold, yes that is it!</p>
+		</div>
+	</section>
+
+	<!-- Features -->
+	<section id="features" class="bg-white scroll-mt-16">
+		<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+			<div class="text-center max-w-3xl mx-auto">
+				<h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-gray-900" data-i18n="features.title">
+					Comprehensive Tools for Every Event</h2>
+				<p class="mt-3 text-gray-600" data-i18n="features.desc">Occasia provides a full suite of features to
+					ensure your events are successful, from initial planning to post-event analysis.</p>
+			</div>
+
+			<div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+				<!-- Card 1 -->
+				<div class="rounded-xl border border-gray-200 bg-white p-6 shadow-card">
+					<div class="h-10 w-10 rounded-lg bg-black text-white flex items-center justify-center">
+						<!-- Ticket icon -->
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6">
+							<path
+								d="M3 7a2 2 0 0 1 2-2h5v3a2 2 0 1 0 4 0V5h5a2 2 0 0 1 2 2v3h-1a2 2 0 1 0 0 4h1v3a2 2 0 0 1-2 2h-5v-3a2 2 0 1 0-4 0v3H5a2 2 0 0 1-2-2v-3h1a2 2 0 1 0 0-4H3V7z" />
+						</svg>
+					</div>
+					<h3 class="mt-4 font-semibold text-gray-900" data-i18n="feature1.title">Ticketing & Registration
+					</h3>
+					<p class="mt-2 text-sm text-gray-600" data-i18n="feature1.desc">Streamline your registration process
+						with built-in ticketing solutions, customizable forms, and multi-tier pricing options.</p>
+				</div>
+
+				<!-- Card 2 -->
+				<div class="rounded-xl border border-gray-200 bg-white p-6 shadow-card">
+					<div class="h-10 w-10 rounded-lg bg-black text-white flex items-center justify-center">
+						<!-- Chart icon -->
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6">
+							<path
+								d="M4 3a1 1 0 0 0-1 1v16h18a1 1 0 1 0 0-2H5V4a1 1 0 0 0-1-1zm4 6a1 1 0 0 1 1-1h1v8H8V9zm5-3a1 1 0 0 1 1-1h1v12h-3V6zm5 5a1 1 0 0 1 1-1h1v7h-3v-6z" />
+						</svg>
+					</div>
+					<h3 class="mt-4 font-semibold text-gray-900" data-i18n="feature2.title">Analytics & Reporting</h3>
+					<p class="mt-2 text-sm text-gray-600" data-i18n="feature2.desc">Gain deep insights into your event’s
+						performance with comprehensive analytics.</p>
+				</div>
+
+				<!-- Card 3 -->
+				<div class="rounded-xl border border-gray-200 bg-white p-6 shadow-card">
+					<div class="h-10 w-10 rounded-lg bg-black text-white flex items-center justify-center">
+						<!-- Lock icon -->
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6">
+							<path
+								d="M12 2a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2h-1V7a5 5 0 0 0-5-5zm-3 8V7a3 3 0 0 1 6 0v3H9zm3 4a2 2 0 1 1 0 4 2 2 0 0 1 0-4z" />
+						</svg>
+					</div>
+					<h3 class="mt-4 font-semibold text-gray-900" data-i18n="feature3.title">Secure Payment Processing
+					</h3>
+					<p class="mt-2 text-sm text-gray-600" data-i18n="feature3.desc">Offer a seamless and secure
+						ticketing experience for attendees.</p>
+				</div>
+
+				<!-- Card 4 -->
+				<div class="rounded-xl border border-gray-200 bg-white p-6 shadow-card">
+					<div class="h-10 w-10 rounded-lg bg-black text-white flex items-center justify-center">
+						<!-- Megaphone icon -->
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6">
+							<path
+								d="M21 8a1 1 0 0 0-1.447-.894L13 10.382V6a1 1 0 0 0-1.553-.833l-6 4A1 1 0 0 0 5 10v7a3 3 0 0 0 5.356 1.857L13 23a1 1 0 0 0 2-1v-3.382l4.553 2.276A1 1 0 0 0 21 20V8zM7 16.618V11.382L11 9.118v9.764L9.618 17.5A1 1 0 0 0 8 18H8a1.999 1.999 0 0 1-1-1.382z" />
+						</svg>
+					</div>
+					<h3 class="mt-4 font-semibold text-gray-900" data-i18n="feature4.title">Promotion & Marketing</h3>
+					<p class="mt-2 text-sm text-gray-600" data-i18n="feature4.desc">Amplify your event’s reach with
+						integrated tracking for ads and social.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Events showcase -->
+	<section class="bg-black text-white">
+		<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+			<div class="text-center">
+				<h2 class="text-2xl sm:text-3xl font-extrabold" data-i18n="events.title">Events Powered by Occasia</h2>
+				<p class="mt-3 text-gray-300 max-w-3xl mx-auto" data-i18n="events.desc">Discover the diverse range of
+					successful events brought to life with Occasia, showcasing our versatility and impact.</p>
+			</div>
+
+			<div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+				<!-- Card template repeated -->
+                <a href="https://app.occasia.tech/events/view/connect-and-sip---young-professionals-networking/33d13824-4a80-453c-a707-4da35f28c36d" class="group relative overflow-hidden rounded-xl" target="_blank" rel="noopener noreferrer">
+					<img class="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+						src="https://ufhbtordggygoxowjmxh.supabase.co/storage/v1/object/public/Occasia/organizers/email66e249e6af53e2c0ae518deb/events/33d13824-4a80-453c-a707-4da35f28c36d/covers/2e2da04a-1424-4105-870b-f1ce09ba5684?q=80&w=1600&auto=format&fit=crop"
+						alt="Connect and Sip - Young Professionals Networking" loading="lazy" />
+					<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+					<div class="absolute bottom-0 left-0 right-0 p-4 text-sm">
+						<div class="font-semibold">Connect and Sip - Young Professionals Networking</div>
+						<div class="text-gray-300">August 28, 2025</div>
+					</div>
+				</a>
+
+                <a href="https://app.occasia.tech/events/view/sun-day-terrace/cf8cc361-c4e6-44be-9f09-50662316e5f2" class="group relative overflow-hidden rounded-xl" target="_blank" rel="noopener noreferrer">
+					<img class="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+						src="https://ufhbtordggygoxowjmxh.supabase.co/storage/v1/object/public/Occasia/organizers/email671ebd433a0928a274c9a5c4/events/cf8cc361-c4e6-44be-9f09-50662316e5f2/covers/871d684e-7d71-49ce-a4b2-b30ff651b9c4?q=80&w=1600&auto=format&fit=crop"
+						alt="Sun Day Terrace" loading="lazy" />
+					<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+					<div class="absolute bottom-0 left-0 right-0 p-4 text-sm">
+						<div class="font-semibold">Sun Day Terrace</div>
+						<div class="text-gray-300">May 11, 2025</div>
+					</div>
+				</a>
+
+                <a href="https://app.occasia.tech/events/view/f1-weekend-2025/13885ea5-35ca-4499-8454-e33f98ee2c55" class="group relative overflow-hidden rounded-xl" target="_blank" rel="noopener noreferrer">
+					<img class="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+						src="https://ufhbtordggygoxowjmxh.supabase.co/storage/v1/object/public/Occasia/organizers/email671ebd433a0928a274c9a5c4/events/13885ea5-35ca-4499-8454-e33f98ee2c55/covers/18ddb986-55ef-4ee6-80af-021a357dbd46?q=80&w=1600&auto=format&fit=crop"
+						alt="Innovate Business Expo" loading="lazy" />
+					<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+					<div class="absolute bottom-0 left-0 right-0 p-4 text-sm">
+						<div class="font-semibold">F1 Weekend 2025</div>
+						<div class="text-gray-300">June 13, 2025</div>
+					</div>
+				</a>
+
+                <a href="https://app.occasia.tech/events/view/UNOFFICIAL%20ALBUM%20LISTENING%20PART/f0bb15ac-27cd-4aab-afa3-76e55cd86e48" class="group relative overflow-hidden rounded-xl" target="_blank" rel="noopener noreferrer">
+					<img class="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+						src="https://ufhbtordggygoxowjmxh.supabase.co/storage/v1/object/public/Occasia/organizers/a3ccc0b9-5baf-467d-b052-5e25f87add96/events/f0bb15ac-27cd-4aab-afa3-76e55cd86e48/covers/36ea3f72-86a4-4d0f-9e7a-bef265dd032f?q=80&w=1600&auto=format&fit=crop"
+						alt="Unofficial Album Listening Party" loading="lazy" />
+					<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+					<div class="absolute bottom-0 left-0 right-0 p-4 text-sm">
+						<div class="font-semibold">Unofficial Album Listening Party</div>
+						<div class="text-gray-300">July 11, 2025</div>
+					</div>
+				</a>
+
+                <a href="https://app.occasia.tech/events/view/Connect%20and%20Run%20-%20Where%20Networking%20meets%20Sports/652c4639-6a69-4be1-8b46-f512b2ba4509" class="group relative overflow-hidden rounded-xl" target="_blank" rel="noopener noreferrer">
+					<img class="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+						src="https://ufhbtordggygoxowjmxh.supabase.co/storage/v1/object/public/Occasia/organizers/email66e249e6af53e2c0ae518deb/events/652c4639-6a69-4be1-8b46-f512b2ba4509/covers/fd42e1d5-7be4-4412-bd77-0c05ea53c817?q=80&w=1600&auto=format&fit=crop"
+						alt="Connect and Run - Where Networking meets Sports" loading="lazy" />
+					<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+					<div class="absolute bottom-0 left-0 right-0 p-4 text-sm">
+						<div class="font-semibold">Connect and Run - Where Networking meets Sports</div>
+						<div class="text-gray-300">August 2, 2025</div>
+					</div>
+				</a>
+
+                <a href="https://app.occasia.tech/events/view/OTTAWA%20RIDDIM/0f5aae6f-9d71-4a75-8f8b-6c91f89048cb" class="group relative overflow-hidden rounded-xl" target="_blank" rel="noopener noreferrer">
+					<img class="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+						src="https://ufhbtordggygoxowjmxh.supabase.co/storage/v1/object/public/Occasia/organizers/a3ccc0b9-5baf-467d-b052-5e25f87add96/events/0f5aae6f-9d71-4a75-8f8b-6c91f89048cb/covers/aa779cb6-8ab5-4489-8c13-c9093feba68f?q=80&w=1600&auto=format&fit=crop"
+						alt="Ottawa Riddim" loading="lazy" />
+					<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+					<div class="absolute bottom-0 left-0 right-0 p-4 text-sm">
+						<div class="font-semibold">Ottawa Riddim</div>
+						<div class="text-gray-300">August 2, 2025</div>
+					</div>
+				</a>
+                <a href="https://app.occasia.tech/events/view/Afro%20Connect%20-%20Tech%20&%20Engineering%20%7C%20Ing%C3%A9nierie/7eeaf339-83eb-4596-a1f0-af6e926b5f2f" class="group relative overflow-hidden rounded-xl" target="_blank" rel="noopener noreferrer">
+					<img class="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+						src="https://ufhbtordggygoxowjmxh.supabase.co/storage/v1/object/public/Occasia/organizers/email66e249e6af53e2c0ae518deb/events/7eeaf339-83eb-4596-a1f0-af6e926b5f2f/covers/a39de651-0ced-4f75-9f6a-b13a4af16dad?q=80&w=1600&auto=format&fit=crop"
+						alt="Afro Connect - Tech & Engineering" loading="lazy" />
+					<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+					<div class="absolute bottom-0 left-0 right-0 p-4 text-sm">
+						<div class="font-semibold">Afro Connect - Tech & Engineering</div>
+						<div class="text-gray-300">June 12, 2025</div>
+					</div>
+				</a>
+                <a href="https://app.occasia.tech/events/view/Soulful%20Sundays/ae9a1e5a-b3e2-4bd3-9fbb-5b0f390698b3" class="group relative overflow-hidden rounded-xl" target="_blank" rel="noopener noreferrer">
+					<img class="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+						src="https://ufhbtordggygoxowjmxh.supabase.co/storage/v1/object/public/Occasia/organizers/2ce75d46-88fe-4510-ac62-f69261b3148a/events/ae9a1e5a-b3e2-4bd3-9fbb-5b0f390698b3/covers/88d4f77d-7551-49ec-a5e5-6ece070211d9?q=80&w=1600&auto=format&fit=crop"
+						alt="Soulful Sundays" loading="lazy" />
+					<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+					<div class="absolute bottom-0 left-0 right-0 p-4 text-sm">
+						<div class="font-semibold">Soulful Sundays</div>
+						<div class="text-gray-300">June 15, 2025</div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- CTA -->
+	<section id="contact" class="bg-white scroll-mt-16">
+		<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+			<div id="signup" class="scroll-mt-16" aria-hidden="true"></div>
+			<div class="mx-auto max-w-4xl rounded-2xl border border-gray-200 bg-white p-10 text-center shadow-card">
+				<h3 class="text-xl sm:text-2xl font-extrabold text-gray-900" data-i18n="cta.title">Ready to Transform
+					Your Next Event?</h3>
+				<p class="mt-3 text-gray-600 max-w-2xl mx-auto" data-i18n="cta.desc">Join thousands of successful event
+					organizers who trust Occasia to deliver exceptional experiences. Get started today!</p>
+				<div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+					<a href="https://app.occasia.tech"
+						class="inline-flex items-center rounded-md bg-black px-5 py-2.5 text-sm font-semibold text-white shadow hover:bg-gray-900"
+						data-i18n="cta.getStarted">Get Started Free</a>
+					<a href="mailto:info@occasia.tech"
+						class="inline-flex items-center gap-2 rounded-md bg-yellow-400 px-5 py-2.5 text-sm font-semibold text-black hover:bg-yellow-300">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4">
+							<path
+								d="M2 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v.2l-10 6-10-6V6zm0 2.4v9.6A2 2 0 0 0 4 20h16a2 2 0 0 0 2-2V8.4l-9.553 5.732a2 2 0 0 1-2.894 0L2 8.4z" />
+						</svg>
+						<span data-i18n="cta.email">Email us</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
 
 	<!-- Footer -->
-	<footer id="footer">
-		<!-- <ul class="icons">
-					<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-					<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-					<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-					<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
-				</ul> -->
-		<ul class="copyright">
-			<li>&copy; Occasia 2024.</li> <li> info@occasia.com </li>
-		</ul>
+	<footer class="border-t border-gray-100">
+		<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+			<a href="https://www.instagram.com/occasia.event" aria-label="Instagram"
+				class="text-gray-400 hover:text-gray-600">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5">
+					<path
+						d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm4.5-.75a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5z" />
+				</svg>
+			</a>
+		</div>
 	</footer>
+	<!-- i18n script -->
+	<script>
+		const translations = {
+			"en": {
+				"nav.features": "Features",
+				"nav.pricing": "Pricing",
+				"nav.contact": "Contact",
+				"nav.signup": "Sign Up",
+				"hero.title": "Empower Your<br/>Events with Occasia.",
+				"hero.desc": "Occasia is the all-in-one platform for event organizers. From seamless event creation to powerful analytics and secure payments, manage every detail with ease.",
+				"hero.signup": "Sign Up for Free",
+				"hero.explore": "Explore Features",
+				"fees.title": "Simple, Low Fees",
+				"fees.desc": "Occasia charges just $1 per ticket sold. That's it, no hidden costs.",
+				"features.title": "Powerful Tools for Every Event",
+				"features.desc": "Occasia offers a full suite of features to ensure your events are successful, from initial planning to post-event analysis.",
+				"feature1.title": "Ticketing & Registration",
+				"feature1.desc": "Streamline your registration with built-in ticketing, customizable forms, and multi-tier pricing.",
+				"feature2.title": "Analytics & Reporting",
+				"feature2.desc": "Get deep insights into your event’s performance with comprehensive analytics.",
+				"feature3.title": "Secure Payment Processing",
+				"feature3.desc": "Give your attendees a smooth and secure ticketing experience.",
+				"feature4.title": "Promotion & Marketing",
+				"feature4.desc": "Expand your event’s reach with integrated tracking for ads and social media.",
+				"events.title": "Events Powered by Occasia",
+				"events.desc": "Discover the diverse range of successful events brought to life with Occasia, showcasing our versatility and impact.",
+				"cta.title": "Ready to Host Your Next Event?",
+				"cta.desc": "Join thousands of event organizers who trust Occasia to deliver exceptional experiences. Get started today!",
+				"cta.getStarted": "Get Started Free",
+				"cta.email": "Email Us",
+				"footer.madeWith": "Made with"
+			},
+			"fr": {
+				"nav.features": "Fonctionnalités",
+				"nav.pricing": "Tarifs",
+				"nav.contact": "Contact",
+				"nav.signup": "S'inscrire",
+				"hero.title": "Dynamisez vos<br/>événements avec Occasia.",
+				"hero.desc": "Occasia est la plateforme tout-en-un pour les organisateurs d'événements. De la création d'événements à l'analyse puissante et aux paiements sécurisés, gérez chaque détail en toute simplicité.",
+				"hero.signup": "S'inscrire gratuitement",
+				"hero.explore": "Découvrir les fonctionnalités",
+				"fees.title": "Des frais simples et bas",
+				"fees.desc": "Occasia facture seulement 1 $ par billet vendu. C'est tout, sans frais cachés.",
+				"features.title": "Des outils puissants pour chaque événement",
+				"features.desc": "Occasia propose une suite complète de fonctionnalités pour garantir le succès de vos événements, de la planification initiale à l'analyse post-événement.",
+				"feature1.title": "Billetterie et Inscription",
+				"feature1.desc": "Simplifiez votre inscription grâce à des solutions de billetterie intégrées, des formulaires personnalisables et des options de tarification à plusieurs niveaux.",
+				"feature2.title": "Analytique et Rapports",
+				"feature2.desc": "Obtenez des informations détaillées sur la performance de votre événement grâce à une analytique complète.",
+				"feature3.title": "Traitement des paiements sécurisé",
+				"feature3.desc": "Offrez à vos participants une expérience de billetterie fluide et sécurisée.",
+				"feature4.title": "Promotion et Marketing",
+				"feature4.desc": "Augmentez la portée de votre événement grâce à un suivi intégré pour les publicités et les réseaux sociaux.",
+				"events.title": "Événements propulsés par Occasia",
+				"events.desc": "Découvrez la diversité des événements réussis qui ont pris vie avec Occasia, démontrant notre polyvalence et notre impact.",
+				"cta.title": "Prêt à organiser votre prochain événement ?",
+				"cta.desc": "Rejoignez des milliers d'organisateurs d'événements qui font confiance à Occasia pour offrir des expériences exceptionnelles. Lancez-vous dès aujourd'hui !",
+				"cta.getStarted": "Démarrer gratuitement",
+				"cta.email": "Envoyez-nous un e-mail",
+				"footer.madeWith": "Fait avec"
+			}
+		}
 
-	<!-- Scripts -->
-	<script src="assets/js/main.js"></script>
+		function detectPreferredLanguage() {
+			const stored = localStorage.getItem('lang');
+			if (stored && (stored === 'en' || stored === 'fr')) return stored;
+			const preferred = (navigator.languages && navigator.languages.length ? navigator.languages[0] : navigator.language || 'en').toLowerCase();
+			return preferred.startsWith('fr') ? 'fr' : 'en';
+		}
 
+		function applyLanguage(lang) {
+			const dict = translations[lang] || translations.en;
+			document.querySelectorAll('[data-i18n]').forEach((el) => {
+				const key = el.getAttribute('data-i18n');
+				const value = dict[key];
+				if (!value) return;
+				if (el.getAttribute('data-i18n-html') === 'true') {
+					el.innerHTML = value;
+				} else {
+					el.textContent = value;
+				}
+			});
+			document.documentElement.lang = lang;
+			const toggle = document.getElementById('lang-toggle');
+			if (toggle) toggle.textContent = lang.toUpperCase();
+		}
+
+		document.addEventListener('DOMContentLoaded', () => {
+			let lang = detectPreferredLanguage();
+			applyLanguage(lang);
+			const toggle = document.getElementById('lang-toggle');
+			if (toggle) {
+				toggle.addEventListener('click', () => {
+					lang = lang === 'en' ? 'fr' : 'en';
+					localStorage.setItem('lang', lang);
+					applyLanguage(lang);
+				});
+			}
+		});
+	</script>
 </body>
 
 </html>
