@@ -5,9 +5,52 @@
 
 window.RELEASES = [
 	{
+		version: "v2.0.1",
+		month: "September 2025",
+		title: "Coupon & Promotion Code System",
+		sections: {
+			newFeatures: [
+				{
+					group: "Coupon Management System",
+					items: [
+						"Create and manage discount coupons with percentage-based discounts",
+						"Usage limit controls and status management (active/disabled)",
+						"Real-time usage tracking and analytics"
+					]
+				},
+				{
+					group: "Stripe Integration",
+					items: [
+						"Seamless integration with Stripe promotion codes",
+						"Automatic coupon creation in Stripe",
+						"Customer-facing promotion codes for checkout"
+					]
+				},
+				{
+					group: "Enhanced Event Settings",
+					items: [
+						"Dedicated settings page with integrated promoter and coupon management",
+						"Centralized event configuration interface"
+					]
+				},
+				{
+					group: "Order Enhancement",
+					items: [
+						"Automatic promotion code detection during checkout",
+						"Coupon usage tracking in order records"
+					]
+				}
+			],
+			fixes: [
+				"Fixed promotion code extraction from Stripe checkout sessions",
+				"Improved error handling and validation for coupon operations"
+			]
+		}
+	},
+	{
 		version: "v2.0.0",
 		month: "August 2025",
-		title: "Major Platform Update - Current Release",
+		title: "Major Platform Update",
 		sections: {
 			newFeatures: [
 				{

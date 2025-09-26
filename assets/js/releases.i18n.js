@@ -5,9 +5,52 @@
 
 window.RELEASES = [
 	{
+		version: "v2.0.1",
+		month: { en: "September 2025", fr: "Septembre 2025" },
+		title: { en: "Coupon & Promotion Code System", fr: "Système de coupons et codes promotionnels" },
+		sections: {
+			newFeatures: [
+				{
+					group: { en: "Coupon Management System", fr: "Système de gestion des coupons" },
+					items: [
+						{ en: "Create and manage discount coupons with percentage-based discounts", fr: "Créer et gérer des coupons de réduction avec des remises en pourcentage" },
+						{ en: "Usage limit controls and status management (active/disabled)", fr: "Contrôles de limite d'utilisation et gestion des statuts (actif/désactivé)" },
+						{ en: "Real-time usage tracking and analytics", fr: "Suivi d'utilisation en temps réel et analytique" }
+					]
+				},
+				{
+					group: { en: "Stripe Integration", fr: "Intégration Stripe" },
+					items: [
+						{ en: "Seamless integration with Stripe promotion codes", fr: "Intégration transparente avec les codes promotionnels Stripe" },
+						{ en: "Automatic coupon creation in Stripe", fr: "Création automatique de coupons dans Stripe" },
+						{ en: "Customer-facing promotion codes for checkout", fr: "Codes promotionnels visibles par les clients lors du paiement" }
+					]
+				},
+				{
+					group: { en: "Enhanced Event Settings", fr: "Paramètres d'événement améliorés" },
+					items: [
+						{ en: "Dedicated settings page with integrated promoter and coupon management", fr: "Page de paramètres dédiée avec gestion intégrée des promoteurs et coupons" },
+						{ en: "Centralized event configuration interface", fr: "Interface de configuration d'événement centralisée" }
+					]
+				},
+				{
+					group: { en: "Order Enhancement", fr: "Amélioration des commandes" },
+					items: [
+						{ en: "Automatic promotion code detection during checkout", fr: "Détection automatique des codes promotionnels lors du paiement" },
+						{ en: "Coupon usage tracking in order records", fr: "Suivi de l'utilisation des coupons dans les enregistrements de commande" }
+					]
+				}
+			],
+			fixes: [
+				{ en: "Fixed promotion code extraction from Stripe checkout sessions", fr: "Correction de l'extraction des codes promotionnels des sessions de paiement Stripe" },
+				{ en: "Improved error handling and validation for coupon operations", fr: "Amélioration de la gestion d'erreurs et de la validation pour les opérations de coupons" }
+			]
+		}
+	},
+	{
 		version: "v2.0.0",
 		month: { en: "August 2025", fr: "Août 2025" },
-		title: { en: "Major Platform Update - Current Release", fr: "Mise à jour majeure de la plateforme - Version actuelle" },
+		title: { en: "Major Platform Update", fr: "Mise à jour majeure de la plateforme" },
 		sections: {
 			newFeatures: [
 				{

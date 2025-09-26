@@ -296,6 +296,37 @@ This document outlines the feature releases for the Occasia event management pla
 - User experience improvements throughout the platform
 - Database optimization and query performance improvements
 
+## Release v2.0.1 - September 2025
+**Coupon & Promotion Code System**
+
+### 🎉 New Features
+- **Coupon Management System**
+  - Create and manage discount coupons with percentage-based discounts
+  - Usage limit controls and status management (active/disabled)
+  - Real-time usage tracking and analytics
+
+- **Stripe Integration**
+  - Seamless integration with Stripe promotion codes
+  - Automatic coupon creation in Stripe
+  - Customer-facing promotion codes for checkout
+
+- **Enhanced Event Settings**
+  - Dedicated settings page with integrated promoter and coupon management
+  - Centralized event configuration interface
+
+- **Order Enhancement**
+  - Automatic promotion code detection during checkout
+  - Coupon usage tracking in order records
+
+### 🔧 Technical Improvements
+- **Database Updates**: Added `coupon_id` to Orders table and new EventCoupons table
+- **Code Organization**: Moved coupon logic to dedicated `payments.rs` module
+- **API Enhancements**: New coupon management endpoints and improved webhook handling
+
+### 🐛 Bug Fixes
+- Fixed promotion code extraction from Stripe checkout sessions
+- Improved error handling and validation for coupon operations
+
 ---
 
 ## Technical Improvements Throughout Releases
