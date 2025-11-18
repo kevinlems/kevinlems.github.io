@@ -12,7 +12,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
 		rel="stylesheet" />
-		<!-- Meta Pixel Code -->
+	<!-- Meta Pixel Code -->
 	<script>
 	!function(f,b,e,v,n,t,s)
 	{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -29,80 +29,88 @@
 	src="https://www.facebook.com/tr?id=812172011245358&ev=PageView&noscript=1"
 	/></noscript>
 	<!-- End Meta Pixel Code -->
-	<script src="https://cdn.tailwindcss.com"></script>
 	<script>function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement("script");
 		o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,
 		o.onload=function(){window.trackingFunctions.onLoad({appId:"6644a96598763c0572ba737f"})},
 		document.head.appendChild(o)}initApollo();</script>
-	<script>
-		tailwind.config = {
-			theme: {
-				extend: {
-					fontFamily: {
-						sans: ["Inter", "ui-sans-serif", "system-ui"],
-					},
-					colors: {
-						brand: {
-							DEFAULT: "#111827", // gray-900
-							accent: "#0EA5E9", // sky-500
-						},
-					},
-					boxShadow: {
-						card: "0 4px 14px rgb(0 0 0 / 8%)",
-					},
-				},
-			},
-			future: { hoverOnlyWhenSupported: true },
-		};
-	</script>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script src="https://unpkg.com/lucide@latest"></script>
+	<style>
+		body {
+			font-family: 'Inter', sans-serif;
+			background-color: #000000;
+			color: #ffffff;
+		}
+		@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');
+		
+		/* Custom Gradient Text */
+		.text-gradient {
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-image: linear-gradient(to right, #f43f5e, #fb7185);
+		}
+		
+		/* Improve touch targets for mobile */
+		@media (max-width: 640px) {
+			a, button {
+				min-height: 44px;
+				min-width: 44px;
+			}
+		}
+		
+		/* Prevent horizontal scroll on mobile */
+		body {
+			overflow-x: hidden;
+		}
+	</style>
 	<meta name="description"
 		content="Occasia is the ultimate platform for event organizers – from ticketing and payments to analytics and marketing." />
 </head>
 
-<body class="min-h-screen bg-white text-gray-800 font-sans antialiased selection:bg-black selection:text-white">
+<body class="min-h-screen bg-black text-white font-sans antialiased selection:bg-rose-500 selection:text-white">
 	<!-- Navigation -->
-	<header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-gray-100">
-		<nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-			<a href="#top" class="flex items-center gap-2 font-extrabold tracking-tight text-xl transition">
-				<span class="inline-block bg-black text-white px-2 py-1 rounded">Occasia</span>
-			</a>
-			<div class="hidden md:flex items-center gap-8 text-sm text-gray-600">
-				<a href="#features" class="hover:text-black transition" data-i18n="nav.features">Features</a>
-				<a href="/release-notes.html" class="hover:text-black transition" data-i18n="nav.releaseNotes">Release Notes</a>
-				<a href="#pricing" class="hover:text-black transition" data-i18n="nav.pricing">Pricing</a>
-				<a href="#contact" class="hover:text-black transition" data-i18n="nav.contact">Contact</a>
+	<nav class="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="flex items-center justify-between h-16 sm:h-20 gap-3">
+				<a href="/" class="flex-shrink-0">
+					<span class="text-xl sm:text-2xl font-black tracking-tighter text-white">OCCASIA</span>
+				</a>
+				<div class="flex items-center gap-4 sm:gap-6 flex-1 justify-end">
+					<a href="/" class="text-sm sm:text-base font-semibold text-white hover:text-rose-400 transition-colors flex items-center" data-i18n="nav.software">Software</a>
+					<a href="/service" class="text-sm sm:text-base font-semibold text-gray-400 hover:text-white transition-colors flex items-center" data-i18n="nav.service">Service</a>
+					<a href="https://app.occasia.tech" class="inline-flex items-center px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 border border-transparent text-xs sm:text-sm font-bold rounded-full text-white bg-rose-600 hover:bg-rose-700 transition-all shadow-[0_0_20px_rgba(244,63,94,0.3)] whitespace-nowrap">
+						<span class="hidden sm:inline" data-i18n="nav.openApp">Open App</span>
+						<span class="sm:hidden" data-i18n="nav.app">App</span>
+					</a>
+				</div>
 			</div>
-			<div class="flex items-center gap-3">
-				<button id="lang-toggle" type="button"
-					class="inline-flex items-center rounded-md border border-gray-300 bg-white px-3 py-1.5 text-xs font-semibold text-gray-900 hover:bg-gray-50">EN</button>
-				<a href="https://app.occasia.tech"
-					class="inline-flex items-center rounded-md bg-black px-4 py-2 text-sm font-semibold text-white shadow hover:bg-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-black/20"
-					data-i18n="nav.signup">Sign Up</a>
-			</div>
-		</nav>
-	</header>
+		</div>
+	</nav>
 
 	<!-- Hero -->
-	<section id="top" class="bg-gray-50">
-		<div
-			class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
+	<section id="top" class="relative pt-24 pb-16 sm:pt-32 sm:pb-20 md:pt-40 md:pb-24 overflow-hidden">
+		<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
 			<div>
-				<h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-gray-900 leading-tight"
-					data-i18n="hero.title" data-i18n-html="true">Empower Your<br />Events with Occasia.</h1>
-				<p class="mt-6 text-gray-600 max-w-xl" data-i18n="hero.desc">Occasia is the ultimate platform designed
-					for professional event organizers. From seamless event creation to powerful analytics and secure
-					payment processing, manage every detail with ease.</p>
-				<div class="mt-8 flex flex-wrap items-center gap-3">
+				<h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter text-white leading-tight">
+					<span data-i18n="hero.title1">Empower Your</span><br /><span class="text-gradient" data-i18n="hero.title2">Events with Occasia</span>
+				</h1>
+				<p class="mt-6 text-base sm:text-lg text-gray-300 max-w-xl leading-relaxed" data-i18n="hero.desc">
+					Occasia is the ultimate platform designed for professional event organizers. From seamless event creation to powerful analytics and secure payment processing, manage every detail with ease.
+				</p>
+				<div class="mt-8 flex flex-wrap items-center gap-4">
 					<a href="https://app.occasia.tech"
-						class="inline-flex items-center justify-center rounded-md bg-black px-5 py-2.5 text-white text-sm font-semibold shadow hover:bg-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-black/20"
-						data-i18n="hero.signup">Sign Up for Free</a>
+						class="inline-flex items-center justify-center rounded-full bg-rose-600 px-6 py-3 text-white text-sm font-bold shadow-[0_0_20px_rgba(244,63,94,0.3)] hover:bg-rose-700 transition-all" data-i18n="hero.cta">
+						Open Occasia App
+					</a>
 					<a href="#features"
-						class="inline-flex items-center justify-center rounded-md border border-gray-300 px-5 py-2.5 text-sm font-semibold text-gray-900 hover:bg-gray-100"
-						data-i18n="hero.explore">Explore Features</a>
+						class="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10 transition-all" data-i18n="hero.explore">
+						Explore Features
+					</a>
 				</div>
 			</div>
 			<div class="relative">
-				<div class="aspect-[4/3] w-full overflow-hidden rounded-xl border border-gray-200 bg-white shadow-card">
+				<div class="aspect-[4/3] w-full overflow-hidden rounded-2xl border border-white/10 bg-zinc-900">
 					<img src="/images/occasia-dashboard.png?q=80&w=1600&auto=format&fit=crop"
 						alt="Occasia dashboard on a laptop" class="h-full w-full object-cover" loading="lazy" />
 				</div>
@@ -111,79 +119,79 @@
 	</section>
 
 	<!-- Low fees banner -->
-	<section id="pricing" class="bg-black text-white scroll-mt-16">
+	<section id="pricing" class="bg-zinc-950 text-white scroll-mt-16 border-t border-white/5">
 		<div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-16 text-center">
-			<h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight" data-i18n="fees.title">Very low fees</h2>
-			<p class="mt-4 text-gray-300" data-i18n="fees.desc">Just $1 per ticket sold, yes that is it!</p>
+			<h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight" data-i18n="pricing.title">Very low fees</h2>
+			<p class="mt-4 text-gray-300" data-i18n="pricing.desc">Just $1 per ticket sold, yes that is it!</p>
 		</div>
 	</section>
 
 	<!-- Features -->
-	<section id="features" class="bg-white scroll-mt-16">
+	<section id="features" class="bg-black scroll-mt-16 border-t border-white/5">
 		<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
 			<div class="text-center max-w-3xl mx-auto">
-				<h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-gray-900" data-i18n="features.title">
+				<h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight text-white" data-i18n="features.title">
 					Comprehensive Tools for Every Event</h2>
-				<p class="mt-3 text-gray-600" data-i18n="features.desc">Occasia provides a full suite of features to
+				<p class="mt-3 text-base sm:text-lg text-gray-400" data-i18n="features.desc">Occasia provides a full suite of features to
 					ensure your events are successful, from initial planning to post-event analysis.</p>
 			</div>
 
 			<div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 				<!-- Card 1 -->
-				<div class="rounded-xl border border-gray-200 bg-white p-6 shadow-card">
-					<div class="h-10 w-10 rounded-lg bg-black text-white flex items-center justify-center">
+				<div class="rounded-2xl border border-white/10 bg-zinc-900 p-6 hover:border-rose-500/50 transition-all">
+					<div class="h-10 w-10 rounded-lg bg-rose-500/10 text-rose-500 flex items-center justify-center">
 						<!-- Ticket icon -->
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6">
 							<path
 								d="M3 7a2 2 0 0 1 2-2h5v3a2 2 0 1 0 4 0V5h5a2 2 0 0 1 2 2v3h-1a2 2 0 1 0 0 4h1v3a2 2 0 0 1-2 2h-5v-3a2 2 0 1 0-4 0v3H5a2 2 0 0 1-2-2v-3h1a2 2 0 1 0 0-4H3V7z" />
 						</svg>
 					</div>
-					<h3 class="mt-4 font-semibold text-gray-900" data-i18n="feature1.title">Ticketing & Registration
+					<h3 class="mt-4 font-semibold text-white" data-i18n="features.ticketing.title">Ticketing & Registration
 					</h3>
-					<p class="mt-2 text-sm text-gray-600" data-i18n="feature1.desc">Streamline your registration process
+					<p class="mt-2 text-sm text-gray-400" data-i18n="features.ticketing.desc">Streamline your registration process
 						with built-in ticketing solutions, customizable forms, and multi-tier pricing options.</p>
 				</div>
 
 				<!-- Card 2 -->
-				<div class="rounded-xl border border-gray-200 bg-white p-6 shadow-card">
-					<div class="h-10 w-10 rounded-lg bg-black text-white flex items-center justify-center">
+				<div class="rounded-2xl border border-white/10 bg-zinc-900 p-6 hover:border-rose-500/50 transition-all">
+					<div class="h-10 w-10 rounded-lg bg-rose-500/10 text-rose-500 flex items-center justify-center">
 						<!-- Chart icon -->
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6">
 							<path
 								d="M4 3a1 1 0 0 0-1 1v16h18a1 1 0 1 0 0-2H5V4a1 1 0 0 0-1-1zm4 6a1 1 0 0 1 1-1h1v8H8V9zm5-3a1 1 0 0 1 1-1h1v12h-3V6zm5 5a1 1 0 0 1 1-1h1v7h-3v-6z" />
 						</svg>
 					</div>
-					<h3 class="mt-4 font-semibold text-gray-900" data-i18n="feature2.title">Analytics & Reporting</h3>
-					<p class="mt-2 text-sm text-gray-600" data-i18n="feature2.desc">Gain deep insights into your event’s
+					<h3 class="mt-4 font-semibold text-white" data-i18n="features.analytics.title">Analytics & Reporting</h3>
+					<p class="mt-2 text-sm text-gray-400" data-i18n="features.analytics.desc">Gain deep insights into your event's
 						performance with comprehensive analytics.</p>
 				</div>
 
 				<!-- Card 3 -->
-				<div class="rounded-xl border border-gray-200 bg-white p-6 shadow-card">
-					<div class="h-10 w-10 rounded-lg bg-black text-white flex items-center justify-center">
+				<div class="rounded-2xl border border-white/10 bg-zinc-900 p-6 hover:border-rose-500/50 transition-all">
+					<div class="h-10 w-10 rounded-lg bg-rose-500/10 text-rose-500 flex items-center justify-center">
 						<!-- Lock icon -->
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6">
 							<path
 								d="M12 2a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2h-1V7a5 5 0 0 0-5-5zm-3 8V7a3 3 0 0 1 6 0v3H9zm3 4a2 2 0 1 1 0 4 2 2 0 0 1 0-4z" />
 						</svg>
 					</div>
-					<h3 class="mt-4 font-semibold text-gray-900" data-i18n="feature3.title">Secure Payment Processing
+					<h3 class="mt-4 font-semibold text-white" data-i18n="features.payment.title">Secure Payment Processing
 					</h3>
-					<p class="mt-2 text-sm text-gray-600" data-i18n="feature3.desc">Offer a seamless and secure
+					<p class="mt-2 text-sm text-gray-400" data-i18n="features.payment.desc">Offer a seamless and secure
 						ticketing experience for attendees.</p>
 				</div>
 
 				<!-- Card 4 -->
-				<div class="rounded-xl border border-gray-200 bg-white p-6 shadow-card">
-					<div class="h-10 w-10 rounded-lg bg-black text-white flex items-center justify-center">
+				<div class="rounded-2xl border border-white/10 bg-zinc-900 p-6 hover:border-rose-500/50 transition-all">
+					<div class="h-10 w-10 rounded-lg bg-rose-500/10 text-rose-500 flex items-center justify-center">
 						<!-- Megaphone icon -->
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6">
 							<path
 								d="M21 8a1 1 0 0 0-1.447-.894L13 10.382V6a1 1 0 0 0-1.553-.833l-6 4A1 1 0 0 0 5 10v7a3 3 0 0 0 5.356 1.857L13 23a1 1 0 0 0 2-1v-3.382l4.553 2.276A1 1 0 0 0 21 20V8zM7 16.618V11.382L11 9.118v9.764L9.618 17.5A1 1 0 0 0 8 18H8a1.999 1.999 0 0 1-1-1.382z" />
 						</svg>
 					</div>
-					<h3 class="mt-4 font-semibold text-gray-900" data-i18n="feature4.title">Promotion & Marketing</h3>
-					<p class="mt-2 text-sm text-gray-600" data-i18n="feature4.desc">Amplify your event’s reach with
+					<h3 class="mt-4 font-semibold text-white" data-i18n="features.marketing.title">Promotion & Marketing</h3>
+					<p class="mt-2 text-sm text-gray-400" data-i18n="features.marketing.desc">Amplify your event's reach with
 						integrated tracking for ads and social.</p>
 				</div>
 			</div>
@@ -191,11 +199,11 @@
 	</section>
 
 	<!-- Events showcase -->
-	<section class="bg-black text-white">
+	<section class="bg-zinc-950 text-white border-t border-white/5">
 		<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
 			<div class="text-center">
-				<h2 class="text-2xl sm:text-3xl font-extrabold" data-i18n="events.title">Events Powered by Occasia</h2>
-				<p class="mt-3 text-gray-300 max-w-3xl mx-auto" data-i18n="events.desc">Discover the diverse range of
+				<h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold" data-i18n="events.title">Events Powered by Occasia</h2>
+				<p class="mt-3 text-base sm:text-lg text-gray-400 max-w-3xl mx-auto" data-i18n="events.desc">Discover the diverse range of
 					successful events brought to life with Occasia, showcasing our versatility and impact.</p>
 			</div>
 
@@ -299,25 +307,18 @@
 	</section>
 
 	<!-- CTA -->
-	<section id="contact" class="bg-white scroll-mt-16">
-		<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+	<section id="contact" class="bg-black scroll-mt-16 border-t border-white/5">
+		<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
 			<div id="signup" class="scroll-mt-16" aria-hidden="true"></div>
-			<div class="mx-auto max-w-4xl rounded-2xl border border-gray-200 bg-white p-10 text-center shadow-card">
-				<h3 class="text-xl sm:text-2xl font-extrabold text-gray-900" data-i18n="cta.title">Ready to Transform
+			<div class="mx-auto max-w-4xl rounded-2xl border border-white/10 bg-zinc-900 p-8 sm:p-10 text-center">
+				<h3 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white" data-i18n="cta.title">Ready to Transform
 					Your Next Event?</h3>
-				<p class="mt-3 text-gray-600 max-w-2xl mx-auto" data-i18n="cta.desc">Join thousands of successful event
+				<p class="mt-4 text-base sm:text-lg text-gray-400 max-w-2xl mx-auto" data-i18n="cta.desc">Join a community of successful event
 					organizers who trust Occasia to deliver exceptional experiences. Get started today!</p>
-				<div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+				<div class="mt-8 flex flex-wrap items-center justify-center gap-4">
 					<a href="https://app.occasia.tech"
-						class="inline-flex items-center rounded-md bg-black px-5 py-2.5 text-sm font-semibold text-white shadow hover:bg-gray-900"
-						data-i18n="cta.getStarted">Get Started Free</a>
-					<a href="mailto:info@occasia.tech"
-						class="inline-flex items-center gap-2 rounded-md bg-yellow-400 px-5 py-2.5 text-sm font-semibold text-black hover:bg-yellow-300">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4">
-							<path
-								d="M2 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v.2l-10 6-10-6V6zm0 2.4v9.6A2 2 0 0 0 4 20h16a2 2 0 0 0 2-2V8.4l-9.553 5.732a2 2 0 0 1-2.894 0L2 8.4z" />
-						</svg>
-						<span data-i18n="cta.email">Email us</span>
+						class="inline-flex items-center justify-center rounded-full bg-rose-600 px-6 py-3 text-sm font-bold text-white shadow-[0_0_30px_rgba(244,63,94,0.4)] hover:bg-rose-700 transition-all" data-i18n="cta.button">
+						Open Occasia App
 					</a>
 				</div>
 			</div>
@@ -325,85 +326,85 @@
 	</section>
 
 	<!-- Footer -->
-	<footer class="border-t border-gray-100">
-		<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-			<a href="https://www.instagram.com/occasia.event" aria-label="Instagram"
-				class="text-gray-400 hover:text-gray-600">
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5">
-					<path
-						d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm4.5-.75a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5z" />
-				</svg>
-			</a>
+	<footer class="border-t border-white/5 bg-black">
+		<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 sm:py-12 flex flex-col md:flex-row justify-between items-center gap-4 sm:gap-6 text-center md:text-left">
+			<div class="text-xl sm:text-2xl font-black text-white">OCCASIA</div>
+			<div class="flex items-center gap-4">
+				<a href="https://www.instagram.com/occasia.event" aria-label="Instagram"
+					class="text-gray-400 hover:text-rose-400 transition-colors">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5">
+						<path
+							d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm4.5-.75a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5z" />
+					</svg>
+				</a>
+				<p class="text-gray-600 text-xs sm:text-sm" data-i18n="footer.copyright">© 2025 Occasia Event Services. All rights reserved.</p>
+			</div>
 		</div>
 	</footer>
-	<!-- i18n script -->
 	<script>
+		// Translations
 		const translations = {
 			"en": {
-				"nav.features": "Features",
-				"nav.releaseNotes": "Release Notes",
-				"nav.pricing": "Pricing",
-				"nav.contact": "Contact",
-				"nav.signup": "Sign Up",
-				"hero.title": "Empower Your<br/>Events with Occasia.",
-				"hero.desc": "Occasia is the all-in-one platform for event organizers. From seamless event creation to powerful analytics and secure payments, manage every detail with ease.",
-				"hero.signup": "Sign Up for Free",
+				"nav.software": "Software",
+				"nav.service": "Service",
+				"nav.openApp": "Open App",
+				"nav.app": "App",
+				"hero.title1": "Empower Your",
+				"hero.title2": "Events with Occasia",
+				"hero.desc": "Occasia is the ultimate platform designed for professional event organizers. From seamless event creation to powerful analytics and secure payment processing, manage every detail with ease.",
+				"hero.cta": "Open Occasia App",
 				"hero.explore": "Explore Features",
-				"fees.title": "Simple, Low Fees",
-				"fees.desc": "Occasia charges just $1 per ticket sold. That's it, no hidden costs.",
-				"features.title": "Powerful Tools for Every Event",
-				"features.desc": "Occasia offers a full suite of features to ensure your events are successful, from initial planning to post-event analysis.",
-				"feature1.title": "Ticketing & Registration",
-				"feature1.desc": "Streamline your registration with built-in ticketing, customizable forms, and multi-tier pricing.",
-				"feature2.title": "Analytics & Reporting",
-				"feature2.desc": "Get deep insights into your event’s performance with comprehensive analytics.",
-				"feature3.title": "Secure Payment Processing",
-				"feature3.desc": "Give your attendees a smooth and secure ticketing experience.",
-				"feature4.title": "Promotion & Marketing",
-				"feature4.desc": "Expand your event’s reach with integrated tracking for ads and social media.",
+				"pricing.title": "Very low fees",
+				"pricing.desc": "Just $1 per ticket sold, yes that is it!",
+				"features.title": "Comprehensive Tools for Every Event",
+				"features.desc": "Occasia provides a full suite of features to ensure your events are successful, from initial planning to post-event analysis.",
+				"features.ticketing.title": "Ticketing & Registration",
+				"features.ticketing.desc": "Streamline your registration process with built-in ticketing solutions, customizable forms, and multi-tier pricing options.",
+				"features.analytics.title": "Analytics & Reporting",
+				"features.analytics.desc": "Gain deep insights into your event's performance with comprehensive analytics.",
+				"features.payment.title": "Secure Payment Processing",
+				"features.payment.desc": "Offer a seamless and secure ticketing experience for attendees.",
+				"features.marketing.title": "Promotion & Marketing",
+				"features.marketing.desc": "Amplify your event's reach with integrated tracking for ads and social.",
 				"events.title": "Events Powered by Occasia",
 				"events.desc": "Discover the diverse range of successful events brought to life with Occasia, showcasing our versatility and impact.",
-				"cta.title": "Ready to Host Your Next Event?",
-				"cta.desc": "Join thousands of event organizers who trust Occasia to deliver exceptional experiences. Get started today!",
-				"cta.getStarted": "Get Started Free",
-				"cta.email": "Email Us",
-				"footer.madeWith": "Made with"
+				"cta.title": "Ready to Transform Your Next Event?",
+				"cta.desc": "Join a community of successful event organizers who trust Occasia to deliver exceptional experiences. Get started today!",
+				"cta.button": "Open Occasia App",
+				"footer.copyright": "© 2025 Occasia Event Services. All rights reserved."
 			},
 			"fr": {
-				"nav.features": "Fonctionnalités",
-				"nav.releaseNotes": "Notes de version",
-				"nav.pricing": "Tarifs",
-				"nav.contact": "Contact",
-				"nav.signup": "S'inscrire",
-				"hero.title": "Dynamisez vos<br/>événements avec Occasia.",
-				"hero.desc": "Occasia est la plateforme tout-en-un pour les organisateurs d'événements. De la création d'événements à l'analyse puissante et aux paiements sécurisés, gérez chaque détail en toute simplicité.",
-				"hero.signup": "S'inscrire gratuitement",
+				"nav.software": "Logiciel",
+				"nav.service": "Service",
+				"nav.openApp": "Ouvrir l'app",
+				"nav.app": "App",
+				"hero.title1": "Dynamisez vos",
+				"hero.title2": "Événements avec Occasia",
+				"hero.desc": "Occasia est la plateforme ultime conçue pour les organisateurs d'événements professionnels. De la création d'événements fluide aux analyses puissantes et au traitement sécurisé des paiements, gérez chaque détail en toute simplicité.",
+				"hero.cta": "Ouvrir Occasia",
 				"hero.explore": "Découvrir les fonctionnalités",
-				"fees.title": "Des frais simples et bas",
-				"fees.desc": "Occasia facture seulement 1 $ par billet vendu. C'est tout, sans frais cachés.",
-				"features.title": "Des outils puissants pour chaque événement",
-				"features.desc": "Occasia propose une suite complète de fonctionnalités pour garantir le succès de vos événements, de la planification initiale à l'analyse post-événement.",
-				"feature1.title": "Billetterie et Inscription",
-				"feature1.desc": "Simplifiez votre inscription grâce à des solutions de billetterie intégrées, des formulaires personnalisables et des options de tarification à plusieurs niveaux.",
-				"feature2.title": "Analytique et Rapports",
-				"feature2.desc": "Obtenez des informations détaillées sur la performance de votre événement grâce à une analytique complète.",
-				"feature3.title": "Traitement des paiements sécurisé",
-				"feature3.desc": "Offrez à vos participants une expérience de billetterie fluide et sécurisée.",
-				"feature4.title": "Promotion et Marketing",
-				"feature4.desc": "Augmentez la portée de votre événement grâce à un suivi intégré pour les publicités et les réseaux sociaux.",
+				"pricing.title": "Frais très bas",
+				"pricing.desc": "Seulement 1 $ par billet vendu, c'est tout!",
+				"features.title": "Outils complets pour chaque événement",
+				"features.desc": "Occasia offre une suite complète de fonctionnalités pour assurer le succès de vos événements, de la planification initiale à l'analyse post-événement.",
+				"features.ticketing.title": "Billetterie et inscription",
+				"features.ticketing.desc": "Simplifiez votre processus d'inscription avec des solutions de billetterie intégrées, des formulaires personnalisables et des options de tarification à plusieurs niveaux.",
+				"features.analytics.title": "Analyses et rapports",
+				"features.analytics.desc": "Obtenez des informations approfondies sur la performance de votre événement avec des analyses complètes.",
+				"features.payment.title": "Traitement sécurisé des paiements",
+				"features.payment.desc": "Offrez une expérience de billetterie fluide et sécurisée aux participants.",
+				"features.marketing.title": "Promotion et marketing",
+				"features.marketing.desc": "Amplifiez la portée de votre événement avec le suivi intégré pour les publicités et les réseaux sociaux.",
 				"events.title": "Événements propulsés par Occasia",
-				"events.desc": "Découvrez la diversité des événements réussis qui ont pris vie avec Occasia, démontrant notre polyvalence et notre impact.",
-				"cta.title": "Prêt à organiser votre prochain événement ?",
-				"cta.desc": "Rejoignez des milliers d'organisateurs d'événements qui font confiance à Occasia pour offrir des expériences exceptionnelles. Lancez-vous dès aujourd'hui !",
-				"cta.getStarted": "Démarrer gratuitement",
-				"cta.email": "Envoyez-nous un e-mail",
-				"footer.madeWith": "Fait avec"
+				"events.desc": "Découvrez la gamme diversifiée d'événements réussis créés avec Occasia, démontrant notre polyvalence et notre impact.",
+				"cta.title": "Prêt à transformer votre prochain événement?",
+				"cta.desc": "Rejoignez une communauté d'organisateurs d'événements prospères qui font confiance à Occasia pour offrir des expériences exceptionnelles. Commencez dès aujourd'hui!",
+				"cta.button": "Ouvrir Occasia",
+				"footer.copyright": "© 2025 Occasia Event Services. Tous droits réservés."
 			}
-		}
+		};
 
 		function detectPreferredLanguage() {
-			const stored = localStorage.getItem('lang');
-			if (stored && (stored === 'en' || stored === 'fr')) return stored;
 			const preferred = (navigator.languages && navigator.languages.length ? navigator.languages[0] : navigator.language || 'en').toLowerCase();
 			return preferred.startsWith('fr') ? 'fr' : 'en';
 		}
@@ -421,21 +422,29 @@
 				}
 			});
 			document.documentElement.lang = lang;
-			const toggle = document.getElementById('lang-toggle');
-			if (toggle) toggle.textContent = lang.toUpperCase();
 		}
 
+		// Auto-detect and apply browser language
 		document.addEventListener('DOMContentLoaded', () => {
-			let lang = detectPreferredLanguage();
+			const lang = detectPreferredLanguage();
 			applyLanguage(lang);
-			const toggle = document.getElementById('lang-toggle');
-			if (toggle) {
-				toggle.addEventListener('click', () => {
-					lang = lang === 'en' ? 'fr' : 'en';
-					localStorage.setItem('lang', lang);
-					applyLanguage(lang);
-				});
-			}
+		});
+
+		// Smooth scroll for anchor links
+		document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+			anchor.addEventListener('click', function (e) {
+				const href = this.getAttribute('href');
+				if (href !== '#' && href !== '') {
+					e.preventDefault();
+					const target = document.querySelector(href);
+					if (target) {
+						target.scrollIntoView({
+							behavior: 'smooth',
+							block: 'start'
+						});
+					}
+				}
+			});
 		});
 	</script>
 </body>

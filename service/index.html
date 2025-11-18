@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Occasia | The Authority Event System</title>
+    <!-- Design Palette: Midnight Black (#111), Dark Grey (#1f2937), and Coral Accent (#f43f5e) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons for clean visuals -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '812172011245358');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=812172011245358&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
+    <script>function initApollo() {
+            var n = Math.random().toString(36).substring(7), o = document.createElement("script");
+            o.src = "https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache=" + n, o.async = !0, o.defer = !0,
+                o.onload = function () { window.trackingFunctions.onLoad({ appId: "6644a96598763c0572ba737f" }) },
+                document.head.appendChild(o)
+        } initApollo();</script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');
+
+        /* Custom Gradient Text */
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(to right, #f43f5e, #fb7185);
+        }
+
+        /* Image Filters for Dark Mode Consistency */
+        .img-dark-filter {
+            filter: grayscale(100%) contrast(1.2) brightness(0.8);
+            transition: filter 0.5s ease;
+        }
+
+        .img-dark-filter:hover {
+            filter: grayscale(0%) contrast(1) brightness(1);
+        }
+
+        /* Improve touch targets for mobile */
+        @media (max-width: 640px) {
+
+            a,
+            button {
+                min-height: 44px;
+                min-width: 44px;
+            }
+        }
+
+        /* Prevent horizontal scroll on mobile */
+        body {
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-rose-500 selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 sm:h-20 gap-3">
+                <a href="/" class="flex-shrink-0">
+                    <span class="text-xl sm:text-2xl font-black tracking-tighter text-white">OCCASIA</span>
+                </a>
+                <div class="flex items-center gap-4 sm:gap-6 flex-1 justify-end">
+                    <a href="/"
+                        class="text-sm sm:text-base font-semibold text-gray-400 hover:text-white transition-colors flex items-center" data-i18n="nav.software">Software</a>
+                    <a href="/service"
+                        class="text-sm sm:text-base font-semibold text-white hover:text-rose-400 transition-colors flex items-center" data-i18n="nav.service">Service</a>
+                    <a href="https://app.apollo.io/#/meet/728c/30-min"
+                        class="inline-flex items-center px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 border border-transparent text-xs sm:text-sm font-bold rounded-full text-white bg-rose-600 hover:bg-rose-700 transition-all shadow-[0_0_20px_rgba(244,63,94,0.3)] whitespace-nowrap">
+                        <span class="hidden sm:inline" data-i18n="nav.bookCall">Book Strategy Call</span>
+                        <span class="sm:hidden" data-i18n="nav.bookCallShort">Book Call</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Background Image -->
+    <div class="relative pt-24 pb-16 sm:pt-32 sm:pb-16 overflow-hidden flex items-center">
+
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1544531586-fde5298cdd40?q=80&w=2070&auto=format&fit=crop"
+                alt="Conference crowd" class="w-full h-full object-cover opacity-30 img-dark-filter">
+            <div class="absolute inset-0 bg-gradient-to-b from-black via-black/80 to-black"></div>
+        </div>
+
+        <!-- Content -->
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
+            <div
+                class="inline-flex items-center px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm mb-8">
+                <span class="text-xs font-semibold tracking-wide uppercase text-rose-400" data-i18n="hero.badge">For Experts & Consultants</span>
+            </div>
+            <h1
+                class="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter text-white mb-6 sm:mb-8 leading-tight drop-shadow-2xl px-2">
+                <span data-i18n="hero.title1">STOP TRADING TIME</span> <br class="hidden md:block" />
+                <span class="text-gradient" data-i18n="hero.title2">FOR MONEY.</span>
+            </h1>
+            <p
+                class="mt-4 max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-gray-300 font-light leading-relaxed drop-shadow-md px-4">
+                <span data-i18n="hero.desc" data-i18n-html="true">The 1-on-1 sales grind is broken. We build <b>Authority Event Systems</b> that fill rooms with qualified prospects, allowing you to establish trust instantly and close clients in bulk.</span>
+            </p>
+            <div class="mt-8 sm:mt-12 flex justify-center gap-6 px-4">
+                <a href="#concept"
+                    class="text-sm font-semibold leading-6 text-white hover:text-rose-400 transition-colors flex items-center gap-2">
+                    <span data-i18n="hero.learnMore">Learn The Concept</span> <i data-lucide="arrow-down" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Problem: The Hamster Wheel -->
+    <section id="concept" class="py-12 sm:py-16 md:py-24 bg-zinc-950 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
+                <div>
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6" data-i18n="concept.trapTitle">The "Expert Trap"</h2>
+                    <p class="text-base sm:text-lg text-gray-400 mb-4 sm:mb-6" data-i18n="concept.trapDesc" data-i18n-html="true">
+                        You are an expert at what you do. But you are likely trapped in the <b>"Sales Hamster Wheel."</b>
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="x-circle" class="w-6 h-6 text-red-500 shrink-0 mt-1"></i>
+                            <span class="text-gray-300" data-i18n="concept.trap1">Chasing cold leads who don't know or trust you.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="x-circle" class="w-6 h-6 text-red-500 shrink-0 mt-1"></i>
+                            <span class="text-gray-300" data-i18n="concept.trap2">Spending hours on 1-on-1 discovery calls that go nowhere.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="x-circle" class="w-6 h-6 text-red-500 shrink-0 mt-1"></i>
+                            <span class="text-gray-300" data-i18n="concept.trap3">Managing complex logistics instead of delivering value.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="relative bg-zinc-900 p-6 sm:p-8 rounded-2xl border border-white/5">
+                    <div class="absolute -top-4 -right-4 w-20 h-20 bg-rose-600 rounded-full blur-2xl opacity-20"></div>
+                    <h3 class="text-lg sm:text-xl font-bold text-white mb-3 sm:mb-4" data-i18n="concept.solutionTitle">The Solution: The "One-to-Many" Shift</h3>
+                    <p class="text-sm sm:text-base text-gray-400" data-i18n="concept.solutionDesc" data-i18n-html="true">
+                        Stop selling to one person at a time. The <b>Authority Event</b> allows you to sell to 20, 50, or 100 qualified prospects simultaneously.
+                    </p>
+                    <div class="mt-6 sm:mt-8 grid grid-cols-2 gap-3 sm:gap-4">
+                        <div class="p-3 sm:p-4 bg-black rounded-lg border border-white/10 text-center">
+                            <span class="block text-xl sm:text-2xl md:text-3xl font-bold text-white" data-i18n="concept.liveEvent">In-Person Event</span>
+                            <span class="text-xs text-gray-500 uppercase tracking-wider" data-i18n="concept.eventTypes">Workshop • Panel • Keynote</span>
+                        </div>
+                        <div class="p-3 sm:p-4 bg-black rounded-lg border border-white/10 text-center">
+                            <span class="block text-xl sm:text-2xl md:text-3xl font-bold text-rose-500">15%</span>
+                            <span class="text-xs text-gray-500 uppercase tracking-wider" data-i18n="concept.conversionRate">Conversion Rate</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: Visual Proof / The Atmosphere -->
+    <section class="py-12 sm:py-16 md:py-24 bg-black relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8 sm:mb-12 md:mb-16">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 sm:mb-4" data-i18n="atmosphere.title">Experience The Atmosphere</h2>
+                <p class="text-sm sm:text-base text-gray-400 px-4" data-i18n="atmosphere.desc">This is what "Authority" looks like. We create the environment; you own the stage.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 h-auto md:h-96">
+                <!-- Image 1: The Speaker -->
+                <div class="relative group overflow-hidden rounded-2xl border border-white/10 h-64 sm:h-80 md:h-full">
+                    <img src="/images/Audience Speech Speaker.jpg?q=80&w=2070&auto=format&fit=crop"
+                        alt="Speaker on stage"
+                        class="w-full h-full object-cover img-dark-filter transform group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute bottom-0 left-0 w-full p-4 sm:p-6 bg-gradient-to-t from-black to-transparent">
+                        <span class="text-white font-bold text-base sm:text-lg" data-i18n="atmosphere.authority">The Authority</span>
+                        <p class="text-gray-400 text-xs uppercase tracking-widest" data-i18n="atmosphere.authorityDesc">Command the Room</p>
+                    </div>
+                </div>
+
+                <!-- Image 2: The Audience (Wide) -->
+                <div class="relative group overflow-hidden rounded-2xl border border-white/10 h-64 sm:h-80 md:h-full">
+                    <img src="/images/Man Sitting In Front.jpg?q=80&w=2664&auto=format&fit=crop" alt="Engaged Audience"
+                        class="w-full h-full object-cover img-dark-filter transform group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute bottom-0 left-0 w-full p-4 sm:p-6 bg-gradient-to-t from-black to-transparent">
+                        <span class="text-white font-bold text-base sm:text-lg" data-i18n="atmosphere.engagement">The Engagement</span>
+                        <p class="text-gray-400 text-xs uppercase tracking-widest" data-i18n="atmosphere.engagementDesc">High-Intent Prospects</p>
+                    </div>
+                </div>
+
+                <!-- Image 3: Networking (Close up) -->
+                <div class="relative group overflow-hidden rounded-2xl border border-white/10 h-64 sm:h-80 md:h-full">
+                    <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=80&w=2070&auto=format&fit=crop"
+                        alt="Networking"
+                        class="w-full h-full object-cover img-dark-filter transform group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute bottom-0 left-0 w-full p-4 sm:p-6 bg-gradient-to-t from-black to-transparent">
+                        <span class="text-white font-bold text-base sm:text-lg" data-i18n="atmosphere.connection">The Connection</span>
+                        <p class="text-gray-400 text-xs uppercase tracking-widest" data-i18n="atmosphere.connectionDesc">Trust Built Instantly</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The 3 Pillars of Value -->
+    <section class="py-12 sm:py-16 md:py-24 bg-zinc-950 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16 md:mb-20">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6" data-i18n="benefits.title">Why In-Person Events Win</h2>
+                <p class="text-gray-400 text-base sm:text-lg px-4" data-i18n="benefits.desc">
+                    In a world of digital noise and cold DMs, "Offline Branding" is the ultimate differentiator.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+                <!-- Benefit 1 -->
+                <div
+                    class="group p-6 sm:p-8 rounded-2xl bg-black border border-white/5 hover:border-rose-500/50 transition-all hover:-translate-y-1">
+                    <div
+                        class="w-12 h-12 rounded-lg bg-rose-500/10 flex items-center justify-center mb-4 sm:mb-6 group-hover:bg-rose-500/20 transition-colors">
+                        <i data-lucide="crown" class="w-6 h-6 text-rose-500"></i>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3" data-i18n="benefits.authorityTitle">Instant Authority</h3>
+                    <p class="text-sm sm:text-base text-gray-400 leading-relaxed" data-i18n="benefits.authorityDesc">
+                        When you stand on a stage, you are no longer a salesperson; you are the expert. You build more trust in 90 minutes than in 6 months of emails.
+                    </p>
+                </div>
+
+                <!-- Benefit 2 -->
+                <div
+                    class="group p-6 sm:p-8 rounded-2xl bg-black border border-white/5 hover:border-rose-500/50 transition-all hover:-translate-y-1">
+                    <div
+                        class="w-12 h-12 rounded-lg bg-rose-500/10 flex items-center justify-center mb-4 sm:mb-6 group-hover:bg-rose-500/20 transition-colors">
+                        <i data-lucide="users" class="w-6 h-6 text-rose-500"></i>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3" data-i18n="benefits.audienceTitle">Qualified Audience</h3>
+                    <p class="text-sm sm:text-base text-gray-400 leading-relaxed" data-i18n="benefits.audienceDesc">
+                        We don't just fill seats; we fill the room with your ideal, high-ticket prospects using our proprietary paid ad strategies.
+                    </p>
+                </div>
+
+                <!-- Benefit 3 -->
+                <div
+                    class="group p-6 sm:p-8 rounded-2xl bg-black border border-white/5 hover:border-rose-500/50 transition-all hover:-translate-y-1">
+                    <div
+                        class="w-12 h-12 rounded-lg bg-rose-500/10 flex items-center justify-center mb-4 sm:mb-6 group-hover:bg-rose-500/20 transition-colors">
+                        <i data-lucide="trending-up" class="w-6 h-6 text-rose-500"></i>
+                    </div>
+                    <h3 class="text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3" data-i18n="benefits.leverageTitle">Massive Leverage</h3>
+                    <p class="text-sm sm:text-base text-gray-400 leading-relaxed" data-i18n="benefits.leverageDesc">
+                        Replace your sales team. The event itself acts as the "setter" and the "closer," allowing you to acquire clients in bulk.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works / Your Role vs Our Role -->
+    <section class="py-12 sm:py-16 md:py-24 bg-black border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12">
+                <!-- Our Role -->
+                <div
+                    class="relative p-6 sm:p-8 md:p-10 rounded-3xl bg-gradient-to-br from-zinc-900 to-black border border-white/10 overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 hidden md:block">
+                        <i data-lucide="settings" class="w-32 h-32 text-white"></i>
+                    </div>
+                    <span class="text-rose-500 font-bold tracking-wider uppercase text-xs sm:text-sm" data-i18n="roles.ourRole">Our Role</span>
+                    <h3 class="text-2xl sm:text-3xl font-bold text-white mt-2 mb-4 sm:mb-6" data-i18n="roles.ourRoleTitle">The "Done-For-You" Producer</h3>
+                    <p class="text-sm sm:text-base text-gray-400 mb-6 sm:mb-8" data-i18n="roles.ourRoleDesc">
+                        We handle 100% of the "exhausting" backend work so you don't have to.
+                    </p>
+                    <ul class="space-y-3 sm:space-y-4">
+                        <li class="flex items-center text-sm sm:text-base text-gray-300">
+                            <i data-lucide="check" class="w-5 h-5 text-rose-500 mr-3 flex-shrink-0"></i> <span data-i18n="roles.ourRole1">Event Structure & Conversion Design</span>
+                        </li>
+                        <li class="flex items-center text-sm sm:text-base text-gray-300">
+                            <i data-lucide="check" class="w-5 h-5 text-rose-500 mr-3 flex-shrink-0"></i> <span data-i18n="roles.ourRole2">Strategic Paid Marketing</span>
+                        </li>
+                        <li class="flex items-center text-sm sm:text-base text-gray-300">
+                            <i data-lucide="check" class="w-5 h-5 text-rose-500 mr-3 flex-shrink-0"></i> <span data-i18n="roles.ourRole3">Venue Sourcing & Booking</span>
+                        </li>
+                        <li class="flex items-center text-sm sm:text-base text-gray-300">
+                            <i data-lucide="check" class="w-5 h-5 text-rose-500 mr-3 flex-shrink-0"></i> <span data-i18n="roles.ourRole4">Registration & Ticketing</span>
+                        </li>
+                        <li class="flex items-center text-sm sm:text-base text-gray-300">
+                            <i data-lucide="check" class="w-5 h-5 text-rose-500 mr-3 flex-shrink-0"></i> <span data-i18n="roles.ourRole5">On-Site Event Management</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Client Role -->
+                <div
+                    class="relative p-6 sm:p-8 md:p-10 rounded-3xl bg-gradient-to-br from-rose-900/20 to-black border border-rose-500/20 overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 hidden md:block">
+                        <i data-lucide="mic" class="w-32 h-32 text-rose-500"></i>
+                    </div>
+                    <span class="text-white font-bold tracking-wider uppercase text-xs sm:text-sm" data-i18n="roles.yourRole">Your Role</span>
+                    <h3 class="text-2xl sm:text-3xl font-bold text-white mt-2 mb-4 sm:mb-6" data-i18n="roles.yourRoleTitle">The Expert on Stage</h3>
+                    <p class="text-sm sm:text-base text-gray-400 mb-6 sm:mb-8" data-i18n="roles.yourRoleDesc">
+                        Your only job is to show up and do what you do best.
+                    </p>
+                    <ul class="space-y-3 sm:space-y-4">
+                        <li class="flex items-center text-sm sm:text-base text-white">
+                            <i data-lucide="star" class="w-5 h-5 text-yellow-500 mr-3 flex-shrink-0"></i> <span data-i18n="roles.yourRole1">Deliver High-Value Content</span>
+                        </li>
+                        <li class="flex items-center text-sm sm:text-base text-white">
+                            <i data-lucide="star" class="w-5 h-5 text-yellow-500 mr-3 flex-shrink-0"></i> <span data-i18n="roles.yourRole2">Build Trust & Connection</span>
+                        </li>
+                        <li class="flex items-center text-sm sm:text-base text-white">
+                            <i data-lucide="star" class="w-5 h-5 text-yellow-500 mr-3 flex-shrink-0"></i> <span data-i18n="roles.yourRole3">Make Your Offer</span>
+                        </li>
+                        <li class="flex items-center text-sm sm:text-base text-white">
+                            <i data-lucide="star" class="w-5 h-5 text-yellow-500 mr-3 flex-shrink-0"></i> <span data-i18n="roles.yourRole4">Close New Clients</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA / Contact -->
+    <section id="contact" class="py-16 sm:py-24 md:py-32 bg-zinc-950 text-center">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2
+                class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 sm:mb-8 uppercase tracking-tight">
+                <span data-i18n="cta.title1">Ready to Build Your</span> <br class="hidden sm:block" />
+                <span class="text-rose-600" data-i18n="cta.title2">Client Acquisition System?</span>
+            </h2>
+            <p class="text-base sm:text-lg md:text-xl text-gray-400 mb-8 sm:mb-12 max-w-2xl mx-auto px-4" data-i18n="cta.desc">
+                We are currently looking for 3 "Founder's Program" partners to launch this system with. Let's discuss if your business is the right fit.
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-4 px-4">
+                <a href="https://app.apollo.io/#/meet/728c/30-min"
+                    class="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 border border-transparent text-base sm:text-lg font-bold rounded-full text-white bg-rose-600 hover:bg-rose-700 transition-all shadow-[0_0_30px_rgba(244,63,94,0.4)] min-h-[48px]">
+                    <span data-i18n="cta.button">Book A Strategy Call</span>
+                </a>
+            </div>
+            <p class="mt-6 text-sm text-gray-500 px-4" data-i18n="cta.subtext">No pressure. Just a conversation about your growth.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 sm:py-12 bg-black border-t border-white/5">
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4 sm:gap-6 text-center md:text-left">
+            <div class="text-xl sm:text-2xl font-black text-white">OCCASIA</div>
+            <p class="text-gray-600 text-xs sm:text-sm">© 2025 Occasia Event Services. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Translations
+        const translations = {
+            "en": {
+                "nav.software": "Software",
+                "nav.service": "Service",
+                "nav.bookCall": "Book Strategy Call",
+                "nav.bookCallShort": "Book Call",
+                "hero.badge": "For Experts & Consultants",
+                "hero.title1": "STOP TRADING TIME",
+                "hero.title2": "FOR MONEY.",
+                "hero.desc": "The 1-on-1 sales grind is broken. We build <b>Authority Event Systems</b> that fill rooms with qualified prospects, allowing you to establish trust instantly and close clients in bulk.",
+                "hero.learnMore": "Learn The Concept",
+                "concept.trapTitle": "The \"Expert Trap\"",
+                "concept.trapDesc": "You are an expert at what you do. But you are likely trapped in the <b>\"Sales Hamster Wheel.\"</b>",
+                "concept.trap1": "Chasing cold leads who don't know or trust you.",
+                "concept.trap2": "Spending hours on 1-on-1 discovery calls that go nowhere.",
+                "concept.trap3": "Managing complex logistics instead of delivering value.",
+                "concept.solutionTitle": "The Solution: The \"One-to-Many\" Shift",
+                "concept.solutionDesc": "Stop selling to one person at a time. The <b>Authority Event</b> allows you to sell to 20, 50, or 100 qualified prospects simultaneously.",
+                "concept.liveEvent": "In-Person Event",
+                "concept.eventTypes": "Workshop • Panel • Keynote",
+                "concept.conversionRate": "Conversion Rate",
+                "atmosphere.title": "Experience The Atmosphere",
+                "atmosphere.desc": "This is what \"Authority\" looks like. We create the environment; you own the stage.",
+                "atmosphere.authority": "The Authority",
+                "atmosphere.authorityDesc": "Command the Room",
+                "atmosphere.engagement": "The Engagement",
+                "atmosphere.engagementDesc": "High-Intent Prospects",
+                "atmosphere.connection": "The Connection",
+                "atmosphere.connectionDesc": "Trust Built Instantly",
+                "benefits.title": "Why In-Person Events Win",
+                "benefits.desc": "In a world of digital noise and cold DMs, \"Offline Branding\" is the ultimate differentiator.",
+                "benefits.authorityTitle": "Instant Authority",
+                "benefits.authorityDesc": "When you stand on a stage, you are no longer a salesperson; you are the expert. You build more trust in 90 minutes than in 6 months of emails.",
+                "benefits.audienceTitle": "Qualified Audience",
+                "benefits.audienceDesc": "We don't just fill seats; we fill the room with your ideal, high-ticket prospects using our proprietary paid ad strategies.",
+                "benefits.leverageTitle": "Massive Leverage",
+                "benefits.leverageDesc": "Replace your sales team. The event itself acts as the \"setter\" and the \"closer,\" allowing you to acquire clients in bulk.",
+                "roles.ourRole": "Our Role",
+                "roles.ourRoleTitle": "The \"Done-For-You\" Producer",
+                "roles.ourRoleDesc": "We handle 100% of the \"exhausting\" backend work so you don't have to.",
+                "roles.ourRole1": "Event Structure & Conversion Design",
+                "roles.ourRole2": "Strategic Paid Marketing",
+                "roles.ourRole3": "Venue Sourcing & Booking",
+                "roles.ourRole4": "Registration & Ticketing",
+                "roles.ourRole5": "On-Site Event Management",
+                "roles.yourRole": "Your Role",
+                "roles.yourRoleTitle": "The Expert on Stage",
+                "roles.yourRoleDesc": "Your only job is to show up and do what you do best.",
+                "roles.yourRole1": "Deliver High-Value Content",
+                "roles.yourRole2": "Build Trust & Connection",
+                "roles.yourRole3": "Make Your Offer",
+                "roles.yourRole4": "Close New Clients",
+                "cta.title1": "Ready to Build Your",
+                "cta.title2": "Client Acquisition System?",
+                "cta.desc": "We are currently looking for 3 \"Founder's Program\" partners to launch this system with. Let's discuss if your business is the right fit.",
+                "cta.button": "Book A Strategy Call",
+                "cta.subtext": "No pressure. Just a conversation about your growth."
+            },
+            "fr": {
+                "nav.software": "Logiciel",
+                "nav.service": "Service",
+                "nav.bookCall": "Réserver un appel",
+                "nav.bookCallShort": "Réserver",
+                "hero.badge": "Pour experts et consultants",
+                "hero.title1": "ARRÊTEZ D'ÉCHANGER LE TEMPS",
+                "hero.title2": "CONTRE L'ARGENT.",
+                "hero.desc": "Le cycle de vente 1-à-1 est brisé. Nous construisons des <b>Systèmes d'Événements d'Autorité</b> qui remplissent les salles avec des prospects qualifiés, vous permettant d'établir la confiance instantanément et de conclure des clients en masse.",
+                "hero.learnMore": "Découvrir le concept",
+                "concept.trapTitle": "Le Piège de l'Expert",
+                "concept.trapDesc": "Vous êtes un expert dans ce que vous faites. Mais vous êtes probablement piégé dans la <b>\"Roue du Hamster de Vente\".</b>",
+                "concept.trap1": "Courir après des prospects froids qui ne vous connaissent pas ou ne vous font pas confiance.",
+                "concept.trap2": "Passer des heures sur des appels de découverte 1-à-1 qui ne mènent nulle part.",
+                "concept.trap3": "Gérer des logistiques complexes au lieu de fournir de la valeur.",
+                "concept.solutionTitle": "La Solution : Un-à-Plusieurs",
+                "concept.solutionDesc": "Arrêtez de vendre à une personne à la fois. L'<b>Événement d'Autorité</b> vous permet de vendre à 20, 50 ou 100 prospects qualifiés simultanément.",
+                "concept.liveEvent": "Événement en personne",
+                "concept.eventTypes": "Atelier • Panel • Conférence",
+                "concept.conversionRate": "Taux de conversion",
+                "atmosphere.title": "L'Ambiance",
+                "atmosphere.desc": "Voici à quoi ressemble l'Autorité. Nous créons l'environnement; vous possédez la scène.",
+                "atmosphere.authority": "L'Autorité",
+                "atmosphere.authorityDesc": "Commander la salle",
+                "atmosphere.engagement": "L'Engagement",
+                "atmosphere.engagementDesc": "Prospects à forte intention",
+                "atmosphere.connection": "La Connexion",
+                "atmosphere.connectionDesc": "Confiance instantanée",
+                "benefits.title": "Pourquoi les événements gagnent",
+                "benefits.desc": "Dans un monde de bruit numérique et de messages froids, le \"Branding Hors Ligne\" est le différenciateur ultime.",
+                "benefits.authorityTitle": "Autorité instantanée",
+                "benefits.authorityDesc": "Quand vous montez sur scène, vous n'êtes plus un vendeur; vous êtes l'expert. Vous construisez plus de confiance en 90 minutes qu'en 6 mois d'emails.",
+                "benefits.audienceTitle": "Audience qualifiée",
+                "benefits.audienceDesc": "Nous ne remplissons pas seulement les sièges; nous remplissons la salle avec vos prospects idéaux à haut ticket en utilisant nos stratégies publicitaires payantes propriétaires.",
+                "benefits.leverageTitle": "Levier massif",
+                "benefits.leverageDesc": "Remplacez votre équipe de vente. L'événement lui-même agit comme le \"setter\" et le \"closer\", vous permettant d'acquérir des clients en masse.",
+                "roles.ourRole": "Notre rôle",
+                "roles.ourRoleTitle": "Producteur Tout-Fait-Pour-Vous",
+                "roles.ourRoleDesc": "Nous gérons 100% du travail backend \"épuisant\" pour que vous n'ayez pas à le faire.",
+                "roles.ourRole1": "Structure d'événement et design de conversion",
+                "roles.ourRole2": "Marketing payant stratégique",
+                "roles.ourRole3": "Recherche et réservation de lieu",
+                "roles.ourRole4": "Inscription et billetterie",
+                "roles.ourRole5": "Gestion d'événement sur site",
+                "roles.yourRole": "Votre rôle",
+                "roles.yourRoleTitle": "L'Expert sur scène",
+                "roles.yourRoleDesc": "Votre seul travail est de vous présenter et de faire ce que vous faites de mieux.",
+                "roles.yourRole1": "Livrer du contenu à haute valeur",
+                "roles.yourRole2": "Construire la confiance et la connexion",
+                "roles.yourRole3": "Faire votre offre",
+                "roles.yourRole4": "Avoir de nouveaux clients",
+                "cta.title1": "Prêt à créer votre",
+                "cta.title2": "Système d'acquisition?",
+                "cta.desc": "Nous recherchons actuellement 3 partenaires du \"Programme Fondateur\" pour lancer ce système. Discutons si votre entreprise est le bon choix.",
+                "cta.button": "Réserver un appel",
+                "cta.subtext": "Aucune pression. Juste une conversation sur votre croissance."
+            }
+        };
+
+        function detectPreferredLanguage() {
+            const preferred = (navigator.languages && navigator.languages.length? navigator.languages[0] : navigator.language || 'en').toLowerCase();
+            return preferred.startsWith('fr')? 'fr' : 'en';
+        }
+
+        function applyLanguage(lang) {
+            const dict = translations[lang] || translations.en;
+            document.querySelectorAll('[data-i18n]').forEach((el) => {
+                const key = el.getAttribute('data-i18n');
+                const value = dict[key];
+                if (!value) return;
+                if (el.getAttribute('data-i18n-html') === 'true') {
+                    el.innerHTML = value;
+                } else {
+                    el.textContent = value;
+                }
+            });
+            document.documentElement.lang = lang;
+        }
+
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Auto-detect and apply browser language
+        document.addEventListener('DOMContentLoaded', () => {
+            const lang = detectPreferredLanguage();
+            applyLanguage(lang);
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && href !== '') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
