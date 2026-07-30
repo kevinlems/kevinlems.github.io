@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Contact Us – Occasia</title>
+	<link rel="icon" type="image/png" href="/images/logo.png" />
+	<meta name="description" content="Get in touch with the Occasia team for support, privacy inquiries, and general questions." />
+
+	<!-- Fonts & Icons -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script src="https://unpkg.com/lucide@latest"></script>
+
+	<!-- Meta Pixel Code -->
+	<script>
+		!function(f,b,e,v,n,t,s)
+		{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+		n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+		if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+		n.queue=[];t=b.createElement(e);t.async=!0;
+		t.src=v;s=b.getElementsByTagName(e)[0];
+		s.parentNode.insertBefore(t,s)}(window, document,'script',
+		'https://connect.facebook.net/en_US/fbevents.js');
+		fbq('init', '812172011245358');
+		fbq('track', 'PageView');
+	</script>
+	<noscript><img height="1" width="1" style="display:none"
+		src="https://www.facebook.com/tr?id=812172011245358&ev=PageView&noscript=1" /></noscript>
+
+	<!-- Apollo Tracker -->
+	<script>
+		function initApollo() {
+			var n = Math.random().toString(36).substring(7), o = document.createElement("script");
+			o.src = "https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache=" + n, o.async = !0, o.defer = !0,
+			o.onload = function () { window.trackingFunctions.onLoad({ appId: "6644a96598763c0572ba737f" }) },
+			document.head.appendChild(o);
+		}
+		initApollo();
+	</script>
+
+	<style>
+		body {
+			font-family: 'Inter', sans-serif;
+			background-color: #000000;
+			color: #ffffff;
+			overflow-x: hidden;
+		}
+
+		.text-gradient {
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-image: linear-gradient(to right, #f43f5e, #fb7185);
+		}
+
+		.glass-card {
+			background: rgba(255, 255, 255, 0.03);
+			backdrop-filter: blur(16px);
+			border: 1px solid rgba(255, 255, 255, 0.08);
+		}
+
+		.glass-card:hover {
+			border-color: rgba(244, 63, 94, 0.3);
+			box-shadow: 0 0 30px rgba(244, 63, 94, 0.15);
+		}
+
+		@media (max-width: 640px) {
+			a, button {
+				min-height: 44px;
+				min-width: 44px;
+			}
+		}
+	</style>
+</head>
+
+<body class="min-h-screen bg-black text-white font-sans antialiased selection:bg-rose-500 selection:text-white flex flex-col justify-between">
+
+	<!-- Navigation -->
+	<nav class="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="flex items-center justify-between h-16 sm:h-20 gap-3">
+				<a href="/" class="flex-shrink-0">
+					<span class="text-xl sm:text-2xl font-black tracking-tighter text-white">OCCASIA</span>
+				</a>
+				<div class="flex items-center gap-4 sm:gap-6 flex-1 justify-end">
+					<a href="/" class="text-sm sm:text-base font-semibold text-gray-400 hover:text-white transition-colors" data-i18n="nav.software">Software</a>
+					<a href="https://app.occasia.tech" class="inline-flex items-center px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 border border-transparent text-xs sm:text-sm font-bold rounded-full text-white bg-rose-600 hover:bg-rose-700 transition-all shadow-[0_0_20px_rgba(244,63,94,0.3)] whitespace-nowrap">
+						<span class="hidden sm:inline" data-i18n="nav.openApp">Open App</span>
+						<span class="sm:hidden" data-i18n="nav.app">App</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Main Content -->
+	<main class="flex-grow pt-32 sm:pt-40 pb-20 px-4 sm:px-6 lg:px-8 flex items-center justify-center">
+		<div class="max-w-2xl w-full mx-auto text-center">
+			
+			<!-- Badge -->
+			<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-rose-500/10 border border-rose-500/20 text-rose-400 text-xs sm:text-sm font-medium mb-8">
+				<i data-lucide="mail" class="w-4 h-4"></i>
+				<span data-i18n="contact.badge">Get in Touch</span>
+			</div>
+
+			<!-- Title & Description -->
+			<h1 class="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight text-white mb-6">
+				<span data-i18n="contact.title">Contact</span> <span class="text-gradient" data-i18n="contact.titleAccent">Occasia</span>
+			</h1>
+			<p class="text-base sm:text-lg text-gray-400 max-w-lg mx-auto mb-12 leading-relaxed" data-i18n="contact.subtitle">
+				Have questions about our event platform, account support, or privacy policies? Send us an email and our team will get back to you promptly.
+			</p>
+
+			<!-- Main Contact Card -->
+			<div class="glass-card rounded-3xl p-8 sm:p-12 transition-all duration-300 relative overflow-hidden group">
+				<div class="absolute -right-12 -top-12 w-40 h-40 bg-rose-600/10 rounded-full blur-3xl pointer-events-none"></div>
+				
+				<div class="w-16 h-16 rounded-2xl bg-rose-600/20 border border-rose-500/30 flex items-center justify-center mx-auto mb-6 text-rose-400">
+					<i data-lucide="mail-open" class="w-8 h-8"></i>
+				</div>
+
+				<div class="text-sm font-semibold uppercase tracking-wider text-gray-400 mb-2" data-i18n="contact.emailLabel">
+					Direct Email
+				</div>
+				
+				<div class="text-2xl sm:text-3xl font-bold text-white tracking-tight mb-8">
+					<a href="mailto:info@occasia.tech" class="hover:text-rose-400 transition-colors select-all">
+						info@occasia.tech
+					</a>
+				</div>
+
+				<!-- Actions -->
+				<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+					<a href="mailto:info@occasia.tech" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-rose-600 hover:bg-rose-700 text-white font-bold text-sm transition-all shadow-[0_0_25px_rgba(244,63,94,0.4)]">
+						<i data-lucide="send" class="w-4 h-4"></i>
+						<span data-i18n="contact.sendBtn">Send Email</span>
+					</a>
+					<button id="copy-btn" onclick="copyEmail()" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-white/10 hover:bg-white/20 text-white font-bold text-sm transition-all border border-white/10">
+						<i data-lucide="copy" id="copy-icon" class="w-4 h-4"></i>
+						<span id="copy-text" data-i18n="contact.copyBtn">Copy Address</span>
+					</button>
+				</div>
+			</div>
+
+			<!-- Additional Info Links -->
+			<div class="mt-12 flex flex-wrap justify-center items-center gap-6 text-sm text-gray-400">
+				<a href="/privacy-policy.html" class="hover:text-rose-400 transition-colors flex items-center gap-1.5">
+					<i data-lucide="shield-check" class="w-4 h-4"></i>
+					<span data-i18n="contact.privacyLink">Privacy Policy</span>
+				</a>
+				<span class="text-gray-700">•</span>
+				<a href="/" class="hover:text-rose-400 transition-colors flex items-center gap-1.5">
+					<i data-lucide="arrow-left" class="w-4 h-4"></i>
+					<span data-i18n="contact.homeLink">Back to Home</span>
+				</a>
+			</div>
+		</div>
+	</main>
+
+	<!-- Footer -->
+	<footer class="border-t border-white/10 bg-black py-8">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
+			<div class="text-xl font-black text-white">OCCASIA</div>
+			<div class="flex flex-wrap items-center justify-center gap-6 text-xs sm:text-sm text-gray-400">
+				<a href="/privacy-policy.html" class="hover:text-white transition-colors" data-i18n="nav.privacy">Privacy Policy</a>
+				<a href="/contact.html" class="hover:text-white transition-colors" data-i18n="nav.contact">Contact</a>
+				<a href="https://www.instagram.com/occasia.event" aria-label="Instagram" class="hover:text-rose-400 transition-colors">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5">
+						<path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm4.5-.75a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5z" />
+					</svg>
+				</a>
+			</div>
+			<p class="text-gray-600 text-xs" data-i18n="footer.copyright">© 2025 Occasia Event Services. All rights reserved.</p>
+		</div>
+	</footer>
+
+	<script>
+		lucide.createIcons();
+
+		function copyEmail() {
+			navigator.clipboard.writeText('info@occasia.tech').then(() => {
+				const btnText = document.getElementById('copy-text');
+				const originalText = btnText.textContent;
+				const currentLang = detectPreferredLanguage();
+				btnText.textContent = currentLang === 'fr' ? 'Copié !' : 'Copied!';
+				setTimeout(() => {
+					btnText.textContent = originalText;
+				}, 2000);
+			});
+		}
+
+		const translations = {
+			"en": {
+				"nav.software": "Software",
+				"nav.service": "Service",
+				"nav.privacy": "Privacy",
+				"nav.contact": "Contact",
+				"nav.openApp": "Open App",
+				"nav.app": "App",
+				"contact.badge": "Get in Touch",
+				"contact.title": "Contact",
+				"contact.titleAccent": "Occasia",
+				"contact.subtitle": "Have questions about our event platform, account support, or privacy policies? Send us an email and our team will get back to you promptly.",
+				"contact.emailLabel": "Direct Email",
+				"contact.sendBtn": "Send Email",
+				"contact.copyBtn": "Copy Address",
+				"contact.privacyLink": "Privacy Policy",
+				"contact.homeLink": "Back to Home",
+				"footer.copyright": "© 2025 Occasia Event Services. All rights reserved."
+			},
+			"fr": {
+				"nav.software": "Logiciel",
+				"nav.service": "Service",
+				"nav.privacy": "Confidentialité",
+				"nav.contact": "Contact",
+				"nav.openApp": "Ouvrir l'app",
+				"nav.app": "App",
+				"contact.badge": "Contactez-nous",
+				"contact.title": "Contactez",
+				"contact.titleAccent": "Occasia",
+				"contact.subtitle": "Des questions sur notre plateforme, votre compte ou notre politique de confidentialité ? Envoyez-nous un courriel.",
+				"contact.emailLabel": "Adresse Courriel",
+				"contact.sendBtn": "Envoyer un courriel",
+				"contact.copyBtn": "Copier l'adresse",
+				"contact.privacyLink": "Politique de confidentialité",
+				"contact.homeLink": "Retour à l'accueil",
+				"footer.copyright": "© 2025 Occasia Event Services. Tous droits réservés."
+			}
+		};
+
+		function detectPreferredLanguage() {
+			const preferred = (navigator.languages && navigator.languages.length ? navigator.languages[0] : navigator.language || 'en').toLowerCase();
+			return preferred.startsWith('fr') ? 'fr' : 'en';
+		}
+
+		function applyLanguage(lang) {
+			const dict = translations[lang] || translations.en;
+			document.querySelectorAll('[data-i18n]').forEach((el) => {
+				const key = el.getAttribute('data-i18n');
+				const value = dict[key];
+				if (!value) return;
+				el.textContent = value;
+			});
+			document.documentElement.lang = lang;
+		}
+
+		document.addEventListener('DOMContentLoaded', () => {
+			const lang = detectPreferredLanguage();
+			applyLanguage(lang);
+		});
+	</script>
+</body>
+
+</html>
