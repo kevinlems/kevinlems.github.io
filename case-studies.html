@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<title>Occasia Case Studies – Real Proof & Results for Event Organizers</title>
+	<link rel="icon" type="image/png" href="/images/logo.png" />
+
+	<!-- Tailwind CSS & Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+	
+	<!-- Meta Pixel Code -->
+	<script>
+	!function(f,b,e,v,n,t,s)
+	{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+	n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+	if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+	n.queue=[];t=b.createElement(e);t.async=!0;
+	t.src=v;s=b.getElementsByTagName(e)[0];
+	s.parentNode.insertBefore(t,s)}(window, document,'script',
+	'https://connect.facebook.net/en_US/fbevents.js');
+	fbq('init', '812172011245358');
+	fbq('track', 'PageView');
+	</script>
+	<noscript><img height="1" width="1" style="display:none"
+	src="https://www.facebook.com/tr?id=812172011245358&ev=PageView&noscript=1"
+	/></noscript>
+	<!-- End Meta Pixel Code -->
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script src="https://unpkg.com/lucide@latest"></script>
+	<style>
+		body {
+			font-family: 'Inter', sans-serif;
+			background-color: #000000;
+			color: #ffffff;
+			overflow-x: hidden;
+		}
+		
+		.text-gradient {
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-image: linear-gradient(135deg, #f43f5e 0%, #fb7185 50%, #fda4af 100%);
+		}
+
+		.bg-gradient-glow {
+			background: radial-gradient(circle at 50% 15%, rgba(244, 63, 94, 0.18) 0%, rgba(0, 0, 0, 0) 65%);
+		}
+	</style>
+	<meta name="description"
+		content="Discover how Occasia software and growth services powered over 6,000+ attendees for Mondial Foot 26, built a 1,500+ member community for Afro Business Club, and captured 100% attendee data for Club Frame MTL." />
+</head>
+
+<body class="min-h-screen bg-black text-white font-sans antialiased selection:bg-rose-500 selection:text-white">
+	
+	<!-- Header / Navigation -->
+	<nav class="fixed w-full z-50 bg-black/90 backdrop-blur-lg border-b border-white/10">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="flex items-center justify-between h-16 sm:h-20">
+				<!-- Brand Logo -->
+				<a href="/" class="flex items-center gap-2">
+					<span class="text-xl sm:text-2xl font-black tracking-tighter text-white">OCCASIA</span>
+				</a>
+
+				<!-- Desktop Navigation Links -->
+				<div class="hidden md:flex items-center gap-6 text-xs sm:text-sm font-semibold text-gray-300">
+					<a href="/platform.html" class="hover:text-rose-400 transition-colors" data-i18n="nav.software">Software</a>
+					<a href="/growth.html" class="hover:text-rose-400 transition-colors" data-i18n="nav.growth">Growth Partner</a>
+					<a href="/community.html" class="hover:text-rose-400 transition-colors" data-i18n="nav.community">Community</a>
+					<a href="/case-studies.html" class="text-rose-400 font-bold" data-i18n="nav.cases">Proof</a>
+				</div>
+
+				<!-- Right Actions & Language Toggle -->
+				<div class="flex items-center gap-2 sm:gap-3">
+					<button id="lang-toggle" onclick="toggleLanguage()" class="px-2 py-1 text-xs font-bold rounded border border-white/20 text-gray-300 hover:text-white hover:border-rose-500 transition-all">
+						FR
+					</button>
+
+					<a href="https://app.occasia.tech" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center px-3.5 py-1.5 border border-white/20 text-xs font-bold rounded-full text-white hover:bg-white/10 transition-all">
+						<span data-i18n="nav.openApp">Open App</span>
+					</a>
+
+					<a href="#contact" class="inline-flex items-center px-3.5 sm:px-5 py-2 border border-transparent text-xs sm:text-sm font-bold rounded-full text-white bg-rose-600 hover:bg-rose-700 transition-all shadow-[0_0_20px_rgba(244,63,94,0.4)] whitespace-nowrap">
+						<span data-i18n="nav.bookCall">Book Call</span>
+					</a>
+
+					<!-- Mobile Menu Toggle Button -->
+					<button onclick="toggleMobileMenu()" aria-label="Toggle Navigation Menu" class="md:hidden p-2 text-gray-300 hover:text-white focus:outline-none">
+						<svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+						<svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- Mobile Navigation Menu Drawer -->
+		<div id="mobile-menu" class="hidden md:hidden border-b border-white/10 bg-zinc-950 px-4 pt-3 pb-6 space-y-3 text-sm font-medium">
+			<a href="/platform.html" class="block py-2 text-gray-200 hover:text-rose-400" data-i18n="nav.software">Ticketing Software ($1/tkt)</a>
+			<a href="/growth.html" class="block py-2 text-gray-200 hover:text-rose-400" data-i18n="nav.growth">Event Growth Partner (Ads & Promo)</a>
+			<a href="/community.html" class="block py-2 text-gray-200 hover:text-rose-400" data-i18n="nav.community">Community Strategy</a>
+			<a href="/case-studies.html" class="block py-2 text-rose-400 font-bold" data-i18n="nav.cases">Case Studies & Proof</a>
+			<a href="https://app.occasia.tech" target="_blank" rel="noopener noreferrer" class="block py-2 text-rose-400 font-bold" data-i18n="nav.openApp">Open Occasia App →</a>
+		</div>
+	</nav>
+
+	<!-- Hero Section -->
+	<section class="relative pt-28 pb-16 sm:pt-36 sm:pb-24 bg-gradient-glow">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<span class="inline-block px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-widest bg-rose-500/20 border border-rose-500/30 text-rose-400 mb-4" data-i18n="hero.badge">
+				Proven Track Record
+			</span>
+			<h1 class="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight text-white leading-tight max-w-4xl mx-auto" data-i18n="hero.title">
+				Real Results for Organizers, Venues, & Communities
+			</h1>
+			<p class="mt-4 sm:mt-6 text-sm sm:text-lg text-gray-300 leading-relaxed max-w-2xl mx-auto px-2 sm:px-0" data-i18n="hero.desc">
+				Explore how Occasia software and done-for-you growth services have powered sold-out events, scaled membership communities, and captured owned attendee databases.
+			</p>
+		</div>
+	</section>
+
+	<!-- Deep-Dive Case Studies List -->
+	<section class="bg-zinc-950 py-16 sm:py-24 border-t border-white/10">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 sm:space-y-24">
+
+			<!-- Case Study 1: Mondial Foot 26 -->
+			<div class="rounded-3xl border border-white/15 bg-zinc-900 overflow-hidden shadow-2xl grid grid-cols-1 lg:grid-cols-12 gap-0">
+				<div class="lg:col-span-6 relative h-64 lg:h-auto overflow-hidden">
+					<img src="/images/mondial_foot.jpg" alt="Mondial Foot 26 World Cup Crowd" class="w-full h-full object-cover" />
+					<div class="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-black/80 via-transparent to-transparent"></div>
+					<span class="absolute top-6 left-6 text-xs font-black uppercase px-3 py-1.5 rounded bg-rose-600 text-white">Levels 1 & 2</span>
+				</div>
+				<div class="lg:col-span-6 p-6 sm:p-10 flex flex-col justify-between">
+					<div>
+						<div class="text-xs text-rose-400 font-bold uppercase tracking-widest">Growth Partner Case Study</div>
+						<h3 class="text-3xl font-black text-white mt-1">Mondial Foot 26</h3>
+						<div class="text-3xl font-extrabold text-white mt-2">6,000+ Total Attendees</div>
+						<p class="text-xs sm:text-sm text-gray-300 mt-4 leading-relaxed" data-i18n="cs1.desc">
+							Mondial Foot 26 required high-capacity ticketing and active promotion to fill fan zone venues for World Cup broadcasts. Occasia provided Level 1 ticketing software and Level 2 managed Meta ad campaigns, driving over 6,000+ attendees to sold-out screenings.
+						</p>
+
+						<div class="mt-6 grid grid-cols-2 gap-4 pt-4 border-t border-white/10 text-xs">
+							<div>
+								<div class="text-rose-400 font-bold">Services Provided</div>
+								<div class="text-gray-300 mt-0.5">Managed Meta Ads & Ticketing App</div>
+							</div>
+							<div>
+								<div class="text-rose-400 font-bold">Key Outcome</div>
+								<div class="text-gray-300 mt-0.5">6k+ Ticketed Fans Hosted</div>
+							</div>
+						</div>
+					</div>
+					<div class="mt-8 pt-4 border-t border-white/10 flex items-center justify-between">
+						<span class="text-xs text-gray-400">Official Growth Partner</span>
+						<a href="https://mondialfoot26.com/" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-rose-400 hover:text-rose-300">Visit mondialfoot26.com →</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- Case Study 2: Afro Business Club -->
+			<div class="rounded-3xl border border-white/15 bg-zinc-900 overflow-hidden shadow-2xl grid grid-cols-1 lg:grid-cols-12 gap-0">
+				<div class="lg:col-span-6 relative h-64 lg:h-auto overflow-hidden">
+					<img src="/images/afro_business_club.jpg" alt="Afro Business Club Dinner Experience" class="w-full h-full object-cover" />
+					<div class="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-black/80 via-transparent to-transparent"></div>
+					<span class="absolute top-6 left-6 text-xs font-black uppercase px-3 py-1.5 rounded bg-rose-600 text-white">Levels 1, 2 & 3</span>
+				</div>
+				<div class="lg:col-span-6 p-6 sm:p-10 flex flex-col justify-between">
+					<div>
+						<div class="text-xs text-rose-400 font-bold uppercase tracking-widest">Community Strategy Case Study</div>
+						<h3 class="text-3xl font-black text-white mt-1">Afro Business Club</h3>
+						<div class="text-3xl font-extrabold text-white mt-2">1,500+ Active Members</div>
+						<p class="text-xs sm:text-sm text-gray-300 mt-4 leading-relaxed" data-i18n="cs2.desc">
+							Afro Business Club needed a recurring business model to scale beyond one-off events. Occasia designed their recurring dinner series, member subscription pricing, and community onboarding—growing the club to 1,500+ subscribers, 10+ dinner events, and $10,075+ in sales.
+						</p>
+
+						<div class="mt-6 grid grid-cols-2 gap-4 pt-4 border-t border-white/10 text-xs">
+							<div>
+								<div class="text-rose-400 font-bold">Services Provided</div>
+								<div class="text-gray-300 mt-0.5">Recurring Dinners & Membership</div>
+							</div>
+							<div>
+								<div class="text-rose-400 font-bold">Key Outcome</div>
+								<div class="text-gray-300 mt-0.5">1,500 Members, 10+ Dinners</div>
+							</div>
+						</div>
+					</div>
+					<div class="mt-8 pt-4 border-t border-white/10 flex items-center justify-between">
+						<span class="text-xs text-gray-400">Community Strategy Partner</span>
+						<a href="https://afrobusinessclub.com/" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-rose-400 hover:text-rose-300">Visit afrobusinessclub.com →</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- Case Study 3: Club Frame MTL -->
+			<div class="rounded-3xl border border-white/15 bg-zinc-900 overflow-hidden shadow-2xl grid grid-cols-1 lg:grid-cols-12 gap-0">
+				<div class="lg:col-span-6 relative h-64 lg:h-auto overflow-hidden">
+					<img src="/images/club_frame.jpg" alt="Club Frame Nightclub MTL" class="w-full h-full object-cover" />
+					<div class="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-black/80 via-transparent to-transparent"></div>
+					<span class="absolute top-6 left-6 text-xs font-black uppercase px-3 py-1.5 rounded bg-emerald-600 text-white">Levels 1 & 2</span>
+				</div>
+				<div class="lg:col-span-6 p-6 sm:p-10 flex flex-col justify-between">
+					<div>
+						<div class="text-xs text-emerald-400 font-bold uppercase tracking-widest">Audience Data Case Study</div>
+						<h3 class="text-3xl font-black text-white mt-1">Club Frame MTL</h3>
+						<div class="text-3xl font-extrabold text-white mt-2">100% Owned Attendee Data</div>
+						<p class="text-xs sm:text-sm text-gray-300 mt-4 leading-relaxed" data-i18n="cs3.desc">
+							Nightclub venues historically lose attendee contact info at the door. Occasia integrated an audience lead capture system and tracking pixels, converting guest check-ins into an owned email database for targeted retargeting campaigns.
+						</p>
+
+						<div class="mt-6 grid grid-cols-2 gap-4 pt-4 border-t border-white/10 text-xs">
+							<div>
+								<div class="text-emerald-400 font-bold">Services Provided</div>
+								<div class="text-gray-300 mt-0.5">Ticketing & Lead Capture System</div>
+							</div>
+							<div>
+								<div class="text-emerald-400 font-bold">Key Outcome</div>
+								<div class="text-gray-300 mt-0.5">Owned Audience Database</div>
+							</div>
+						</div>
+					</div>
+					<div class="mt-8 pt-4 border-t border-white/10 flex items-center justify-between">
+						<span class="text-xs text-gray-400">Audience System Partner</span>
+						<a href="https://www.clubframemtl.com/" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-rose-400 hover:text-rose-300">Visit clubframemtl.com →</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<!-- Strategy Intake Form Section -->
+	<section id="contact" class="bg-black py-12 sm:py-20 border-t border-white/10">
+		<div class="max-w-xl mx-auto px-4 sm:px-6">
+			<div class="rounded-2xl border border-rose-500/40 bg-zinc-900 p-6 sm:p-8 shadow-[0_0_40px_rgba(244,63,94,0.2)]">
+				<div class="text-center">
+					<h3 class="text-2xl font-extrabold text-white" data-i18n="form.h">Ready to Build Your Case Study?</h3>
+					<p class="text-xs text-gray-400 mt-1" data-i18n="form.sub">Book your strategy call with the Occasia founding team.</p>
+				</div>
+
+				<form id="ghl-lead-form" onsubmit="handleFormSubmit(event)" class="mt-6 space-y-3.5">
+					<div class="grid grid-cols-2 gap-2.5 sm:gap-3.5">
+						<div>
+							<input type="text" name="first_name" required placeholder="First Name" class="w-full rounded-xl bg-black/60 border border-white/15 px-3.5 sm:px-4 py-2.5 text-xs sm:text-sm text-white placeholder-gray-500 focus:border-rose-500 focus:outline-none" />
+						</div>
+						<div>
+							<input type="text" name="last_name" required placeholder="Last Name" class="w-full rounded-xl bg-black/60 border border-white/15 px-3.5 sm:px-4 py-2.5 text-xs sm:text-sm text-white placeholder-gray-500 focus:border-rose-500 focus:outline-none" />
+						</div>
+					</div>
+					<div>
+						<input type="email" name="email" required placeholder="Work Email" class="w-full rounded-xl bg-black/60 border border-white/15 px-4 py-2.5 text-sm text-white placeholder-gray-500 focus:border-rose-500 focus:outline-none" />
+					</div>
+					<div>
+						<input type="tel" name="phone" required placeholder="Phone Number (e.g. +1 514 123 4567)" class="w-full rounded-xl bg-black/60 border border-white/15 px-4 py-2.5 text-sm text-white placeholder-gray-500 focus:border-rose-500 focus:outline-none" />
+					</div>
+					<div>
+						<input type="text" name="organization" required placeholder="Organization / Venue Name" class="w-full rounded-xl bg-black/60 border border-white/15 px-4 py-2.5 text-sm text-white placeholder-gray-500 focus:border-rose-500 focus:outline-none" />
+					</div>
+					<div>
+						<select name="service_tier" required class="w-full rounded-xl bg-black/60 border border-white/15 px-4 py-2.5 text-sm text-white focus:border-rose-500 focus:outline-none">
+							<option value="Level 1">Level 1: Ticketing Software ($1/ticket)</option>
+							<option value="Level 2" selected>Level 2: Event Growth Partner (Ads & Promo)</option>
+							<option value="Level 3">Level 3: Done-For-You Community Growth</option>
+						</select>
+					</div>
+
+					<button type="submit" id="form-submit-btn" class="w-full py-3 rounded-full bg-rose-600 text-white font-bold text-sm shadow-md hover:bg-rose-700 transition-all flex items-center justify-center gap-2">
+						<span data-i18n="form.btn">Book Strategy Call</span>
+					</button>
+
+					<div id="form-success" class="hidden text-center p-3 rounded-xl bg-emerald-950/60 border border-emerald-500/30 text-emerald-300 text-xs font-bold" data-i18n="form.success">
+						✓ Thank you! Our team will call you back within the next few hours.
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="border-t border-white/10 bg-black py-8 text-xs text-gray-500">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
+			<div>
+				<span class="font-black text-white text-base">OCCASIA</span>
+				<span class="ml-2 text-gray-400">© 2026 Occasia Event Services</span>
+			</div>
+			<div class="flex items-center gap-4 text-gray-400">
+				<a href="/platform.html" class="hover:text-white">Software</a>
+				<a href="/growth.html" class="hover:text-white">Growth</a>
+				<a href="/community.html" class="hover:text-white">Community</a>
+				<a href="/privacy-policy.html" class="hover:text-white">Privacy</a>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Scripts, Language Toggle & GHL Handler -->
+	<script>
+		// ACTIVE GHL WEBHOOK ENDPOINT:
+		const GHL_WEBHOOK_URL = "https://services.leadconnectorhq.com/hooks/jHbmtYzLJIFF9GbAX6mz/webhook-trigger/fb5867e2-02e8-4eb9-837f-33b5b0bc59b5"; 
+
+		let currentLang = 'en';
+
+		const translations = {
+			"en": {
+				"nav.software": "Software",
+				"nav.growth": "Growth Partner",
+				"nav.community": "Community",
+				"nav.cases": "Proof",
+				"nav.openApp": "Open App",
+				"nav.bookCall": "Book Call",
+				"hero.badge": "Proven Track Record",
+				"hero.title": "Real Results for Organizers, Venues, & Communities",
+				"hero.desc": "Explore how Occasia software and done-for-you growth services have powered sold-out events, scaled membership communities, and captured owned attendee databases.",
+				"cs1.desc": "Mondial Foot 26 required high-capacity ticketing and active promotion to fill fan zone venues for World Cup broadcasts. Occasia provided Level 1 ticketing software and Level 2 managed Meta ad campaigns, driving over 6,000+ attendees to sold-out screenings.",
+				"cs2.desc": "Afro Business Club needed a recurring business model to scale beyond one-off events. Occasia designed their recurring dinner series, member subscription pricing, and community onboarding—growing the club to 1,500+ subscribers, 10+ dinner events, and $10,075+ in sales.",
+				"cs3.desc": "Nightclub venues historically lose attendee contact info at the door. Occasia integrated an audience lead capture system and tracking pixels, converting guest check-ins into an owned email database for targeted retargeting campaigns.",
+				"form.h": "Ready to Build Your Case Study?",
+				"form.sub": "Book your strategy call with the Occasia founding team.",
+				"form.btn": "Book Strategy Call",
+				"form.success": "✓ Thank you! Our team will call you back within the next few hours."
+			},
+			"fr": {
+				"nav.software": "Logiciel",
+				"nav.growth": "Partenaire Croissance",
+				"nav.community": "Communauté",
+				"nav.cases": "Preuves",
+				"nav.openApp": "Ouvrir l'App",
+				"nav.bookCall": "Réserver",
+				"hero.badge": "Résultats Prouvés",
+				"hero.title": "Résultats Concrets pour Organisateurs & Communautés",
+				"hero.desc": "Découvrez comment le logiciel et les services Occasia ont propulsé des événements à guichet fermé et bâti des communautés fidèles.",
+				"cs1.desc": "Mondial Foot 26 avait besoin d'une billetterie haute capacité et de promotion active pour remplir ses fan zones. Occasia a fourni le logiciel Niveau 1 et les publicités Meta Niveau 2, attirant plus de 6 000+ participants.",
+				"cs2.desc": "Afro Business Club souhaitait créer un modèle récurrent. Occasia a conçu la série de dîners, les abonnements membres et l'intégration—faisant passer le club à 1 500+ membres et 10+ dîners.",
+				"cs3.desc": "Les clubs perdent souvent les contacts des clients à la porte. Occasia a intégré un système de capture d'audience et de retargeting, transformant les entrées en base de données email propriétaire.",
+				"form.h": "Prêt à Créer Votre Étude de Cas ?",
+				"form.sub": "Réservez votre appel stratégique avec les fondateurs d'Occasia.",
+				"form.btn": "Réserver un Appel",
+				"form.success": "✓ Merci ! Notre équipe vous rappellera rapidement dans les prochaines heures."
+			}
+		};
+
+		function toggleLanguage() {
+			currentLang = currentLang === 'en' ? 'fr' : 'en';
+			const dict = translations[currentLang];
+			document.querySelectorAll('[data-i18n]').forEach((el) => {
+				const key = el.getAttribute('data-i18n');
+				if (dict[key]) el.textContent = dict[key];
+			});
+			document.documentElement.lang = currentLang;
+			document.getElementById('lang-toggle').textContent = currentLang === 'en' ? 'FR' : 'EN';
+		}
+
+		function toggleMobileMenu() {
+			const menu = document.getElementById('mobile-menu');
+			const iconOpen = document.getElementById('menu-icon-open');
+			const iconClose = document.getElementById('menu-icon-close');
+			menu.classList.toggle('hidden');
+			iconOpen.classList.toggle('hidden');
+			iconClose.classList.toggle('hidden');
+		}
+
+		async function handleFormSubmit(e) {
+			e.preventDefault();
+			const form = e.target;
+			const submitBtn = document.getElementById('form-submit-btn');
+			const successMsg = document.getElementById('form-success');
+
+			const firstName = form.first_name.value;
+			const lastName = form.last_name.value;
+
+			const formData = {
+				first_name: firstName,
+				last_name: lastName,
+				full_name: `${firstName} ${lastName}`.trim(),
+				email: form.email.value,
+				phone: form.phone.value,
+				organization: form.organization.value,
+				service_tier: form.service_tier.value,
+				submitted_at: new Date().toISOString()
+			};
+
+			if (GHL_WEBHOOK_URL) {
+				try {
+					submitBtn.disabled = true;
+					submitBtn.textContent = 'Sending...';
+
+					await fetch(GHL_WEBHOOK_URL, {
+						method: 'POST',
+						headers: { 'Content-Type': 'application/json' },
+						body: JSON.stringify(formData)
+					});
+				} catch (err) {
+					console.error('Webhook error:', err);
+				} finally {
+					submitBtn.disabled = false;
+					submitBtn.textContent = translations[currentLang]["form.btn"];
+				}
+			}
+
+			successMsg.classList.remove('hidden');
+			form.reset();
+		}
+	</script>
+</body>
+
+</html>

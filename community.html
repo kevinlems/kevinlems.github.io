@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<title>Occasia Community Growth – Recurring Dinners, Memberships & Retention Strategy</title>
+	<link rel="icon" type="image/png" href="/images/logo.png" />
+
+	<!-- Tailwind CSS & Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+	
+	<!-- Meta Pixel Code -->
+	<script>
+	!function(f,b,e,v,n,t,s)
+	{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+	n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+	if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+	n.queue=[];t=b.createElement(e);t.async=!0;
+	t.src=v;s=b.getElementsByTagName(e)[0];
+	s.parentNode.insertBefore(t,s)}(window, document,'script',
+	'https://connect.facebook.net/en_US/fbevents.js');
+	fbq('init', '812172011245358');
+	fbq('track', 'PageView');
+	</script>
+	<noscript><img height="1" width="1" style="display:none"
+	src="https://www.facebook.com/tr?id=812172011245358&ev=PageView&noscript=1"
+	/></noscript>
+	<!-- End Meta Pixel Code -->
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script src="https://unpkg.com/lucide@latest"></script>
+	<style>
+		body {
+			font-family: 'Inter', sans-serif;
+			background-color: #000000;
+			color: #ffffff;
+			overflow-x: hidden;
+		}
+		
+		.text-gradient {
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-image: linear-gradient(135deg, #f43f5e 0%, #fb7185 50%, #fda4af 100%);
+		}
+
+		.bg-gradient-glow {
+			background: radial-gradient(circle at 50% 15%, rgba(244, 63, 94, 0.2) 0%, rgba(0, 0, 0, 0) 65%);
+		}
+	</style>
+	<meta name="description"
+		content="Occasia Community Growth Strategy: Turn one-off events into recurring dinner series, subscriber memberships, and long-term community monetization." />
+</head>
+
+<body class="min-h-screen bg-black text-white font-sans antialiased selection:bg-rose-500 selection:text-white">
+	
+	<!-- Header / Navigation -->
+	<nav class="fixed w-full z-50 bg-black/90 backdrop-blur-lg border-b border-white/10">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="flex items-center justify-between h-16 sm:h-20">
+				<!-- Brand Logo -->
+				<a href="/" class="flex items-center gap-2">
+					<span class="text-xl sm:text-2xl font-black tracking-tighter text-white">OCCASIA</span>
+				</a>
+
+				<!-- Desktop Navigation Links -->
+				<div class="hidden md:flex items-center gap-6 text-xs sm:text-sm font-semibold text-gray-300">
+					<a href="/platform.html" class="hover:text-rose-400 transition-colors" data-i18n="nav.software">Software</a>
+					<a href="/growth.html" class="hover:text-rose-400 transition-colors" data-i18n="nav.growth">Growth Partner</a>
+					<a href="/community.html" class="text-rose-400 font-bold" data-i18n="nav.community">Community</a>
+					<a href="/case-studies.html" class="hover:text-rose-400 transition-colors" data-i18n="nav.cases">Proof</a>
+				</div>
+
+				<!-- Right Actions & Language Toggle -->
+				<div class="flex items-center gap-2 sm:gap-3">
+					<button id="lang-toggle" onclick="toggleLanguage()" class="px-2 py-1 text-xs font-bold rounded border border-white/20 text-gray-300 hover:text-white hover:border-rose-500 transition-all">
+						FR
+					</button>
+
+					<a href="https://app.occasia.tech" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center px-3.5 py-1.5 border border-white/20 text-xs font-bold rounded-full text-white hover:bg-white/10 transition-all">
+						<span data-i18n="nav.openApp">Open App</span>
+					</a>
+
+					<a href="#contact" class="inline-flex items-center px-3.5 sm:px-5 py-2 border border-transparent text-xs sm:text-sm font-bold rounded-full text-white bg-rose-600 hover:bg-rose-700 transition-all shadow-[0_0_20px_rgba(244,63,94,0.4)] whitespace-nowrap">
+						<span data-i18n="nav.bookCall">Book Call</span>
+					</a>
+
+					<!-- Mobile Menu Toggle Button -->
+					<button onclick="toggleMobileMenu()" aria-label="Toggle Navigation Menu" class="md:hidden p-2 text-gray-300 hover:text-white focus:outline-none">
+						<svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+						<svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- Mobile Navigation Menu Drawer -->
+		<div id="mobile-menu" class="hidden md:hidden border-b border-white/10 bg-zinc-950 px-4 pt-3 pb-6 space-y-3 text-sm font-medium">
+			<a href="/platform.html" class="block py-2 text-gray-200 hover:text-rose-400" data-i18n="nav.software">Ticketing Software ($1/tkt)</a>
+			<a href="/growth.html" class="block py-2 text-gray-200 hover:text-rose-400" data-i18n="nav.growth">Event Growth Partner (Ads & Promo)</a>
+			<a href="/community.html" class="block py-2 text-rose-400 font-bold" data-i18n="nav.community">Community Strategy</a>
+			<a href="/case-studies.html" class="block py-2 text-gray-200 hover:text-rose-400" data-i18n="nav.cases">Case Studies & Proof</a>
+			<a href="https://app.occasia.tech" target="_blank" rel="noopener noreferrer" class="block py-2 text-rose-400 font-bold" data-i18n="nav.openApp">Open Occasia App →</a>
+		</div>
+	</nav>
+
+	<!-- Hero Section -->
+	<section class="relative pt-28 pb-16 sm:pt-36 sm:pb-24 bg-gradient-glow">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center max-w-3xl mx-auto">
+				<span class="inline-block px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-widest bg-rose-500/20 border border-rose-500/30 text-rose-400 mb-4" data-i18n="hero.badge">
+					Level 3: Community Growth Model
+				</span>
+				<h1 class="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight text-white leading-tight" data-i18n="hero.title">
+					Turn One-Off Events Into a Recurring Community Engine
+				</h1>
+				<p class="mt-4 sm:mt-6 text-sm sm:text-lg text-gray-300 leading-relaxed px-2 sm:px-0" data-i18n="hero.desc">
+					We design, launch, and execute recurring dinner series, exclusive member subscriptions, and retention systems that transform event buyers into a loyal, monetizable community.
+				</p>
+
+				<!-- Hero CTA Buttons -->
+				<div class="mt-8 flex flex-row items-center justify-center gap-3 sm:gap-4 px-2">
+					<a href="#contact" class="px-5 sm:px-8 py-3.5 rounded-full bg-rose-600 text-white font-bold text-xs sm:text-sm shadow-[0_0_25px_rgba(244,63,94,0.4)] hover:bg-rose-700 transition-all text-center whitespace-nowrap" data-i18n="hero.cta1">
+						Explore Community Growth →
+					</a>
+					<a href="#pillars" class="px-5 sm:px-7 py-3.5 rounded-full border border-white/20 text-xs sm:text-sm font-semibold text-white hover:bg-white/10 transition-all text-center whitespace-nowrap" data-i18n="hero.cta2">
+						Community Pillars
+					</a>
+				</div>
+			</div>
+
+			<!-- Featured Proof Case Study Card (Afro Business Club) -->
+			<div class="mt-12 sm:mt-16 max-w-4xl mx-auto">
+				<div class="rounded-2xl border border-rose-500/40 bg-zinc-900/90 overflow-hidden shadow-[0_0_50px_rgba(244,63,94,0.25)] grid grid-cols-1 md:grid-cols-12 gap-0">
+					<div class="md:col-span-6 relative h-56 md:h-auto overflow-hidden">
+						<img src="/images/afro_business_club.jpg" alt="Afro Business Club Dinner Experience" class="w-full h-full object-cover" />
+						<div class="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-black/80 via-transparent to-transparent"></div>
+						<span class="absolute top-4 left-4 text-[10px] font-black uppercase px-3 py-1 rounded bg-rose-600 text-white">Community Blueprint</span>
+					</div>
+					<div class="md:col-span-6 p-6 sm:p-8 flex flex-col justify-between">
+						<div>
+							<div class="text-xs text-rose-400 font-bold uppercase tracking-wider">Level 3 Success Story</div>
+							<h3 class="text-2xl font-black text-white mt-1">Afro Business Club</h3>
+							<div class="text-3xl font-extrabold text-white mt-2">1,500+ Active Members</div>
+							<p class="text-xs sm:text-sm text-gray-300 mt-2 leading-relaxed" data-i18n="proof.desc">
+								Occasia architected the recurring dinner model, membership subscription tier, and community strategy—scaling to 10+ dinner events & 1,000+ total attendees.
+							</p>
+						</div>
+						<div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between">
+							<span class="text-xs text-gray-400">10+ Dinner Events Held</span>
+							<a href="https://afrobusinessclub.com/" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-rose-400 hover:text-rose-300">afrobusinessclub.com →</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Community Growth Pillars Grid -->
+	<section id="pillars" class="bg-zinc-950 py-16 sm:py-24 border-t border-white/10">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			
+			<div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+				<h2 class="text-xs font-black uppercase tracking-widest text-rose-500" data-i18n="pil.sub">The Community Playbook</h2>
+				<h3 class="text-2xl sm:text-4xl font-extrabold text-white mt-1" data-i18n="pil.title">4 Pillars of Community Retention</h3>
+				<p class="mt-2 text-xs sm:text-sm text-gray-400" data-i18n="pil.desc">Move beyond one-off ticket sales and create predictable recurring event revenue.</p>
+			</div>
+
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+
+				<!-- Pillar 1: Recurring Business & Social Dinners -->
+				<div class="rounded-2xl border border-white/10 bg-zinc-900 p-6 sm:p-8 flex flex-col justify-between hover:border-rose-500/40 transition-all group">
+					<div>
+						<div class="w-12 h-12 rounded-xl bg-rose-500/10 border border-rose-500/30 flex items-center justify-center text-rose-400 font-bold text-xl mb-4 group-hover:bg-rose-600 group-hover:text-white transition-all">
+							🍽️
+						</div>
+						<h4 class="text-xl font-bold text-white" data-i18n="p1.t">Recurring Dinner Series Execution</h4>
+						<p class="text-xs sm:text-sm text-gray-300 mt-2 leading-relaxed" data-i18n="p1.d">
+							We structure intimate, high-margin dinner experiences and networking series. From restaurant partner negotiation to seating curation and host scripts, we turn dining into high-retention community rituals.
+						</p>
+					</div>
+					<div class="mt-6 pt-4 border-t border-white/10 text-xs font-semibold text-rose-400" data-i18n="p1.b">High-Margin Intimate Gatherings</div>
+				</div>
+
+				<!-- Pillar 2: Membership & Subscription Monetization -->
+				<div class="rounded-2xl border border-white/10 bg-zinc-900 p-6 sm:p-8 flex flex-col justify-between hover:border-rose-500/40 transition-all group">
+					<div>
+						<div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-bold text-xl mb-4 group-hover:bg-emerald-600 group-hover:text-white transition-all">
+							💳
+						</div>
+						<h4 class="text-xl font-bold text-white" data-i18n="p2.t">Membership & Subscription Model</h4>
+						<p class="text-xs sm:text-sm text-gray-300 mt-2 leading-relaxed" data-i18n="p2.d">
+							Convert occasional attendees into monthly or quarterly paying subscribers with guaranteed dinner access, VIP perks, and member-only directory listings for predictable monthly recurring revenue.
+						</p>
+					</div>
+					<div class="mt-6 pt-4 border-t border-white/10 text-xs font-semibold text-emerald-400" data-i18n="p2.b">Predictable Monthly Revenue</div>
+				</div>
+
+				<!-- Pillar 3: Member Onboarding & Retention Systems -->
+				<div class="rounded-2xl border border-white/10 bg-zinc-900 p-6 sm:p-8 flex flex-col justify-between hover:border-rose-500/40 transition-all group">
+					<div>
+						<div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 font-bold text-xl mb-4 group-hover:bg-purple-600 group-hover:text-white transition-all">
+							💬
+						</div>
+						<h4 class="text-xl font-bold text-white" data-i18n="p3.t">Community Retention & Group Infrastructure</h4>
+						<p class="text-xs sm:text-sm text-gray-300 mt-2 leading-relaxed" data-i18n="p3.d">
+							We implement member onboarding sequences, dedicated group messaging channels (WhatsApp/Telegram/Slack), and feedback loops to keep your community engaged between events.
+						</p>
+					</div>
+					<div class="mt-6 pt-4 border-t border-white/10 text-xs font-semibold text-purple-400" data-i18n="p3.b">Active Between-Event Engagement</div>
+				</div>
+
+				<!-- Pillar 4: Corporate & Brand Sponsorships -->
+				<div class="rounded-2xl border border-white/10 bg-zinc-900 p-6 sm:p-8 flex flex-col justify-between hover:border-rose-500/40 transition-all group">
+					<div>
+						<div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 font-bold text-xl mb-4 group-hover:bg-amber-600 group-hover:text-white transition-all">
+							🤝
+						</div>
+						<h4 class="text-xl font-bold text-white" data-i18n="p4.t">Sponsorship & Partnership Strategy</h4>
+						<p class="text-xs sm:text-sm text-gray-300 mt-2 leading-relaxed" data-i18n="p4.d">
+							Monetize your curated audience by securing brand sponsors, corporate partners, and venue drink sponsors looking to reach your high-value community members.
+						</p>
+					</div>
+					<div class="mt-6 pt-4 border-t border-white/10 text-xs font-semibold text-amber-400" data-i18n="p4.b">Additional Sponsorship Income</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<!-- Strategy Intake Form Section (Pre-selected Level 3 for GHL) -->
+	<section id="contact" class="bg-black py-12 sm:py-20 border-t border-white/10">
+		<div class="max-w-xl mx-auto px-4 sm:px-6">
+			<div class="rounded-2xl border border-rose-500/40 bg-zinc-900 p-6 sm:p-8 shadow-[0_0_40px_rgba(244,63,94,0.2)]">
+				<div class="text-center">
+					<h3 class="text-2xl font-extrabold text-white" data-i18n="form.h">Explore Community Strategy</h3>
+					<p class="text-xs text-gray-400 mt-1" data-i18n="form.sub">Schedule a community strategy audit with our founding team.</p>
+				</div>
+
+				<form id="ghl-lead-form" onsubmit="handleFormSubmit(event)" class="mt-6 space-y-3.5">
+					<div class="grid grid-cols-2 gap-2.5 sm:gap-3.5">
+						<div>
+							<input type="text" name="first_name" required placeholder="First Name" class="w-full rounded-xl bg-black/60 border border-white/15 px-3.5 sm:px-4 py-2.5 text-xs sm:text-sm text-white placeholder-gray-500 focus:border-rose-500 focus:outline-none" />
+						</div>
+						<div>
+							<input type="text" name="last_name" required placeholder="Last Name" class="w-full rounded-xl bg-black/60 border border-white/15 px-3.5 sm:px-4 py-2.5 text-xs sm:text-sm text-white placeholder-gray-500 focus:border-rose-500 focus:outline-none" />
+						</div>
+					</div>
+					<div>
+						<input type="email" name="email" required placeholder="Work Email" class="w-full rounded-xl bg-black/60 border border-white/15 px-4 py-2.5 text-sm text-white placeholder-gray-500 focus:border-rose-500 focus:outline-none" />
+					</div>
+					<div>
+						<input type="tel" name="phone" required placeholder="Phone Number (e.g. +1 514 123 4567)" class="w-full rounded-xl bg-black/60 border border-white/15 px-4 py-2.5 text-sm text-white placeholder-gray-500 focus:border-rose-500 focus:outline-none" />
+					</div>
+					<div>
+						<input type="text" name="organization" required placeholder="Organization / Venue Name" class="w-full rounded-xl bg-black/60 border border-white/15 px-4 py-2.5 text-sm text-white placeholder-gray-500 focus:border-rose-500 focus:outline-none" />
+					</div>
+					<div>
+						<select name="service_tier" required class="w-full rounded-xl bg-black/60 border border-white/15 px-4 py-2.5 text-sm text-white focus:border-rose-500 focus:outline-none">
+							<option value="Level 1">Level 1: Ticketing Software ($1/ticket)</option>
+							<option value="Level 2">Level 2: Event Growth Partner (Ads & Promo)</option>
+							<option value="Level 3" selected>Level 3: Done-For-You Community Growth</option>
+						</select>
+					</div>
+
+					<button type="submit" id="form-submit-btn" class="w-full py-3 rounded-full bg-rose-600 text-white font-bold text-sm shadow-md hover:bg-rose-700 transition-all flex items-center justify-center gap-2">
+						<span data-i18n="form.btn">Request Community Audit</span>
+					</button>
+
+					<div id="form-success" class="hidden text-center p-3 rounded-xl bg-emerald-950/60 border border-emerald-500/30 text-emerald-300 text-xs font-bold" data-i18n="form.success">
+						✓ Thank you! Our team will call you back within the next few hours.
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="border-t border-white/10 bg-black py-8 text-xs text-gray-500">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
+			<div>
+				<span class="font-black text-white text-base">OCCASIA</span>
+				<span class="ml-2 text-gray-400">© 2026 Occasia Event Services</span>
+			</div>
+			<div class="flex items-center gap-4 text-gray-400">
+				<a href="/platform.html" class="hover:text-white">Software</a>
+				<a href="/growth.html" class="hover:text-white">Growth</a>
+				<a href="/community.html" class="text-white font-bold">Community</a>
+				<a href="/privacy-policy.html" class="hover:text-white">Privacy</a>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Scripts, Language Toggle & GHL Handler -->
+	<script>
+		// ACTIVE GHL WEBHOOK ENDPOINT:
+		const GHL_WEBHOOK_URL = "https://services.leadconnectorhq.com/hooks/jHbmtYzLJIFF9GbAX6mz/webhook-trigger/fb5867e2-02e8-4eb9-837f-33b5b0bc59b5"; 
+
+		let currentLang = 'en';
+
+		const translations = {
+			"en": {
+				"nav.software": "Software",
+				"nav.growth": "Growth Partner",
+				"nav.community": "Community",
+				"nav.cases": "Proof",
+				"nav.openApp": "Open App",
+				"nav.bookCall": "Book Call",
+				"hero.badge": "Level 3: Community Growth Model",
+				"hero.title": "Turn One-Off Events Into a Recurring Community Engine",
+				"hero.desc": "We design, launch, and execute recurring dinner series, exclusive member subscriptions, and retention systems that transform event buyers into a loyal, monetizable community.",
+				"hero.cta1": "Explore Community Growth →",
+				"hero.cta2": "Community Pillars",
+				"proof.desc": "Occasia architected the recurring dinner model, membership subscription tier, and community strategy—scaling to 10+ dinner events & 1,000+ total attendees.",
+				"pil.sub": "The Community Playbook",
+				"pil.title": "4 Pillars of Community Retention",
+				"pil.desc": "Move beyond one-off ticket sales and create predictable recurring event revenue.",
+				"p1.t": "Recurring Dinner Series Execution",
+				"p1.d": "We structure intimate, high-margin dinner experiences and networking series. From restaurant partner negotiation to seating curation and host scripts, we turn dining into high-retention community rituals.",
+				"p1.b": "High-Margin Intimate Gatherings",
+				"p2.t": "Membership & Subscription Model",
+				"p2.d": "Convert occasional attendees into monthly or quarterly paying subscribers with guaranteed dinner access, VIP perks, and member-only directory listings for predictable monthly recurring revenue.",
+				"p2.b": "Predictable Monthly Revenue",
+				"p3.t": "Community Retention & Group Infrastructure",
+				"p3.d": "We implement member onboarding sequences, dedicated group messaging channels (WhatsApp/Telegram/Slack), and feedback loops to keep your community engaged between events.",
+				"p3.b": "Active Between-Event Engagement",
+				"p4.t": "Sponsorship & Partnership Strategy",
+				"p4.d": "Monetize your curated audience by securing brand sponsors, corporate partners, and venue drink sponsors looking to reach your high-value community members.",
+				"p4.b": "Additional Sponsorship Income",
+				"form.h": "Explore Community Strategy",
+				"form.sub": "Schedule a community strategy audit with our founding team.",
+				"form.btn": "Request Community Audit",
+				"form.success": "✓ Thank you! Our team will call you back within the next few hours."
+			},
+			"fr": {
+				"nav.software": "Logiciel",
+				"nav.growth": "Partenaire Croissance",
+				"nav.community": "Communauté",
+				"nav.cases": "Preuves",
+				"nav.openApp": "Ouvrir l'App",
+				"nav.bookCall": "Réserver",
+				"hero.badge": "Niveau 3 : Modèle de Croissance Communautaire",
+				"hero.title": "Transformez vos Événements en Moteur Communautaire Récurrent",
+				"hero.desc": "Nous concevons et gérons des séries de dîners récurrents, des adhésions d'abonnés et des systèmes de rétention pour monétiser votre audience sur le long terme.",
+				"hero.cta1": "Explorer la Croissance →",
+				"hero.cta2": "Piliers Communautaires",
+				"proof.desc": "Occasia a conçu le modèle de dîners récurrents et la stratégie d'adhésion du club, atteignant plus de 10 événements et 1 000+ participants.",
+				"pil.sub": "Le Guide Communautaire",
+				"pil.title": "4 Piliers de Rétention Communautaire",
+				"pil.desc": "Dépassez la vente de billets ponctuelle et créez des revenus récurrents prévisibles.",
+				"p1.t": "Exécution de Dîners Récurrents",
+				"p1.d": "Organisation de dîners d'affaires et rencontres thématiques. Négociation avec les restaurants, gestion des tables et scripts d'animation.",
+				"p1.b": "Événements Intimistes à Forte Marge",
+				"p2.t": "Modèle d'Abonnement et Membres",
+				"p2.d": "Transformez les participants occasionnels en abonnés payants avec accès prioritaire aux dîners et avantages VIP.",
+				"p2.b": "Revenus Mensuels Prévisibles",
+				"p3.t": "Rétention & Canaux Privés",
+				"p3.d": "Mise en place de séquences d'accueil, groupes de discussion privés (WhatsApp/Slack) et animations pour garder la communauté active entre chaque événement.",
+				"p3.b": "Engagement Continu entre les Événements",
+				"p4.t": "Stratégie de Partenariats & Sponsors",
+				"p4.d": "Monétisez votre communauté en attirant des sponsors de marque et des lieux partenaires désireux de toucher vos membres VIP.",
+				"p4.b": "Revenus Publicitaires Complémentaires",
+				"form.h": "Explorer la Stratégie Communautaire",
+				"form.sub": "Planifiez un audit stratégique communautaire avec nos fondateurs.",
+				"form.btn": "Demander un Audit",
+				"form.success": "✓ Merci ! Notre équipe vous rappellera rapidement dans les prochaines heures."
+			}
+		};
+
+		function toggleLanguage() {
+			currentLang = currentLang === 'en' ? 'fr' : 'en';
+			const dict = translations[currentLang];
+			document.querySelectorAll('[data-i18n]').forEach((el) => {
+				const key = el.getAttribute('data-i18n');
+				if (dict[key]) el.textContent = dict[key];
+			});
+			document.documentElement.lang = currentLang;
+			document.getElementById('lang-toggle').textContent = currentLang === 'en' ? 'FR' : 'EN';
+		}
+
+		function toggleMobileMenu() {
+			const menu = document.getElementById('mobile-menu');
+			const iconOpen = document.getElementById('menu-icon-open');
+			const iconClose = document.getElementById('menu-icon-close');
+			menu.classList.toggle('hidden');
+			iconOpen.classList.toggle('hidden');
+			iconClose.classList.toggle('hidden');
+		}
+
+		async function handleFormSubmit(e) {
+			e.preventDefault();
+			const form = e.target;
+			const submitBtn = document.getElementById('form-submit-btn');
+			const successMsg = document.getElementById('form-success');
+
+			const firstName = form.first_name.value;
+			const lastName = form.last_name.value;
+
+			const formData = {
+				first_name: firstName,
+				last_name: lastName,
+				full_name: `${firstName} ${lastName}`.trim(),
+				email: form.email.value,
+				phone: form.phone.value,
+				organization: form.organization.value,
+				service_tier: form.service_tier.value,
+				submitted_at: new Date().toISOString()
+			};
+
+			if (GHL_WEBHOOK_URL) {
+				try {
+					submitBtn.disabled = true;
+					submitBtn.textContent = 'Sending...';
+
+					await fetch(GHL_WEBHOOK_URL, {
+						method: 'POST',
+						headers: { 'Content-Type': 'application/json' },
+						body: JSON.stringify(formData)
+					});
+				} catch (err) {
+					console.error('Webhook error:', err);
+				} finally {
+					submitBtn.disabled = false;
+					submitBtn.textContent = translations[currentLang]["form.btn"];
+				}
+			}
+
+			successMsg.classList.remove('hidden');
+			form.reset();
+		}
+	</script>
+</body>
+
+</html>
