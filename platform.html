@@ -551,16 +551,19 @@
 			const submitBtn = document.getElementById('form-submit-btn');
 			const successMsg = document.getElementById('form-success');
 
-			const firstName = form.first_name.value;
-			const lastName = form.last_name.value;
+			const firstName = form.first_name.value.trim();
+			const lastName = form.last_name.value.trim();
 
 			const formData = {
+				firstName: firstName,
+				lastName: lastName,
 				first_name: firstName,
 				last_name: lastName,
+				name: `${firstName} ${lastName}`.trim(),
 				full_name: `${firstName} ${lastName}`.trim(),
-				email: form.email.value,
-				phone: form.phone.value,
-				organization: form.organization.value,
+				email: form.email.value.trim(),
+				phone: form.phone.value.trim(),
+				organization: form.organization.value.trim(),
 				service_tier: form.service_tier.value,
 				submitted_at: new Date().toISOString()
 			};
