@@ -488,11 +488,11 @@
 						class="w-full rounded-lg bg-neutral-900 border border-neutral-800 px-3.5 py-3 text-sm text-white focus:border-neutral-500 focus:outline-none transition-colors cursor-pointer"
 					>
 						<option value="" disabled selected class="text-neutral-600">Select monthly revenue range</option>
-						<option value="Under $25k/mo">Under $25,000 / month</option>
-						<option value="$25k - $50k/mo">$25,000 – $50,000 / month</option>
-						<option value="$50k - $100k/mo">$50,000 – $100,000 / month</option>
-						<option value="$100k - $250k/mo">$100,000 – $250,000 / month</option>
-						<option value="$250k+/mo">$250,000+ / month</option>
+						<option value="under_25kmo">Under $25,000 / month</option>
+						<option value="25k__50kmo">$25,000 – $50,000 / month</option>
+						<option value="50k__100kmo">$50,000 – $100,000 / month</option>
+						<option value="100k__250kmo">$100,000 – $250,000 / month</option>
+						<option value="250kmo">$250,000+ / month</option>
 					</select>
 				</div>
 
@@ -552,7 +552,7 @@
 			const email = form.email.value.trim();
 			const phone = form.phone.value.trim();
 			const companyName = form.company_name.value.trim();
-			const mrrRange = form.mrr_range.value || "Not Specified";
+			const mrrRange = form.mrr_range.value || "";
 
 			// Exact GHL Payload Mapping with tag "dinner candidate"
 			const payload = {
