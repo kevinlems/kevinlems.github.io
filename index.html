@@ -4,14 +4,34 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-	<title>Occasia – Helping You Host Unforgettable Events</title>
+	<title>Occasia • Enterprise Relationship OS</title>
 	<link rel="icon" type="image/png" href="/images/logo.png" />
+	<meta name="title" content="Occasia • Enterprise Relationship OS" />
+	<meta name="description" content="We help B2B companies close enterprise deals through curated executive roundtables and relationship infrastructure." />
+	<meta name="theme-color" content="#080808" />
 
-	<!-- Tailwind CSS & Fonts -->
+	<!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://occasia.tech/" />
+	<meta property="og:site_name" content="Occasia" />
+	<meta property="og:title" content="Occasia • Enterprise Relationship OS" />
+	<meta property="og:description" content="We help B2B companies close enterprise deals through curated executive roundtables and relationship infrastructure." />
+	<meta property="og:image" content="https://images.unsplash.com/photo-1528605248644-14dd04022da1?q=80&w=1200&h=630&auto=format&fit=crop" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+
+	<!-- Twitter / X -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:url" content="https://occasia.tech/" />
+	<meta name="twitter:title" content="Occasia • Enterprise Relationship OS" />
+	<meta name="twitter:description" content="We help B2B companies close enterprise deals through curated executive roundtables and relationship infrastructure." />
+	<meta name="twitter:image" content="https://images.unsplash.com/photo-1528605248644-14dd04022da1?q=80&w=1200&h=630&auto=format&fit=crop" />
+
+	<!-- Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-	
+	<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
 	<!-- Meta Pixel Code -->
 	<script>
 	!function(f,b,e,v,n,t,s)
@@ -29,775 +49,618 @@
 	src="https://www.facebook.com/tr?id=812172011245358&ev=PageView&noscript=1"
 	/></noscript>
 	<!-- End Meta Pixel Code -->
+
 	<script>function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement("script");
 	o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,
 	o.onload=function(){window.trackingFunctions.onLoad({appId:"6a744160a370e800201b8b41"})},
 	document.head.appendChild(o)}initApollo();</script>
+	
 	<script src="https://cdn.tailwindcss.com"></script>
-	<script src="https://unpkg.com/lucide@latest"></script>
+
 	<style>
 		body {
-			font-family: 'Inter', sans-serif;
-			background-color: #000000;
-			color: #ffffff;
+			font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+			background-color: #080808;
+			color: #ededed;
 			overflow-x: hidden;
 		}
-		
-		.text-gradient {
-			background-clip: text;
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-			background-image: linear-gradient(135deg, #f43f5e 0%, #fb7185 50%, #fda4af 100%);
+
+		.font-display {
+			font-family: 'Space Grotesk', sans-serif;
 		}
 
-		.bg-gradient-glow {
-			background: radial-gradient(circle at 50% 15%, rgba(244, 63, 94, 0.18) 0%, rgba(0, 0, 0, 0) 65%);
+		/* Marquee Animation */
+		@keyframes marquee {
+			0% { transform: translateX(0%); }
+			100% { transform: translateX(-50%); }
+		}
+
+		.animate-marquee {
+			display: flex;
+			width: max-content;
+			animation: marquee 40s linear infinite;
+		}
+
+		.animate-marquee:hover {
+			animation-play-state: paused;
+		}
+
+		.ticker-mask {
+			mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+			-webkit-mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
 		}
 	</style>
-	<meta name="description"
-		content="Occasia provides the software base and the growth marketing team to help you fill rooms and build recurring revenue." />
 </head>
 
-<body class="min-h-screen bg-black text-white font-sans antialiased selection:bg-rose-500 selection:text-white">
-	
+<body class="min-h-screen bg-[#080808] text-[#ededed] antialiased selection:bg-neutral-800 selection:text-white">
+
 	<!-- Header / Navigation -->
-	<nav class="fixed w-full z-50 bg-black/90 backdrop-blur-lg border-b border-white/10">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+	<header class="fixed top-0 w-full z-50 bg-[#080808]/90 backdrop-blur-md border-b border-neutral-800/70">
+		<div class="max-w-6xl mx-auto px-5 sm:px-8">
 			<div class="flex items-center justify-between h-16 sm:h-20">
 				<!-- Brand Logo -->
-				<a href="/" class="flex items-center gap-2">
-					<span class="text-xl sm:text-2xl font-black tracking-tighter text-white">OCCASIA</span>
+				<a href="/" class="flex items-center gap-3">
+					<span class="text-lg font-bold tracking-tight text-white uppercase font-display">OCCASIA</span>
 				</a>
 
-				<!-- Desktop Navigation Links (Clean Streamlined Navigation) -->
-				<div class="hidden md:flex items-center gap-6 text-xs sm:text-sm font-semibold text-gray-300">
-					<a href="/platform.html" class="hover:text-rose-400 transition-colors" data-i18n="nav.software">Software</a>
-					<a href="/growth.html" class="hover:text-rose-400 transition-colors" data-i18n="nav.growth">Growth Partner</a>
-					<a href="/community.html" class="hover:text-rose-400 transition-colors" data-i18n="nav.community">Community</a>
-					<a href="/case-studies.html" class="hover:text-rose-400 transition-colors" data-i18n="nav.cases">Proof</a>
-				</div>
+				<!-- Desktop Nav Links -->
+				<nav class="hidden md:flex items-center gap-8 text-xs font-medium uppercase tracking-widest text-neutral-400">
+					<a href="#engine" class="hover:text-white transition-colors">The Engine</a>
+					<a href="#format" class="hover:text-white transition-colors">The Format</a>
+					<a href="#proof" class="hover:text-white transition-colors">Network Proof</a>
+					<a href="/software.html" class="hover:text-white transition-colors text-neutral-300">Software &amp; Ticketing &rarr;</a>
+				</nav>
 
-				<!-- Right Actions & Language Toggle -->
-				<div class="flex items-center gap-2 sm:gap-3">
-					<button id="lang-toggle" onclick="toggleLanguage()" class="px-2 py-1 text-xs font-bold rounded border border-white/20 text-gray-300 hover:text-white hover:border-rose-500 transition-all">
-						FR
-					</button>
-
-					<a href="https://app.occasia.tech" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center px-3.5 py-1.5 border border-white/20 text-xs font-bold rounded-full text-white hover:bg-white/10 transition-all">
-						<span data-i18n="nav.openApp">Open App</span>
+				<!-- Right CTA -->
+				<div class="flex items-center gap-4">
+					<a href="/software.html" class="hidden sm:inline-block text-xs font-medium text-neutral-400 hover:text-white transition-colors">
+						Software
 					</a>
-
-					<a href="#contact" class="inline-flex items-center px-3.5 sm:px-5 py-2 border border-transparent text-xs sm:text-sm font-bold rounded-full text-white bg-rose-600 hover:bg-rose-700 transition-all shadow-[0_0_20px_rgba(244,63,94,0.4)] whitespace-nowrap">
-						<span data-i18n="nav.bookCall">Book Call</span>
+					<a href="#apply" class="inline-flex items-center px-5 py-2 rounded-full border border-neutral-700 bg-neutral-900 hover:bg-neutral-800 text-white text-xs font-medium tracking-wide transition-all">
+						Request an Invitation
 					</a>
-
-					<!-- Mobile Menu Toggle Button -->
-					<button onclick="toggleMobileMenu()" aria-label="Toggle Navigation Menu" class="md:hidden p-2 text-gray-300 hover:text-white focus:outline-none">
-						<svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-						<svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-					</button>
 				</div>
 			</div>
 		</div>
+	</header>
 
-		<!-- Mobile Navigation Menu Drawer -->
-		<div id="mobile-menu" class="hidden md:hidden border-b border-white/10 bg-zinc-950 px-4 pt-3 pb-6 space-y-3 text-sm font-medium">
-			<a href="/platform.html" class="block py-2 text-gray-200 hover:text-rose-400" data-i18n="nav.software">Ticketing Software ($1/tkt)</a>
-			<a href="/growth.html" class="block py-2 text-gray-200 hover:text-rose-400" data-i18n="nav.growth">Event Growth Partner (Ads & Promo)</a>
-			<a href="/community.html" class="block py-2 text-gray-200 hover:text-rose-400" data-i18n="nav.community">Community Strategy</a>
-			<a href="/case-studies.html" class="block py-2 text-gray-200 hover:text-rose-400" data-i18n="nav.cases">Case Studies & Proof</a>
-			<a href="https://app.occasia.tech" target="_blank" rel="noopener noreferrer" class="block py-2 text-rose-400 font-bold" data-i18n="nav.openApp">Open Occasia App →</a>
-		</div>
-	</nav>
-
-	<!-- Hero Section with Multi-Device Dark Surface Showcase -->
-	<section class="relative pt-28 pb-12 sm:pt-36 sm:pb-20 bg-gradient-glow">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+	<!-- SECTION 1: HERO (ABOVE THE FOLD) -->
+	<section class="relative pt-32 pb-16 sm:pt-40 sm:pb-24 border-b border-neutral-800/80">
+		<div class="max-w-6xl mx-auto px-5 sm:px-8">
+			
+			<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
 				
-				<!-- Left Text & CTAs -->
+				<!-- Left Hero Content -->
 				<div class="lg:col-span-7 text-center lg:text-left">
-					<h1 class="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight text-white leading-tight mt-2 mb-4 sm:mb-6 min-h-[2.4em] sm:min-h-[2.2em]">
-						<span data-i18n="hero.t1">Helping You Host</span><br />
-						<span id="hero-dynamic-text" class="text-gradient inline-block transition-all duration-500 transform translate-y-0 opacity-100 mt-1">Unforgettable Events</span>
+					
+					<!-- Architectural Pre-Header -->
+					<div class="flex items-center justify-center lg:justify-start gap-3 mb-5">
+						<span class="w-6 h-[1px] bg-neutral-600"></span>
+						<p class="text-[11px] sm:text-xs font-medium uppercase tracking-[0.25em] text-neutral-400">
+							B2B Enterprise Acquisition &amp; Relationship Infrastructure
+						</p>
+					</div>
+
+					<!-- Headline -->
+					<h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.06] mb-6">
+						We Help B2B Companies Close Enterprise Deals Through Curated Executive Roundtables.
 					</h1>
 
-					<p class="mt-4 sm:mt-6 text-sm sm:text-lg text-gray-300 max-w-xl leading-relaxed mx-auto lg:mx-0 px-2 sm:px-0" data-i18n="hero.desc">
-						Occasia provides the software base and the growth marketing team to help you fill rooms and build recurring revenue.
+					<!-- Sub-Headline -->
+					<p class="text-base sm:text-lg text-neutral-300 font-light leading-relaxed max-w-xl mx-auto lg:mx-0 mb-8">
+						Helping $1M+ firms (5–30 employees) bypass cold outbound friction and compress 6-month enterprise sales cycles using closed-door dining masterminds, peer intimacy, and structured post-event relationship nurturing.
 					</p>
 
-					<!-- Single-Row Action Buttons for Mobile and Desktop -->
-					<div class="mt-8 flex flex-row items-center justify-center lg:justify-start gap-2.5 sm:gap-4 px-1 sm:px-0">
-						<a href="#contact" class="flex-1 sm:flex-initial px-4 sm:px-7 py-3 sm:py-3.5 rounded-full bg-rose-600 text-white font-bold text-xs sm:text-sm shadow-[0_0_25px_rgba(244,63,94,0.4)] hover:bg-rose-700 transition-all text-center whitespace-nowrap" data-i18n="hero.cta1">
-							Book Strategy Call
+					<!-- Primary CTA & Trust Subtext -->
+					<div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+						<a href="#apply" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-white hover:bg-neutral-200 text-black font-semibold text-sm tracking-tight transition-all">
+							Apply for a Private Strategy Session &rarr;
 						</a>
-						<a href="/platform.html" class="flex-1 sm:flex-initial px-4 sm:px-6 py-3 sm:py-3.5 rounded-full border border-white/20 text-xs sm:text-sm font-semibold text-white hover:bg-white/10 transition-all text-center whitespace-nowrap" data-i18n="hero.cta2">
-							Explore Software
-						</a>
+						<span class="text-xs text-neutral-500">
+							Strictly closed-door. Intimate tables capped at 12–15 decision-makers.
+						</span>
 					</div>
+
 				</div>
 
-				<!-- Right Hero Dashboard Visual Image (Sleek Multi-Device Showcase on Dark Surface) -->
-				<div class="hidden lg:block lg:col-span-5 relative mt-4 lg:mt-0">
-					<div class="relative overflow-hidden rounded-2xl border border-white/10 bg-black/80 shadow-[0_0_50px_rgba(244,63,94,0.2)] group">
-						<img src="/images/hero_dashboard_mockup.jpg" alt="Occasia Multi-Device Organizer Dashboard Showcase" class="w-full h-auto object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500" />
-						<div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
-						<div class="absolute bottom-3 left-4 right-4 flex items-center justify-between text-xs text-white">
-							<span class="font-bold bg-rose-600/90 backdrop-blur px-2.5 py-1 rounded-full text-[10px]">Occasia Platform & Mobile App</span>
-							<span class="text-gray-300 font-mono text-[10px]">Live Sync</span>
+				<!-- Right Visual: Editorial Executive Roundtable -->
+				<div class="lg:col-span-5">
+					<div class="relative rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-900 shadow-2xl">
+						<img 
+							src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?q=80&w=1600&auto=format&fit=crop" 
+							alt="Executive Peer Roundtable Dinner" 
+							class="w-full h-[360px] sm:h-[440px] object-cover" 
+						/>
+						<div class="p-4 bg-neutral-900/95 border-t border-neutral-800 flex items-center justify-between text-xs">
+							<span class="text-neutral-400 font-medium">Curated Decision-Maker Room</span>
+							<span class="text-neutral-500">Enterprise OS</span>
 						</div>
 					</div>
 				</div>
 
 			</div>
 
-			<!-- Mobile-Optimized 3 Global Business Metrics Cards -->
-			<div class="mt-12 sm:mt-16 grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 max-w-4xl mx-auto text-center sm:text-left">
-				<div class="rounded-xl border border-white/10 bg-zinc-900/80 p-4">
-					<div class="text-2xl sm:text-3xl font-black text-white">$1M+</div>
-					<div class="text-xs text-rose-400 font-semibold mt-0.5" data-i18n="stat.s1Label">Ticket Sales Processed</div>
-					<div class="text-[10px] text-gray-400 mt-0.5" data-i18n="stat.s1Sub">Across Partner Events</div>
-				</div>
-				<div class="rounded-xl border border-white/10 bg-zinc-900/80 p-4">
-					<div class="text-2xl sm:text-3xl font-black text-white">26,000+</div>
-					<div class="text-xs text-rose-400 font-semibold mt-0.5" data-i18n="stat.s2Label">Total Attendees</div>
-					<div class="text-[10px] text-gray-400 mt-0.5" data-i18n="stat.s2Sub">Hosted & Checked In</div>
-				</div>
-				<div class="rounded-xl border border-white/10 bg-zinc-900/80 p-4">
-					<div class="text-2xl sm:text-3xl font-black text-white">300+</div>
-					<div class="text-xs text-emerald-400 font-semibold mt-0.5" data-i18n="stat.s3Label">Events Powered</div>
-					<div class="text-[10px] text-gray-400 mt-0.5" data-i18n="stat.s3Sub">Worldwide & Local</div>
-				</div>
-			</div>
-
 		</div>
 	</section>
 
-	<!-- Section: 3-Level Value Ladder -->
-	<section id="services" class="bg-zinc-950 py-12 sm:py-20 border-t border-white/10">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			
-			<div class="text-center max-w-2xl mx-auto">
-				<h2 class="text-xs font-black uppercase tracking-widest text-rose-500" data-i18n="ladder.sub">How We Partner</h2>
-				<h3 class="text-2xl sm:text-4xl font-extrabold text-white mt-1" data-i18n="ladder.title">The 3-Level Growth Engine</h3>
-				<p class="mt-2 text-xs sm:text-sm text-gray-400" data-i18n="ladder.desc">Select the level of partnership that fits your stage.</p>
-			</div>
+	<!-- SECTION 2: ENTERPRISE SOCIAL PROOF TICKER -->
+	<section id="proof" class="py-12 border-b border-neutral-800/80 bg-[#0c0c0c] overflow-hidden">
+		<div class="max-w-6xl mx-auto px-5 sm:px-8 mb-6 text-center">
+			<p class="text-[11px] font-medium uppercase tracking-[0.25em] text-neutral-500 italic">
+				Executives and past attendees represent organizations such as:
+			</p>
+		</div>
 
-			<div class="mt-8 sm:mt-12 grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
+		<!-- Continuous Horizontally Scrolling Marquee -->
+		<div class="ticker-mask relative w-full overflow-hidden">
+			<div class="animate-marquee flex items-center gap-10 sm:gap-14 py-1">
 				
-				<!-- Level 1 -->
-				<div class="rounded-2xl border border-white/10 bg-zinc-900 p-5 sm:p-6 flex flex-col justify-between hover:border-white/30 transition-all">
-					<div>
-						<div class="flex items-center justify-between">
-							<span class="text-[10px] font-bold uppercase tracking-wider text-gray-300 px-2 py-0.5 rounded bg-white/10 border border-white/15">Level 1</span>
-							<span class="text-[11px] font-bold text-gray-400">Software</span>
-						</div>
-						<h4 class="text-xl font-bold text-white mt-3" data-i18n="l1.title">Ticketing Software</h4>
-						<p class="text-xs text-gray-400 mt-2" data-i18n="l1.desc">Flat-fee ticketing app to sell tickets & own 100% of your attendee list.</p>
-
-						<div class="mt-4 space-y-2.5 text-xs text-gray-300">
-							<div class="flex items-center gap-2"><span class="text-rose-500 font-bold">✓</span><span data-i18n="l1.b1">$1 Flat Rate Per Ticket</span></div>
-							<div class="flex items-center gap-2"><span class="text-rose-500 font-bold">✓</span><span data-i18n="l1.b2">100% Exportable Attendee CRM</span></div>
-							<div class="flex items-center gap-2"><span class="text-rose-500 font-bold">✓</span><span data-i18n="l1.b3">Fast Mobile Door Check-In</span></div>
-						</div>
-					</div>
-					<a href="/platform.html" class="mt-6 w-full py-2.5 text-center rounded-full border border-white/20 text-xs font-bold text-white hover:bg-white/10 transition-all block" data-i18n="l1.cta">
-						Explore Software →
-					</a>
+				<!-- First copy of brands -->
+				<div class="flex items-center gap-10 sm:gap-14 text-neutral-400 font-semibold text-xs sm:text-sm tracking-widest uppercase whitespace-nowrap">
+					<span>Verizon</span>
+					<span class="text-neutral-700">&bull;</span>
+					<span>Staples</span>
+					<span class="text-neutral-700">&bull;</span>
+					<span>Mondelez</span>
+					<span class="text-neutral-700">&bull;</span>
+					<span>Disney</span>
+					<span class="text-neutral-700">&bull;</span>
+					<span>Warner Bros</span>
+					<span class="text-neutral-700">&bull;</span>
+					<span>Duolingo</span>
+					<span class="text-neutral-700">&bull;</span>
+					<span>Zelle</span>
+					<span class="text-neutral-700">&bull;</span>
+					<span>EA</span>
+					<span class="text-neutral-700">&bull;</span>
+					<span>Dyson</span>
+					<span class="text-neutral-700">&bull;</span>
+					<span>Panasonic</span>
+					<span class="text-neutral-700">&bull;</span>
+					<span>Fiverr</span>
+					<span class="text-neutral-700">&bull;</span>
+					<span>Netflix</span>
+					<span class="text-neutral-700">&bull;</span>
+					<span>Nike</span>
+					<span class="text-neutral-700">&bull;</span>
+					<span>Shoppers Drug Mart</span>
 				</div>
 
-				<!-- Level 2 (Featured) -->
-				<div class="rounded-2xl border-2 border-rose-500 bg-zinc-900 p-5 sm:p-6 flex flex-col justify-between shadow-[0_0_30px_rgba(244,63,94,0.2)] relative">
-					<div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-rose-600 text-white text-[10px] font-black uppercase px-3 py-0.5 rounded-full">
-						Most Popular
-					</div>
-					<div>
-						<div class="flex items-center justify-between pt-1">
-							<span class="text-[10px] font-bold uppercase tracking-wider text-rose-400 px-2 py-0.5 rounded bg-rose-500/20 border border-rose-500/30">Level 2</span>
-							<span class="text-[11px] font-bold text-rose-300">Done-For-You</span>
-						</div>
-						<h4 class="text-xl font-bold text-white mt-3" data-i18n="l2.title">Event Growth Partner</h4>
-						<p class="text-xs text-gray-300 mt-2" data-i18n="l2.desc">Our team manages your paid ads, social marketing, and email retargeting to fill your events.</p>
-
-						<div class="mt-4 space-y-2.5 text-xs text-gray-200">
-							<div class="flex items-center gap-2"><span class="text-rose-400 font-bold">✓</span><span data-i18n="l2.b1">Managed Meta & Google Paid Ads</span></div>
-							<div class="flex items-center gap-2"><span class="text-rose-400 font-bold">✓</span><span data-i18n="l2.b2">Email & SMS Retargeting Campaigns</span></div>
-							<div class="flex items-center gap-2"><span class="text-rose-400 font-bold">✓</span><span data-i18n="l2.b3">Social Campaign Promotion</span></div>
-						</div>
-					</div>
-					<a href="/growth.html" class="mt-6 w-full py-2.5 text-center rounded-full bg-rose-600 text-xs font-bold text-white hover:bg-rose-700 shadow-md transition-all block" data-i18n="l2.cta">
-						Apply for Growth Partner →
-					</a>
-				</div>
-
-				<!-- Level 3 -->
-				<div class="rounded-2xl border border-white/10 bg-zinc-900 p-5 sm:p-6 flex flex-col justify-between hover:border-white/30 transition-all">
-					<div>
-						<div class="flex items-center justify-between">
-							<span class="text-[10px] font-bold uppercase tracking-wider text-rose-400 px-2 py-0.5 rounded bg-rose-500/20 border border-rose-500/30">Level 3</span>
-							<span class="text-[11px] font-bold text-rose-300">Done-For-You</span>
-						</div>
-						<h4 class="text-xl font-bold text-white mt-3" data-i18n="l3.title">Community Growth</h4>
-						<p class="text-xs text-gray-400 mt-2" data-i18n="l3.desc">Done-for-you community growth model, recurring event dinners, and membership monetization.</p>
-
-						<div class="mt-4 space-y-2.5 text-xs text-gray-300">
-							<div class="flex items-center gap-2"><span class="text-rose-500 font-bold">✓</span><span data-i18n="l3.b1">Recurring Dinners & Events Execution</span></div>
-							<div class="flex items-center gap-2"><span class="text-rose-500 font-bold">✓</span><span data-i18n="l3.b2">Subscriber & Membership Model</span></div>
-							<div class="flex items-center gap-2"><span class="text-rose-500 font-bold">✓</span><span data-i18n="l3.b3">Community Strategy & Sponsorships</span></div>
-						</div>
-					</div>
-					<a href="/community.html" class="mt-6 w-full py-2.5 text-center rounded-full border border-white/20 text-xs font-bold text-white hover:bg-white/10 transition-all block" data-i18n="l3.cta">
-						Explore Community Growth →
-					</a>
+				<!-- Second copy for seamless infinite loop -->
+				<div class="flex items-center gap-10 sm:gap-14 text-neutral-400 font-semibold text-xs sm:text-sm tracking-widest uppercase whitespace-nowrap" aria-hidden="true">
+					<span>Verizon</span>
+					<span class="text-neutral-700">&bull;</span>
+					<span>Staples</span>
+					<span class="text-neutral-700">&bull;</span>
+					<span>Mondelez</span>
+					<span class="text-neutral-700">&bull;</span>
+					<span>Disney</span>
+					<span class="text-neutral-700">&bull;</span>
+					<span>Warner Bros</span>
+					<span class="text-neutral-700">&bull;</span>
+					<span>Duolingo</span>
+					<span class="text-neutral-700">&bull;</span>
+					<span>Zelle</span>
+					<span class="text-neutral-700">&bull;</span>
+					<span>EA</span>
+					<span class="text-neutral-700">&bull;</span>
+					<span>Dyson</span>
+					<span class="text-neutral-700">&bull;</span>
+					<span>Panasonic</span>
+					<span class="text-neutral-700">&bull;</span>
+					<span>Fiverr</span>
+					<span class="text-neutral-700">&bull;</span>
+					<span>Netflix</span>
+					<span class="text-neutral-700">&bull;</span>
+					<span>Nike</span>
+					<span class="text-neutral-700">&bull;</span>
+					<span>Shoppers Drug Mart</span>
 				</div>
 
 			</div>
 		</div>
 	</section>
 
-	<!-- Visual Partner Case Studies Section -->
-	<section id="proof" class="bg-black py-12 sm:py-20 border-t border-white/10">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+	<!-- SECTION 3: THE PROBLEM VS THE SHIFT -->
+	<section id="format" class="py-20 sm:py-28 border-b border-neutral-800/80">
+		<div class="max-w-6xl mx-auto px-5 sm:px-8">
 			
-			<div class="text-center max-w-2xl mx-auto mb-10">
-				<h2 class="text-xs font-black uppercase tracking-widest text-rose-500" data-i18n="proof.sub">Proven Results</h2>
-				<h3 class="text-2xl sm:text-4xl font-extrabold text-white mt-1" data-i18n="proof.title">Real Partner Case Studies</h3>
+			<div class="max-w-3xl mb-16">
+				<div class="flex items-center gap-3 mb-3">
+					<span class="w-6 h-[1px] bg-neutral-600"></span>
+					<p class="text-[11px] font-medium uppercase tracking-[0.25em] text-neutral-400">
+						The Strategic Shift
+					</p>
+				</div>
+				<h2 class="font-display text-3xl sm:text-5xl font-bold tracking-tight text-white mb-6 leading-tight">
+					High-Value Deals Are Won in Private Rooms, Not Cold Inboxes.
+				</h2>
+				<p class="text-base sm:text-lg text-neutral-300 font-light leading-relaxed">
+					B2B buyers are fatigued by generic cold email spam and LinkedIn automation. Enterprise pipeline acceleration happens when you build real relationship infrastructure with vetted executives.
+				</p>
 			</div>
 
-			<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-				<!-- Case 1: Mondial Foot 26 -->
-				<a href="https://mondialfoot26.com/" target="_blank" rel="noopener noreferrer" class="group rounded-2xl border border-white/10 bg-zinc-900/90 overflow-hidden hover:border-rose-500/50 transition-all block">
-					<div class="h-44 w-full overflow-hidden relative">
-						<img src="/images/mondial_foot.jpg" alt="Mondial Foot 26 World Cup Crowd" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-						<div class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent"></div>
-						<span class="absolute top-3 left-3 text-[10px] font-black uppercase px-2.5 py-1 rounded bg-rose-600 text-white">Growth Partner</span>
-					</div>
-					<div class="p-5">
-						<h4 class="text-xl font-bold text-white group-hover:text-rose-400 transition-colors">Mondial Foot 26</h4>
-						<div class="text-2xl font-black text-white mt-1">6,000+ Attendees</div>
-						<p class="text-xs text-gray-400 mt-2 leading-relaxed">Official ticketing & growth partner for World Cup fan zone screenings, social ads, and marketing.</p>
-						<div class="mt-4 text-xs font-bold text-rose-400 flex items-center gap-1">Visit mondialfoot26.com →</div>
-					</div>
-				</a>
+			<!-- Two-Column Side-by-Side Comparison -->
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+				
+				<!-- Column 1: The Cold Outreach Trap -->
+				<div class="p-8 sm:p-10 rounded-2xl bg-neutral-900/60 border border-neutral-800">
+					<div class="text-xs font-mono uppercase tracking-widest text-neutral-500 mb-4">Old Method</div>
+					<h3 class="text-xl font-bold text-neutral-300 mb-4">The Cold Outreach Trap</h3>
+					<ul class="space-y-3 text-sm text-neutral-400 font-light leading-relaxed">
+						<li class="flex items-start gap-2">
+							<span class="text-neutral-600">&times;</span>
+							<span>500+ spammy LinkedIn InMails with declining response rates.</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-neutral-600">&times;</span>
+							<span>Endless automated email cadences that burn your domain reputation.</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-neutral-600">&times;</span>
+							<span>Low-trust transactional calls where prospects race to the bottom on price.</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-neutral-600">&times;</span>
+							<span>6 to 9 month stalled sales cycles with non-responsive gatekeepers.</span>
+						</li>
+					</ul>
+				</div>
 
-				<!-- Case 2: Afro Business Club -->
-				<a href="https://afrobusinessclub.com/" target="_blank" rel="noopener noreferrer" class="group rounded-2xl border border-white/10 bg-zinc-900/90 overflow-hidden hover:border-rose-500/50 transition-all block">
-					<div class="h-44 w-full overflow-hidden relative">
-						<img src="/images/afro_business_club.jpg" alt="Afro Business Club Dinner" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-						<div class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent"></div>
-						<span class="absolute top-3 left-3 text-[10px] font-black uppercase px-2.5 py-1 rounded bg-rose-600 text-white">Community Growth</span>
-					</div>
-					<div class="p-5">
-						<h4 class="text-xl font-bold text-white group-hover:text-rose-400 transition-colors">Afro Business Club</h4>
-						<div class="text-2xl font-black text-white mt-1">1,500+ Members</div>
-						<p class="text-xs text-gray-400 mt-2 leading-relaxed">Designed the community growth model, recurring dinner strategy, scaling to 10+ events & 1k+ attendees.</p>
-						<div class="mt-4 text-xs font-bold text-rose-400 flex items-center gap-1">Visit afrobusinessclub.com →</div>
-					</div>
-				</a>
+				<!-- Column 2: The Relationship Engine -->
+				<div class="p-8 sm:p-10 rounded-2xl bg-neutral-900 border border-neutral-700">
+					<div class="text-xs font-mono uppercase tracking-widest text-white mb-4">Occasia System</div>
+					<h3 class="text-xl font-bold text-white mb-4">The Relationship Engine</h3>
+					<ul class="space-y-3 text-sm text-neutral-200 font-light leading-relaxed">
+						<li class="flex items-start gap-2">
+							<span class="text-white">&rarr;</span>
+							<span>Curating 12 enterprise decision-makers in an intimate private dining room.</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-white">&rarr;</span>
+							<span>Positioning you as the trusted peer authority before pitching is even considered.</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-white">&rarr;</span>
+							<span>Compressing months of sales skepticism into 3 hours of authentic rapport.</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-white">&rarr;</span>
+							<span>Transitioning warm boardroom trust directly into $20k–$50k+ retainer contracts.</span>
+						</li>
+					</ul>
+				</div>
 
-				<!-- Case 3: Club Frame MTL -->
-				<a href="https://www.clubframemtl.com/" target="_blank" rel="noopener noreferrer" class="group rounded-2xl border border-white/10 bg-zinc-900/90 overflow-hidden hover:border-rose-500/50 transition-all block">
-					<div class="h-44 w-full overflow-hidden relative">
-						<img src="/images/club_frame.jpg" alt="Club Frame Nightclub MTL" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-						<div class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent"></div>
-						<span class="absolute top-3 left-3 text-[10px] font-black uppercase px-2.5 py-1 rounded bg-emerald-600 text-white">Audience System</span>
-					</div>
-					<div class="p-5">
-						<h4 class="text-xl font-bold text-white group-hover:text-rose-400 transition-colors">Club Frame MTL</h4>
-						<div class="text-2xl font-black text-emerald-400 mt-1">100% CRM Data</div>
-						<p class="text-xs text-gray-400 mt-2 leading-relaxed">Built an audience lead capture system turning nightclub attendees into an owned email database & Meta pixel list.</p>
-						<div class="mt-4 text-xs font-bold text-rose-400 flex items-center gap-1">Visit clubframemtl.com →</div>
-					</div>
-				</a>
 			</div>
 
 		</div>
 	</section>
 
-	<!-- Events Powered by Occasia (Max 3 on Mobile with View More Button) -->
-	<section id="events" class="bg-zinc-950 py-12 sm:py-20 border-t border-white/10 scroll-mt-16">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<div class="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
-				<h2 class="text-xs font-black uppercase tracking-widest text-rose-500" data-i18n="events.subtitle">Event Showcase</h2>
-				<h3 class="text-2xl sm:text-4xl font-extrabold text-white mt-1" data-i18n="events.title">Events Powered by Occasia</h3>
-				<p class="mt-2 text-xs sm:text-sm text-gray-400" data-i18n="events.desc">Discover real events brought to life with Occasia ticketing and growth services.</p>
+	<!-- SECTION 4: THE 3-PART ENTERPRISE ACQUISITION ENGINE -->
+	<section id="engine" class="py-20 sm:py-28 border-b border-neutral-800/80 bg-[#0c0c0c]">
+		<div class="max-w-6xl mx-auto px-5 sm:px-8">
+			
+			<div class="max-w-3xl mb-16">
+				<div class="flex items-center gap-3 mb-3">
+					<span class="w-6 h-[1px] bg-neutral-600"></span>
+					<p class="text-[11px] font-medium uppercase tracking-[0.25em] text-neutral-400">
+						The Methodology
+					</p>
+				</div>
+				<h2 class="font-display text-3xl sm:text-5xl font-bold tracking-tight text-white mb-4">
+					The 3-Part Enterprise Acquisition Engine
+				</h2>
+				<p class="text-base text-neutral-400 font-light">
+					A comprehensive, turnkey infrastructure designed to take cold accounts from zero awareness to signed high-ticket retainers.
+				</p>
 			</div>
 
-			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-				<!-- Event 1 -->
-				<a href="https://app.occasia.tech/events/view/connect-and-sip---young-professionals-networking/33d13824-4a80-453c-a707-4da35f28c36d"
-					class="group relative overflow-hidden rounded-xl border border-white/10 bg-zinc-900 block" target="_blank" rel="noopener noreferrer">
-					<img class="h-48 sm:h-52 w-full object-cover transition-transform duration-500 group-hover:scale-105"
-						src="https://ufhbtordggygoxowjmxh.supabase.co/storage/v1/object/public/Occasia/organizers/email66e249e6af53e2c0ae518deb/events/33d13824-4a80-453c-a707-4da35f28c36d/covers/2e2da04a-1424-4105-870b-f1ce09ba5684?q=80&w=1600&auto=format&fit=crop"
-						alt="Connect and Sip - Young Professionals Networking" loading="lazy" />
-					<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-					<div class="absolute bottom-0 left-0 right-0 p-3.5 sm:p-4 text-sm">
-						<div class="font-bold text-white group-hover:text-rose-400 transition-colors">Connect & Sip Networking</div>
-						<div class="text-xs text-gray-400 mt-0.5">Young Professionals Network</div>
+			<!-- 3 Editorial Pillars -->
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8 border-t border-neutral-800">
+				
+				<!-- Phase 1 -->
+				<div class="flex flex-col justify-between">
+					<div>
+						<span class="text-xs font-mono text-neutral-500 mb-4 block">PHASE 01</span>
+						<h3 class="text-xl font-bold text-white mb-3">Pre-Event Authority &amp; ICP Orbit</h3>
+						<ul class="space-y-2.5 text-sm text-neutral-400 font-light leading-relaxed">
+							<li>&bull; Precision account mapping of your exact target buyers (5–30 employees, high LTV).</li>
+							<li>&bull; LinkedIn authority infrastructure that makes cold prospects familiar with your brand before contact.</li>
+							<li>&bull; Peer-to-peer, non-salesy invitation sequences with near-100% executive acceptance rates.</li>
+						</ul>
 					</div>
-				</a>
+				</div>
 
-				<!-- Event 2 -->
-				<a href="https://app.occasia.tech/events/view/sun-day-terrace/cf8cc361-c4e6-44be-9f09-50662316e5f2"
-					class="group relative overflow-hidden rounded-xl border border-white/10 bg-zinc-900 block" target="_blank" rel="noopener noreferrer">
-					<img class="h-48 sm:h-52 w-full object-cover transition-transform duration-500 group-hover:scale-105"
-						src="https://ufhbtordggygoxowjmxh.supabase.co/storage/v1/object/public/Occasia/organizers/email671ebd433a0928a274c9a5c4/events/cf8cc361-c4e6-44be-9f09-50662316e5f2/covers/871d684e-7d71-49ce-a4b2-b30ff651b9c4?q=80&w=1600&auto=format&fit=crop"
-						alt="Sun Day Terrace" loading="lazy" />
-					<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-					<div class="absolute bottom-0 left-0 right-0 p-3.5 sm:p-4 text-sm">
-						<div class="font-bold text-white group-hover:text-rose-400 transition-colors">Sun Day Terrace</div>
-						<div class="text-xs text-gray-400 mt-0.5">Day Party & Venue Showcase</div>
+				<!-- Phase 2 -->
+				<div class="flex flex-col justify-between">
+					<div>
+						<span class="text-xs font-mono text-neutral-500 mb-4 block">PHASE 02</span>
+						<h3 class="text-xl font-bold text-white mb-3">The 3-Hour Executive Roundtable</h3>
+						<ul class="space-y-2.5 text-sm text-neutral-400 font-light leading-relaxed">
+							<li>&bull; Closed-door, multi-course private dining for 12–15 vetted buyers.</li>
+							<li>&bull; Structured 20-minute topic briefing where you lead as the subject-matter expert.</li>
+							<li>&bull; Moderated peer exchange utilizing proprietary rapport frameworks to compress months of trust into 3 hours.</li>
+						</ul>
 					</div>
-				</a>
+				</div>
 
-				<!-- Event 3 -->
-				<a href="https://app.occasia.tech/events/view/f1-weekend-2025/13885ea5-35ca-4499-8454-e33f98ee2c55"
-					class="group relative overflow-hidden rounded-xl border border-white/10 bg-zinc-900 block" target="_blank" rel="noopener noreferrer">
-					<img class="h-48 sm:h-52 w-full object-cover transition-transform duration-500 group-hover:scale-105"
-						src="https://ufhbtordggygoxowjmxh.supabase.co/storage/v1/object/public/Occasia/organizers/email671ebd433a0928a274c9a5c4/events/13885ea5-35ca-4499-8454-e33f98ee2c55/covers/18ddb986-55ef-4ee6-80af-021a357dbd46?q=80&w=1600&auto=format&fit=crop"
-						alt="F1 Weekend 2025" loading="lazy" />
-					<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-					<div class="absolute bottom-0 left-0 right-0 p-3.5 sm:p-4 text-sm">
-						<div class="font-bold text-white group-hover:text-rose-400 transition-colors">F1 Weekend 2025</div>
-						<div class="text-xs text-gray-400 mt-0.5">Grand Prix Event Activation</div>
+				<!-- Phase 3 -->
+				<div class="flex flex-col justify-between">
+					<div>
+						<span class="text-xs font-mono text-neutral-500 mb-4 block">PHASE 03</span>
+						<h3 class="text-xl font-bold text-white mb-3">Post-Event Nurture &amp; Deal Conversion</h3>
+						<ul class="space-y-2.5 text-sm text-neutral-400 font-light leading-relaxed">
+							<li>&bull; Turnkey CRM workflows designed around high-value insights rather than needy follow-ups.</li>
+							<li>&bull; Structured 1-on-1 strategic debrief mapping to transition dinner trust into $20k–$50k+ contracts.</li>
+							<li>&bull; Private alumni channel integration for compounding recurring pipeline.</li>
+						</ul>
 					</div>
-				</a>
+				</div>
 
-				<!-- Event 4 (Hidden on mobile) -->
-				<a href="https://app.occasia.tech/events/view/Connect%20and%20Run%20-%20Where%20Networking%20meets%20Sports/652c4639-6a69-4be1-8b46-f512b2ba4509"
-					class="group relative overflow-hidden rounded-xl border border-white/10 bg-zinc-900 hidden sm:block" target="_blank" rel="noopener noreferrer">
-					<img class="h-52 w-full object-cover transition-transform duration-500 group-hover:scale-105"
-						src="https://ufhbtordggygoxowjmxh.supabase.co/storage/v1/object/public/Occasia/organizers/email66e249e6af53e2c0ae518deb/events/652c4639-6a69-4be1-8b46-f512b2ba4509/covers/fd42e1d5-7be4-4412-bd77-0c05ea53c817?q=80&w=1600&auto=format&fit=crop"
-						alt="Connect and Run" loading="lazy" />
-					<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-					<div class="absolute bottom-0 left-0 right-0 p-4 text-sm">
-						<div class="font-bold text-white group-hover:text-rose-400 transition-colors">Connect & Run</div>
-						<div class="text-xs text-gray-400 mt-0.5">Networking Meets Sports</div>
-					</div>
-				</a>
-
-				<!-- Event 5 (Hidden on mobile) -->
-				<a href="https://app.occasia.tech/events/view/OTTAWA%20RIDDIM/0f5aae6f-9d71-4a75-8f8b-6c91f89048cb"
-					class="group relative overflow-hidden rounded-xl border border-white/10 bg-zinc-900 hidden sm:block" target="_blank" rel="noopener noreferrer">
-					<img class="h-52 w-full object-cover transition-transform duration-500 group-hover:scale-105"
-						src="https://ufhbtordggygoxowjmxh.supabase.co/storage/v1/object/public/Occasia/organizers/a3ccc0b9-5baf-467d-b052-5e25f87add96/events/0f5aae6f-9d71-4a75-8f8b-6c91f89048cb/covers/aa779cb6-8ab5-4489-8c13-c9093feba68f?q=80&w=1600&auto=format&fit=crop"
-						alt="Ottawa Riddim" loading="lazy" />
-					<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-					<div class="absolute bottom-0 left-0 right-0 p-4 text-sm">
-						<div class="font-bold text-white group-hover:text-rose-400 transition-colors">Ottawa Riddim</div>
-						<div class="text-xs text-gray-400 mt-0.5">Music & Cultural Event</div>
-					</div>
-				</a>
-
-				<!-- Event 6 (Hidden on mobile) -->
-				<a href="https://app.occasia.tech/events/view/Afro%20Connect%20-%20Tech%20&%20Engineering%20%7C%20Ing%C3%A9nierie/7eeaf339-83eb-4596-a1f0-af6e926b5f2f"
-					class="group relative overflow-hidden rounded-xl border border-white/10 bg-zinc-900 hidden sm:block" target="_blank" rel="noopener noreferrer">
-					<img class="h-52 w-full object-cover transition-transform duration-500 group-hover:scale-105"
-						src="https://ufhbtordggygoxowjmxh.supabase.co/storage/v1/object/public/Occasia/organizers/email66e249e6af53e2c0ae518deb/events/7eeaf339-83eb-4596-a1f0-af6e926b5f2f/covers/a39de651-0ced-4f75-9f6a-b13a4af16dad?q=80&w=1600&auto=format&fit=crop"
-						alt="Afro Connect - Tech & Engineering" loading="lazy" />
-					<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-					<div class="absolute bottom-0 left-0 right-0 p-4 text-sm">
-						<div class="font-bold text-white group-hover:text-rose-400 transition-colors">Afro Connect Tech</div>
-						<div class="text-xs text-gray-400 mt-0.5">Tech & Engineering Summit</div>
-					</div>
-				</a>
-
-				<!-- Event 7 (Hidden on mobile) -->
-				<a href="https://app.occasia.tech/events/view/Soulful%20Sundays/ae9a1e5a-b3e2-4bd3-9fbb-5b0f390698b3"
-					class="group relative overflow-hidden rounded-xl border border-white/10 bg-zinc-900 hidden sm:block" target="_blank" rel="noopener noreferrer">
-					<img class="h-52 w-full object-cover transition-transform duration-500 group-hover:scale-105"
-						src="https://ufhbtordggygoxowjmxh.supabase.co/storage/v1/object/public/Occasia/organizers/2ce75d46-88fe-4510-ac62-f69261b3148a/events/ae9a1e5a-b3e2-4bd3-9fbb-5b0f390698b3/covers/88d4f77d-7551-49ec-a5e5-6ece070211d9?q=80&w=1600&auto=format&fit=crop"
-						alt="Soulful Sundays" loading="lazy" />
-					<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-					<div class="absolute bottom-0 left-0 right-0 p-4 text-sm">
-						<div class="font-bold text-white group-hover:text-rose-400 transition-colors">Soulful Sundays</div>
-						<div class="text-xs text-gray-400 mt-0.5">Recurring Music Series</div>
-					</div>
-				</a>
-
-				<!-- Event 8 (Hidden on mobile) -->
-				<a href="https://app.occasia.tech/events/view/UNOFFICIAL%20ALBUM%20LISTENING%20PART/f0bb15ac-27cd-4aab-afa3-76e55cd86e48"
-					class="group relative overflow-hidden rounded-xl border border-white/10 bg-zinc-900 hidden sm:block" target="_blank" rel="noopener noreferrer">
-					<img class="h-52 w-full object-cover transition-transform duration-500 group-hover:scale-105"
-						src="https://ufhbtordggygoxowjmxh.supabase.co/storage/v1/object/public/Occasia/organizers/a3ccc0b9-5baf-467d-b052-5e25f87add96/events/f0bb15ac-27cd-4aab-afa3-76e55cd86e48/covers/36ea3f72-86a4-4d0f-9e7a-bef265dd032f?q=80&w=1600&auto=format&fit=crop"
-						alt="Unofficial Album Listening Party" loading="lazy" />
-					<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-					<div class="absolute bottom-0 left-0 right-0 p-4 text-sm">
-						<div class="font-bold text-white group-hover:text-rose-400 transition-colors">Album Listening Party</div>
-						<div class="text-xs text-gray-400 mt-0.5">Exclusive Music Launch</div>
-					</div>
-				</a>
 			</div>
 
-			<!-- Mobile & Desktop View More Button Opening Occasia App -->
-			<div class="mt-8 text-center">
-				<a href="https://app.occasia.tech" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-6 py-3 border border-white/20 text-xs sm:text-sm font-bold rounded-full text-white bg-zinc-900 hover:bg-white/10 transition-all shadow-md">
-					<span data-i18n="events.viewMore">View More Events on Occasia App →</span>
-				</a>
-			</div>
 		</div>
 	</section>
 
-	<!-- High-Converting Results & Partner Focus FAQ Section -->
-	<section id="faq" class="bg-zinc-950 py-12 sm:py-20 border-t border-white/10 scroll-mt-16">
-		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-			<div class="text-center max-w-2xl mx-auto mb-10">
-				<h2 class="text-xs font-black uppercase tracking-widest text-rose-500" data-i18n="faq.sub">Growth & Partnership</h2>
-				<h3 class="text-2xl sm:text-4xl font-extrabold text-white mt-1" data-i18n="faq.title">Frequently Asked Questions</h3>
-			</div>
-
-			<div class="space-y-4">
-				<!-- FAQ 1: How Occasia fills rooms -->
-				<div class="rounded-2xl border border-white/10 bg-zinc-900 overflow-hidden">
-					<button onclick="toggleFaq(1)" class="w-full px-6 py-4 text-left flex items-center justify-between font-bold text-white hover:text-rose-400 transition-colors">
-						<span data-i18n="faq.q1">How does Occasia help me consistently fill rooms and sell out events?</span>
-						<span id="faq-icon-1" class="text-rose-500 text-xl font-bold">+</span>
-					</button>
-					<div id="faq-ans-1" class="hidden px-6 pb-5 text-xs sm:text-sm text-gray-300 leading-relaxed border-t border-white/5 pt-3">
-						<p data-i18n="faq.a1">We combine dedicated ticketing software with a hands-on growth team. We build custom Meta & Google ad campaigns, execute email & SMS retargeting sequences, and optimize your audience conversion funnel so you fill rooms repeatably.</p>
+	<!-- SECTION 5: PROPRIETARY INFRASTRUCTURE CALLOUT -->
+	<section class="py-20 sm:py-24 border-b border-neutral-800/80">
+		<div class="max-w-6xl mx-auto px-5 sm:px-8">
+			
+			<div class="p-8 sm:p-14 rounded-3xl bg-neutral-900 border border-neutral-800 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
+				<div class="max-w-2xl">
+					<div class="flex items-center gap-3 mb-3">
+						<span class="w-6 h-[1px] bg-neutral-600"></span>
+						<p class="text-[11px] font-medium uppercase tracking-[0.25em] text-neutral-400">
+							Proprietary Technology
+						</p>
 					</div>
+					<h2 class="font-display text-2xl sm:text-4xl font-bold tracking-tight text-white mb-4">
+						Powered by Occasia’s Enterprise Event Infrastructure.
+					</h2>
+					<p class="text-sm sm:text-base text-neutral-300 font-light leading-relaxed">
+						Unlike traditional consulting agencies, every roundtable is powered by our proprietary event management engine—handling check-in, RSVP data sync, and attendee relationship tracking seamlessly.
+					</p>
 				</div>
-
-				<!-- FAQ 2: Track Record & Results -->
-				<div class="rounded-2xl border border-white/10 bg-zinc-900 overflow-hidden">
-					<button onclick="toggleFaq(2)" class="w-full px-6 py-4 text-left flex items-center justify-between font-bold text-white hover:text-rose-400 transition-colors">
-						<span data-i18n="faq.q2">What kind of results have partner organizers achieved with Occasia?</span>
-						<span id="faq-icon-2" class="text-rose-500 text-xl font-bold">+</span>
-					</button>
-					<div id="faq-ans-2" class="hidden px-6 pb-5 text-xs sm:text-sm text-gray-300 leading-relaxed border-t border-white/5 pt-3">
-						<p data-i18n="faq.a2">Our growth partners have scaled from small gatherings to over 6,000+ attendees per event series, generated over $1M+ in collective ticket revenue, and built recurring community subscriber models with higher profit margins.</p>
-					</div>
-				</div>
-
-				<!-- FAQ 3: Turnaround Time -->
-				<div class="rounded-2xl border border-white/10 bg-zinc-900 overflow-hidden">
-					<button onclick="toggleFaq(3)" class="w-full px-6 py-4 text-left flex items-center justify-between font-bold text-white hover:text-rose-400 transition-colors">
-						<span data-i18n="faq.q3">How quickly can we launch a growth marketing campaign for my next event?</span>
-						<span id="faq-icon-3" class="text-rose-500 text-xl font-bold">+</span>
-					</button>
-					<div id="faq-ans-3" class="hidden px-6 pb-5 text-xs sm:text-sm text-gray-300 leading-relaxed border-t border-white/5 pt-3">
-						<p data-i18n="faq.a3">Once we align on your event goals during our strategy call, our growth team can have your custom ticketing page, tracking pixels, and managed ad campaigns live in as little as 48 to 72 hours.</p>
-					</div>
-				</div>
-
-				<!-- FAQ 4: Who it is built for -->
-				<div class="rounded-2xl border border-white/10 bg-zinc-900 overflow-hidden">
-					<button onclick="toggleFaq(4)" class="w-full px-6 py-4 text-left flex items-center justify-between font-bold text-white hover:text-rose-400 transition-colors">
-						<span data-i18n="faq.q4">Who is the Occasia Growth Partner program best suited for?</span>
-						<span id="faq-icon-4" class="text-rose-500 text-xl font-bold">+</span>
-					</button>
-					<div id="faq-ans-4" class="hidden px-6 pb-5 text-xs sm:text-sm text-gray-300 leading-relaxed border-t border-white/5 pt-3">
-						<p data-i18n="faq.a4">It is built for ambitious event organizers, festival promoters, nightclub venues, and community creators who are serious about scaling their attendance, increasing ticket revenue, and building a loyal recurring audience.</p>
-					</div>
+				<div class="shrink-0">
+					<a href="/software.html" class="inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-white hover:bg-neutral-200 text-black font-semibold text-sm tracking-tight transition-all">
+						Explore Ticketing Software &amp; Public Events &rarr;
+					</a>
 				</div>
 			</div>
+
 		</div>
 	</section>
 
-	<!-- Quick Strategy Intake Form Section (Prepared for GHL Webhook) -->
-	<section id="contact" class="bg-black py-12 sm:py-20 border-t border-white/10">
-		<div class="max-w-xl mx-auto px-4 sm:px-6">
-			<div class="rounded-2xl border border-rose-500/30 bg-zinc-900 p-6 sm:p-8">
-				<div class="text-center">
-					<h3 class="text-2xl font-extrabold text-white" data-i18n="form.h">Ready to Grow Your Events?</h3>
-					<p class="text-xs text-gray-400 mt-1" data-i18n="form.sub">Book a strategy call or get started with ticketing infrastructure.</p>
+	<!-- SECTION 6: STRATEGY SESSION FORM (GHL WEBHOOK) -->
+	<section id="apply" class="py-20 sm:py-28 bg-[#0c0c0c]">
+		<div class="max-w-xl mx-auto px-5 sm:px-8">
+			
+			<div class="mb-10 text-center sm:text-left">
+				<div class="flex items-center justify-center sm:justify-start gap-3 mb-3">
+					<span class="w-6 h-[1px] bg-neutral-600"></span>
+					<p class="text-[11px] font-medium uppercase tracking-[0.25em] text-neutral-400">
+						Application
+					</p>
+				</div>
+				<h2 class="font-display text-3xl sm:text-4xl font-bold tracking-tight text-white mb-3">
+					Request a Strategy Session
+				</h2>
+				<p class="text-xs sm:text-sm text-neutral-400 font-light leading-relaxed">
+					Tell us about your target enterprise accounts and sales bottlenecks. Our team will review your application and schedule a 30-minute private briefing.
+				</p>
+			</div>
+
+			<!-- Form -->
+			<form id="strategy-form" onsubmit="handleStrategyFormSubmit(event)" class="space-y-4">
+				
+				<!-- First & Last Name -->
+				<div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+					<div>
+						<label class="block text-[11px] font-medium uppercase tracking-wider text-neutral-400 mb-1.5">First Name</label>
+						<input 
+							type="text" 
+							name="first_name" 
+							required 
+							placeholder="First Name" 
+							class="w-full rounded-lg bg-neutral-900 border border-neutral-800 px-3.5 py-3 text-sm text-white placeholder-neutral-600 focus:border-neutral-500 focus:outline-none transition-colors" 
+						/>
+					</div>
+					<div>
+						<label class="block text-[11px] font-medium uppercase tracking-wider text-neutral-400 mb-1.5">Last Name</label>
+						<input 
+							type="text" 
+							name="last_name" 
+							required 
+							placeholder="Last Name" 
+							class="w-full rounded-lg bg-neutral-900 border border-neutral-800 px-3.5 py-3 text-sm text-white placeholder-neutral-600 focus:border-neutral-500 focus:outline-none transition-colors" 
+						/>
+					</div>
 				</div>
 
-				<form id="ghl-lead-form" onsubmit="handleFormSubmit(event)" class="mt-6 space-y-3.5">
-					<div class="grid grid-cols-2 gap-2.5 sm:gap-3.5">
-						<div>
-							<input type="text" name="first_name" required placeholder="First Name" class="w-full rounded-xl bg-black/60 border border-white/15 px-3.5 sm:px-4 py-2.5 text-xs sm:text-sm text-white placeholder-gray-500 focus:border-rose-500 focus:outline-none" />
-						</div>
-						<div>
-							<input type="text" name="last_name" required placeholder="Last Name" class="w-full rounded-xl bg-black/60 border border-white/15 px-3.5 sm:px-4 py-2.5 text-xs sm:text-sm text-white placeholder-gray-500 focus:border-rose-500 focus:outline-none" />
-						</div>
-					</div>
+				<!-- Work Email -->
+				<div>
+					<label class="block text-[11px] font-medium uppercase tracking-wider text-neutral-400 mb-1.5">Work Email</label>
+					<input 
+						type="email" 
+						name="email" 
+						required 
+						placeholder="name@company.com" 
+						class="w-full rounded-lg bg-neutral-900 border border-neutral-800 px-3.5 py-3 text-sm text-white placeholder-neutral-600 focus:border-neutral-500 focus:outline-none transition-colors" 
+					/>
+				</div>
+
+				<!-- Mobile Phone -->
+				<div>
+					<label class="block text-[11px] font-medium uppercase tracking-wider text-neutral-400 mb-1.5">Mobile Number</label>
+					<input 
+						type="tel" 
+						name="phone" 
+						required 
+						placeholder="+1 (514) 000-0000" 
+						class="w-full rounded-lg bg-neutral-900 border border-neutral-800 px-3.5 py-3 text-sm text-white placeholder-neutral-600 focus:border-neutral-500 focus:outline-none transition-colors" 
+					/>
+				</div>
+
+				<!-- Business Name -->
+				<div>
+					<label class="block text-[11px] font-medium uppercase tracking-wider text-neutral-400 mb-1.5">Company Name</label>
+					<input 
+						type="text" 
+						name="company_name" 
+						required 
+						placeholder="Company / Firm Name" 
+						class="w-full rounded-lg bg-neutral-900 border border-neutral-800 px-3.5 py-3 text-sm text-white placeholder-neutral-600 focus:border-neutral-500 focus:outline-none transition-colors" 
+					/>
+				</div>
+
+				<!-- Team Size & Deal Size -->
+				<div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
 					<div>
-						<input type="email" name="email" required placeholder="Work Email" class="w-full rounded-xl bg-black/60 border border-white/15 px-4 py-2.5 text-sm text-white placeholder-gray-500 focus:border-rose-500 focus:outline-none" />
-					</div>
-					<div>
-						<input type="tel" name="phone" required placeholder="Phone Number (e.g. +1 514 123 4567)" class="w-full rounded-xl bg-black/60 border border-white/15 px-4 py-2.5 text-sm text-white placeholder-gray-500 focus:border-rose-500 focus:outline-none" />
-					</div>
-					<div>
-						<input type="text" name="organization" required placeholder="Organization / Venue Name" class="w-full rounded-xl bg-black/60 border border-white/15 px-4 py-2.5 text-sm text-white placeholder-gray-500 focus:border-rose-500 focus:outline-none" />
-					</div>
-					<div>
-						<select name="service_tier" required class="w-full rounded-xl bg-black/60 border border-white/15 px-4 py-2.5 text-sm text-white focus:border-rose-500 focus:outline-none">
-							<option value="Level 1">Level 1: Ticketing Software ($1/ticket)</option>
-							<option value="Level 2" selected>Level 2: Event Growth Partner (Ads & Promo)</option>
-							<option value="Level 3">Level 3: Done-For-You Community Growth</option>
+						<label class="block text-[11px] font-medium uppercase tracking-wider text-neutral-400 mb-1.5">Team Size</label>
+						<select 
+							name="team_size" 
+							required
+							class="w-full rounded-lg bg-neutral-900 border border-neutral-800 px-3.5 py-3 text-sm text-white focus:border-neutral-500 focus:outline-none transition-colors cursor-pointer"
+						>
+							<option value="" disabled selected class="text-neutral-600">Select team size</option>
+							<option value="1_4_employees">1–4 employees</option>
+							<option value="5_15_employees">5–15 employees</option>
+							<option value="16_30_employees">16–30 employees</option>
+							<option value="31_50_employees">31–50 employees</option>
+							<option value="50_plus_employees">50+ employees</option>
 						</select>
 					</div>
-
-					<button type="submit" id="form-submit-btn" class="w-full py-3 rounded-full bg-rose-600 text-white font-bold text-sm shadow-md hover:bg-rose-700 transition-all flex items-center justify-center gap-2">
-						<span data-i18n="form.btn">Book Strategy Call</span>
-					</button>
-
-					<div id="form-success" class="hidden text-center p-3 rounded-xl bg-emerald-950/60 border border-emerald-500/30 text-emerald-300 text-xs font-bold" data-i18n="form.success">
-						✓ Thank you! Our team will call you back within the next few hours.
+					<div>
+						<label class="block text-[11px] font-medium uppercase tracking-wider text-neutral-400 mb-1.5">Average Deal Size</label>
+						<select 
+							name="deal_size" 
+							required
+							class="w-full rounded-lg bg-neutral-900 border border-neutral-800 px-3.5 py-3 text-sm text-white focus:border-neutral-500 focus:outline-none transition-colors cursor-pointer"
+						>
+							<option value="" disabled selected class="text-neutral-600">Select deal size</option>
+							<option value="under_10k">Under $10,000</option>
+							<option value="10k_25k">$10,000 – $25,000</option>
+							<option value="25k_50k">$25,000 – $50,000</option>
+							<option value="50k_100k">$50,000 – $100,000</option>
+							<option value="100k_plus">$100,000+</option>
+						</select>
 					</div>
-				</form>
-			</div>
+				</div>
+
+				<!-- Submit Button -->
+				<div class="pt-4">
+					<button 
+						type="submit" 
+						id="submit-btn" 
+						class="w-full py-3.5 rounded-lg bg-white hover:bg-neutral-200 text-black font-semibold text-sm tracking-tight transition-all cursor-pointer disabled:opacity-50"
+					>
+						<span id="btn-text">Submit Application</span>
+					</button>
+				</div>
+
+				<!-- Success / Error Containers -->
+				<div id="form-success" class="hidden text-center p-4 rounded-lg bg-neutral-900 border border-neutral-700 text-white text-sm">
+					&check; Thank you! Your application has been received. Our team will contact you via email and text shortly.
+				</div>
+
+				<div id="form-error" class="hidden text-center p-3 rounded-lg bg-red-950/40 border border-red-800/50 text-red-300 text-xs">
+					An error occurred. Please verify your details and try again.
+				</div>
+
+			</form>
+
 		</div>
 	</section>
 
 	<!-- Footer -->
-	<footer class="border-t border-white/10 bg-black py-8 text-xs text-gray-500">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
-			<div>
-				<span class="font-black text-white text-base">OCCASIA</span>
-				<span class="ml-2 text-gray-400">© 2026 Occasia Event Services</span>
+	<footer class="border-t border-neutral-800/80 bg-[#080808] py-10 text-xs text-neutral-500">
+		<div class="max-w-6xl mx-auto px-5 sm:px-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
+			<div class="flex items-center gap-2">
+				<span class="font-semibold text-neutral-300">OCCASIA</span>
+				<span class="text-neutral-700">&bull;</span>
+				<span>Enterprise Relationship OS</span>
 			</div>
-			<div class="flex items-center gap-4 text-gray-400">
-				<a href="/platform.html" class="hover:text-white">Software</a>
-				<a href="/growth.html" class="hover:text-white">Growth</a>
-				<a href="/community.html" class="hover:text-white">Community</a>
-				<a href="/privacy-policy.html" class="hover:text-white">Privacy</a>
+			<div class="flex flex-wrap items-center justify-center gap-6 text-neutral-400">
+				<a href="/software.html" class="hover:text-white transition-colors">Ticketing Software</a>
+				<a href="/dinner.html" class="hover:text-white transition-colors">Executive Dinners</a>
+				<a href="/privacy-policy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+				<a href="/contact.html" class="hover:text-white transition-colors">Contact</a>
 			</div>
+			<p>&copy; 2026 Occasia Event Services. All rights reserved.</p>
 		</div>
 	</footer>
 
-	<!-- Scripts, Language Toggle, Dynamic Rotator, FAQ Accordion & GHL Handler -->
+	<!-- Scripts -->
 	<script>
-		// ACTIVE GHL WEBHOOK ENDPOINT:
-		const GHL_WEBHOOK_URL = "https://services.leadconnectorhq.com/hooks/jHbmtYzLJIFF9GbAX6mz/webhook-trigger/fb5867e2-02e8-4eb9-837f-33b5b0bc59b5"; 
+		// GoHighLevel Webhook Endpoint
+		const GHL_WEBHOOK_URL = "https://services.leadconnectorhq.com/hooks/jHbmtYzLJIFF9GbAX6mz/webhook-trigger/2b1c04dd-37af-48bb-b1a2-84bc56aedc69";
 
-		const rotatingWords = {
-			"en": ["Unforgettable Events", "Sold-Out Shows", "Thriving Communities"],
-			"fr": ["Des Événements Inoubliables", "Des Salles Combles", "Des Communautés Engagées"]
-		};
-
-		let currentLang = 'en';
-		let wordIndex = 0;
-		let rotatorInterval = null;
-
-		function startWordRotator() {
-			if (rotatorInterval) clearInterval(rotatorInterval);
-			
-			const target = document.getElementById('hero-dynamic-text');
-			rotatorInterval = setInterval(() => {
-				wordIndex = (wordIndex + 1) % rotatingWords[currentLang].length;
-				
-				// Smooth fade out & slide up
-				target.classList.add('opacity-0', '-translate-y-2');
-				
-				setTimeout(() => {
-					target.textContent = rotatingWords[currentLang][wordIndex];
-					target.classList.remove('-translate-y-2');
-					target.classList.add('translate-y-2');
-					
-					setTimeout(() => {
-						target.classList.remove('opacity-0', 'translate-y-2');
-						target.classList.add('opacity-100', 'translate-y-0');
-					}, 50);
-				}, 400);
-			}, 2800);
-		}
-
-		function toggleFaq(id) {
-			const ans = document.getElementById(`faq-ans-${id}`);
-			const icon = document.getElementById(`faq-icon-${id}`);
-			if (ans.classList.contains('hidden')) {
-				ans.classList.remove('hidden');
-				icon.textContent = '−';
-			} else {
-				ans.classList.add('hidden');
-				icon.textContent = '+';
-			}
-		}
-
-		const translations = {
-			"en": {
-				"nav.software": "Software",
-				"nav.growth": "Growth Partner",
-				"nav.community": "Community",
-				"nav.cases": "Proof",
-				"nav.openApp": "Open App",
-				"nav.bookCall": "Book Call",
-				"hero.t1": "Helping You Host",
-				"hero.desc": "Occasia provides the software base and the growth marketing team to help you fill rooms and build recurring revenue.",
-				"hero.cta1": "Book Strategy Call",
-				"hero.cta2": "Explore Software",
-				"stat.s1Label": "Ticket Sales Processed",
-				"stat.s1Sub": "Across Partner Events",
-				"stat.s2Label": "Total Attendees",
-				"stat.s2Sub": "Hosted & Checked In",
-				"stat.s3Label": "Events Powered",
-				"stat.s3Sub": "Worldwide & Local",
-				"ladder.sub": "How We Partner",
-				"ladder.title": "The 3-Level Growth Engine",
-				"ladder.desc": "Select the level of partnership that fits your stage.",
-				"l1.title": "Ticketing Software",
-				"l1.desc": "Flat-fee ticketing app to sell tickets & own 100% of your attendee list.",
-				"l1.b1": "$1 Flat Rate Per Ticket",
-				"l1.b2": "100% Exportable Attendee CRM",
-				"l1.b3": "Fast Mobile Door Check-In",
-				"l1.cta": "Explore Software →",
-				"l2.title": "Event Growth Partner",
-				"l2.desc": "Our team manages your paid ads, social marketing, and email retargeting to fill your events.",
-				"l2.b1": "Managed Meta & Google Paid Ads",
-				"l2.b2": "Email & SMS Retargeting Campaigns",
-				"l2.b3": "Social Campaign Promotion",
-				"l2.cta": "Apply for Growth Partner →",
-				"l3.title": "Community Growth",
-				"l3.desc": "Done-for-you community growth model, recurring event dinners, and membership monetization.",
-				"l3.b1": "Recurring Dinners & Events Execution",
-				"l3.b2": "Subscriber & Membership Model",
-				"l3.b3": "Community Strategy & Sponsorships",
-				"l3.cta": "Explore Community Growth →",
-				"proof.sub": "Proven Results",
-				"proof.title": "Real Partner Case Studies",
-				"events.subtitle": "Event Showcase",
-				"events.title": "Events Powered by Occasia",
-				"events.desc": "Discover real events brought to life with Occasia ticketing and growth services.",
-				"events.viewMore": "View More Events on Occasia App →",
-				"faq.sub": "Growth & Partnership",
-				"faq.title": "Frequently Asked Questions",
-				"faq.q1": "How does Occasia help me consistently fill rooms and sell out events?",
-				"faq.a1": "We combine dedicated ticketing software with a hands-on growth team. We build custom Meta & Google ad campaigns, execute email & SMS retargeting sequences, and optimize your audience conversion funnel so you fill rooms repeatably.",
-				"faq.q2": "What kind of results have partner organizers achieved with Occasia?",
-				"faq.a2": "Our growth partners have scaled from small gatherings to over 6,000+ attendees per event series, generated over $1M+ in collective ticket revenue, and built recurring community subscriber models with higher profit margins.",
-				"faq.q3": "How quickly can we launch a growth marketing campaign for my next event?",
-				"faq.a3": "Once we align on your event goals during our strategy call, our growth team can have your custom ticketing page, tracking pixels, and managed ad campaigns live in as little as 48 to 72 hours.",
-				"faq.q4": "Who is the Occasia Growth Partner program best suited for?",
-				"faq.a4": "It is built for ambitious event organizers, festival promoters, nightclub venues, and community creators who are serious about scaling their attendance, increasing ticket revenue, and building a loyal recurring audience.",
-				"form.h": "Ready to Grow Your Events?",
-				"form.sub": "Book a strategy call or get started with ticketing infrastructure.",
-				"form.btn": "Book Strategy Call",
-				"form.success": "✓ Thank you! Our team will call you back within the next few hours."
-			},
-			"fr": {
-				"nav.software": "Logiciel",
-				"nav.growth": "Partenaire Croissance",
-				"nav.community": "Communauté",
-				"nav.cases": "Preuves",
-				"nav.openApp": "Ouvrir l'App",
-				"nav.bookCall": "Réserver",
-				"hero.t1": "Nous Vous Aidons à Organiser",
-				"hero.desc": "Occasia fournit la base logicielle et l'équipe marketing de croissance pour vous aider à remplir vos salles et générer des revenus récurrents.",
-				"hero.cta1": "Réserver un Appel",
-				"hero.cta2": "Découvrir Logiciel",
-				"stat.s1Label": "Ventes de Billets Traitées",
-				"stat.s1Sub": "Événements Partenaires",
-				"stat.s2Label": "Participants Totaux",
-				"stat.s2Sub": "Accueillis et Scannés",
-				"stat.s3Label": "Événements Propulsés",
-				"stat.s3Sub": "Locaux et Internationaux",
-				"ladder.sub": "Nos Partenariats",
-				"ladder.title": "Le Moteur en 3 Niveaux",
-				"ladder.desc": "Sélectionnez le niveau de partenariat adapté à vos objectifs.",
-				"l1.title": "Logiciel de Billetterie",
-				"l1.desc": "Application à tarif fixe pour vendre des billets et posséder vos données.",
-				"l1.b1": "Tarif Fixe de 1 $ par Billet",
-				"l1.b2": "CRM Participants 100% Exportable",
-				"l1.b3": "App de Scan Rapide aux Portes",
-				"l1.cta": "Explorer le Logiciel →",
-				"l2.title": "Partenaire Croissance",
-				"l2.desc": "Notre équipe gère vos pubs payantes, marketing social et emails pour remplir vos événements.",
-				"l2.b1": "Gestion Pubs Payantes Meta & Google",
-				"l2.b2": "Séquences Retargeting Email & SMS",
-				"l2.b3": "Promotion et Médias Sociaux",
-				"l2.cta": "Postuler comme Partenaire →",
-				"l3.title": "Stratégie Communautaire",
-				"l3.desc": "Modèle clé en main de croissance communautaire, dîners récurrents et monétisation.",
-				"l3.b1": "Exécution d'Événements & Dîners Récurrents",
-				"l3.b2": "Modèle d'Abonnés & Adhésion",
-				"l3.b3": "Stratégie Communautaire & Partenariats",
-				"l3.cta": "Explorer la Croissance →",
-				"proof.sub": "Résultats Prouvés",
-				"proof.title": "Études de Cas Partenaires",
-				"events.subtitle": "Galerie Événements",
-				"events.title": "Événements Propulsés par Occasia",
-				"events.desc": "Découvrez les événements créés avec la billetterie et les services Occasia.",
-				"events.viewMore": "Voir Plus d'Événements sur l'App Occasia →",
-				"faq.sub": "Croissance & Partenariat",
-				"faq.title": "Foire Aux Questions",
-				"faq.q1": "Comment Occasia m'aide à remplir mes salles et guichets fermés ?",
-				"faq.a1": "Nous combinons notre logiciel de billetterie avec une équipe marketing dédiée. Nous créons vos publicités Meta & Google, vos relances Email/SMS et optimisons votre conversion pour remplir vos événements de manière prévisible.",
-				"faq.q2": "Quels résultats les organisateurs ont-ils obtenus avec Occasia ?",
-				"faq.a2": "Nos partenaires sont passés de petits rassemblements à plus de 6 000+ participants par série d'événements, générant plus de 1M$+ de ventes cumulées et créant des modèles d'abonnements communautaires très rentables.",
-				"faq.q3": "À quelle vitesse pouvons-nous lancer une campagne pour mon prochain événement ?",
-				"faq.a3": "Une fois vos objectifs définis lors de l'appel stratégique, notre équipe peut mettre en ligne votre billetterie personnalisée, vos pixels de suivi et vos campagnes publicitaires en 48 à 72 heures.",
-				"faq.q4": "À qui s'adresse principalement le programme Partenaire Croissance ?",
-				"faq.a4": "Il est conçu pour les organisateurs d'événements ambitieux, promoteurs de festivals, lieux/clubs et créateurs de communautés qui souhaitent augmenter leurs ventes et bâtir une audience fidèle.",
-				"form.h": "Prêt à Développer Vos Événements?",
-				"form.sub": "Réservez un appel stratégique dès aujourd'hui.",
-				"form.btn": "Réserver un Appel",
-				"form.success": "✓ Merci ! Notre équipe vous rappellera rapidement dans les prochaines heures."
-			}
-		};
-
-		function toggleLanguage() {
-			currentLang = currentLang === 'en' ? 'fr' : 'en';
-			const dict = translations[currentLang];
-			document.querySelectorAll('[data-i18n]').forEach((el) => {
-				const key = el.getAttribute('data-i18n');
-				if (dict[key]) el.textContent = dict[key];
-			});
-			document.documentElement.lang = currentLang;
-			document.getElementById('lang-toggle').textContent = currentLang === 'en' ? 'FR' : 'EN';
-			
-			// Reset dynamic rotator word to match language
-			wordIndex = 0;
-			document.getElementById('hero-dynamic-text').textContent = rotatingWords[currentLang][0];
-		}
-
-		function toggleMobileMenu() {
-			const menu = document.getElementById('mobile-menu');
-			const iconOpen = document.getElementById('menu-icon-open');
-			const iconClose = document.getElementById('menu-icon-close');
-			menu.classList.toggle('hidden');
-			iconOpen.classList.toggle('hidden');
-			iconClose.classList.toggle('hidden');
-		}
-
-		async function handleFormSubmit(e) {
+		async function handleStrategyFormSubmit(e) {
 			e.preventDefault();
 			const form = e.target;
-			const submitBtn = document.getElementById('form-submit-btn');
-			const successMsg = document.getElementById('form-success');
+			const submitBtn = document.getElementById('submit-btn');
+			const btnText = document.getElementById('btn-text');
+			const successBox = document.getElementById('form-success');
+			const errorBox = document.getElementById('form-error');
+
+			errorBox.classList.add('hidden');
+			successBox.classList.add('hidden');
 
 			const firstName = form.first_name.value.trim();
 			const lastName = form.last_name.value.trim();
+			const email = form.email.value.trim();
+			const phone = form.phone.value.trim();
+			const companyName = form.company_name.value.trim();
+			const teamSize = form.team_size.value || "";
+			const dealSize = form.deal_size.value || "";
 
-			const formData = {
-				firstName: firstName,
-				lastName: lastName,
+			const payload = {
 				first_name: firstName,
 				last_name: lastName,
 				name: `${firstName} ${lastName}`.trim(),
 				full_name: `${firstName} ${lastName}`.trim(),
-				email: form.email.value.trim(),
-				phone: form.phone.value.trim(),
-				organization: form.organization.value.trim(),
-				service_tier: form.service_tier.value,
+				email: email,
+				phone: phone,
+				company_name: companyName,
+				organization: companyName,
+				team_size: teamSize,
+				deal_size: dealSize,
+				custom_field: {
+					team_size: teamSize,
+					deal_size: dealSize
+				},
+				tags: ["enterprise_strategy_candidate"],
+				tag: "enterprise_strategy_candidate",
+				form_source: "Occasia Homepage Strategy Session",
 				submitted_at: new Date().toISOString()
 			};
 
-			if (GHL_WEBHOOK_URL) {
-				try {
-					submitBtn.disabled = true;
-					submitBtn.textContent = 'Sending...';
+			try {
+				submitBtn.disabled = true;
+				btnText.textContent = "Submitting...";
 
+				if (GHL_WEBHOOK_URL) {
 					await fetch(GHL_WEBHOOK_URL, {
-						method: 'POST',
-						headers: { 'Content-Type': 'application/json' },
-						body: JSON.stringify(formData)
+						method: "POST",
+						headers: { 
+							"Content-Type": "application/json",
+							"Accept": "application/json"
+						},
+						body: JSON.stringify(payload)
 					});
-				} catch (err) {
-					console.error('Webhook error:', err);
-				} finally {
-					submitBtn.disabled = false;
-					submitBtn.textContent = translations[currentLang]["form.btn"];
 				}
+
+				form.reset();
+				successBox.classList.remove('hidden');
+			} catch (err) {
+				console.error("Webhook error:", err);
+				form.reset();
+				successBox.classList.remove('hidden');
+			} finally {
+				submitBtn.disabled = false;
+				btnText.textContent = "Submit Application";
 			}
-
-			successMsg.classList.remove('hidden');
-			form.reset();
 		}
-
-		// Initialize rotator on page load
-		document.addEventListener('DOMContentLoaded', startWordRotator);
 	</script>
 </body>
 
