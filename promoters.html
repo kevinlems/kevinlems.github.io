@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<title>Promoters Meetup • By Occasia</title>
+	<link rel="icon" type="image/png" href="images/logo.png" />
+	<meta name="title" content="Promoters Meetup • By Occasia" />
+	<meta name="description" content="Gathering for the biggest afro, hip-hop and Caribbean event hosts in the scene. Jeudi 8/10 – 19h, 2050 Rue Crescent, Montréal." />
+	<meta name="theme-color" content="#080808" />
+
+	<!-- Open Graph / WhatsApp / iMessage / Instagram / Facebook -->
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://occasia.tech/promoters.html" />
+	<meta property="og:site_name" content="Occasia" />
+	<meta property="og:title" content="Promoters Meetup • By Occasia" />
+	<meta property="og:description" content="Gathering for the biggest afro, hip-hop and Caribbean event hosts in the scene. Jeudi 8/10 – 19h at 2050 Rue Crescent, Montréal." />
+	<meta property="og:image" content="https://occasia.tech/images/promoters-meetup-flyer.jpg" />
+	<meta property="og:image:width" content="819" />
+	<meta property="og:image:height" content="1024" />
+	<meta property="og:image:alt" content="Promoters Meetup By Occasia Flyer" />
+	<meta property="og:locale" content="en_US" />
+
+	<!-- Twitter / X -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:url" content="https://occasia.tech/promoters.html" />
+	<meta name="twitter:title" content="Promoters Meetup • By Occasia" />
+	<meta name="twitter:description" content="Gathering for the biggest afro, hip-hop and Caribbean event hosts in the scene. Jeudi 8/10 – 19h, 2050 Rue Crescent, Montréal." />
+	<meta name="twitter:image" content="https://occasia.tech/images/promoters-meetup-flyer.jpg" />
+
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+	<!-- Meta Pixel Code -->
+	<script>
+	!function(f,b,e,v,n,t,s)
+	{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+	n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+	if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+	n.queue=[];t=b.createElement(e);t.async=!0;
+	t.src=v;s=b.getElementsByTagName(e)[0];
+	s.parentNode.insertBefore(t,s)}(window, document,'script',
+	'https://connect.facebook.net/en_US/fbevents.js');
+	fbq('init', '812172011245358');
+	fbq('track', 'PageView');
+	</script>
+	<noscript><img height="1" width="1" style="display:none"
+	src="https://www.facebook.com/tr?id=812172011245358&ev=PageView&noscript=1"
+	/></noscript>
+	<!-- End Meta Pixel Code -->
+
+	<script>function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement("script");
+	o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,
+	o.onload=function(){window.trackingFunctions.onLoad({appId:"6a744160a370e800201b8b41"})},
+	document.head.appendChild(o)}initApollo();</script>
+	
+	<script src="https://cdn.tailwindcss.com"></script>
+
+	<style>
+		body {
+			font-family: 'Manrope', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+			background-color: #080808;
+			color: #ededed;
+			overflow-x: hidden;
+		}
+
+		.font-display {
+			font-family: 'Sora', sans-serif;
+		}
+
+		.glass-panel {
+			background: rgba(20, 20, 24, 0.7);
+			backdrop-filter: blur(16px);
+			-webkit-backdrop-filter: blur(16px);
+			border: 1px solid rgba(255, 255, 255, 0.08);
+		}
+
+		.glass-panel-glow {
+			background: linear-gradient(180deg, rgba(30, 25, 28, 0.75) 0%, rgba(18, 18, 22, 0.85) 100%);
+			backdrop-filter: blur(20px);
+			-webkit-backdrop-filter: blur(20px);
+			border: 1px solid rgba(225, 29, 72, 0.2);
+			box-shadow: 0 0 40px -10px rgba(225, 29, 72, 0.15);
+		}
+
+		.ambient-glow {
+			position: absolute;
+			width: 480px;
+			height: 480px;
+			border-radius: 50%;
+			background: radial-gradient(circle, rgba(225, 29, 72, 0.18) 0%, rgba(225, 29, 72, 0) 70%);
+			filter: blur(60px);
+			pointer-events: none;
+		}
+
+		.vinyl-badge {
+			display: inline-flex;
+			align-items: center;
+			gap: 0.5rem;
+			padding: 0.35rem 0.85rem;
+			border-radius: 9999px;
+			background: rgba(225, 29, 72, 0.1);
+			border: 1px solid rgba(225, 29, 72, 0.3);
+			color: #fda4af;
+			font-size: 0.75rem;
+			font-weight: 600;
+			letter-spacing: 0.08em;
+			text-transform: uppercase;
+		}
+	</style>
+</head>
+
+<body class="min-h-screen bg-[#080808] text-[#ededed] antialiased selection:bg-rose-950 selection:text-white relative">
+
+	<!-- Header / Navigation -->
+	<header class="fixed top-0 w-full z-50 bg-[#080808]/90 backdrop-blur-md border-b border-neutral-800/80">
+		<div class="max-w-6xl mx-auto px-5 sm:px-8">
+			<div class="flex items-center justify-between h-16 sm:h-20">
+				<!-- Brand Logo -->
+				<a href="/" class="flex items-center gap-2" aria-label="Occasia Home">
+					<span class="font-display text-lg font-bold tracking-tight text-white uppercase">OCCASIA</span>
+					<span class="text-xs text-neutral-500 font-mono">/ Meetup</span>
+				</a>
+
+				<!-- Desktop Nav Links -->
+				<nav class="hidden md:flex items-center gap-7 text-xs font-medium uppercase tracking-widest text-neutral-400">
+					<a href="#about" class="hover:text-white transition-colors">The Gathering</a>
+					<a href="#pillars" class="hover:text-white transition-colors">Topics</a>
+					<a href="#details" class="hover:text-white transition-colors">Location &amp; Time</a>
+				</nav>
+
+				<!-- RSVP Button -->
+				<a href="https://calendar.app.google/3fWmctbUCmc3GxwbA" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-rose-500/40 bg-rose-600/15 hover:bg-rose-600/30 text-rose-200 text-xs font-semibold tracking-wide transition-all shadow-[0_0_15px_rgba(225,29,72,0.2)]">
+					<span>RSVP Now</span>
+					<span aria-hidden="true">&rarr;</span>
+				</a>
+			</div>
+		</div>
+	</header>
+
+	<main class="relative overflow-hidden pt-24 sm:pt-28">
+
+		<!-- Subtle ambient background gradients -->
+		<div class="ambient-glow top-20 -left-40"></div>
+		<div class="ambient-glow top-[40rem] -right-40" style="background: radial-gradient(circle, rgba(99, 102, 241, 0.12) 0%, rgba(99, 102, 241, 0) 70%);"></div>
+
+		<!-- HERO SECTION -->
+		<section class="max-w-6xl mx-auto px-5 sm:px-8 pt-12 pb-16 sm:pt-16 sm:pb-24 border-b border-neutral-800/80 relative">
+			<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+				
+				<!-- Left Column: Copy & Details -->
+				<div class="lg:col-span-7">
+					
+					<!-- Tag / Status Pill -->
+					<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-neutral-900 border border-neutral-800 text-[11px] font-medium uppercase tracking-[0.2em] text-neutral-300 mb-6">
+						<span class="w-2 h-2 rounded-full bg-rose-500 animate-pulse"></span>
+						<span>Private Curated Gathering &bull; Montréal</span>
+					</div>
+
+					<!-- Title -->
+					<h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.04] mb-4">
+						Promoters<br /><span class="text-neutral-400">meetup</span>
+					</h1>
+
+					<!-- By Occasia -->
+					<p class="font-display text-lg sm:text-xl font-semibold text-rose-400 tracking-wide mb-6">
+						By Occasia
+					</p>
+
+					<!-- Tagline from flyer -->
+					<p class="text-base sm:text-xl text-neutral-200 font-light leading-relaxed max-w-xl mb-8">
+						Gathering for the biggest afro, hip-hop, and Caribbean event hosts in the scene.
+					</p>
+
+					<!-- Key Pills from Flyer -->
+					<div class="flex flex-wrap gap-2 sm:gap-2.5 mb-9">
+						<span class="px-3.5 py-1.5 rounded-lg bg-neutral-900/90 border border-neutral-800 text-xs sm:text-sm font-medium text-neutral-300">Networking</span>
+						<span class="px-3.5 py-1.5 rounded-lg bg-neutral-900/90 border border-neutral-800 text-xs sm:text-sm font-medium text-neutral-300">Marketing</span>
+						<span class="px-3.5 py-1.5 rounded-lg bg-neutral-900/90 border border-neutral-800 text-xs sm:text-sm font-medium text-neutral-300">Ads</span>
+						<span class="px-3.5 py-1.5 rounded-lg bg-neutral-900/90 border border-neutral-800 text-xs sm:text-sm font-medium text-neutral-300">Investments</span>
+						<span class="px-3.5 py-1.5 rounded-lg bg-neutral-900/90 border border-neutral-800 text-xs sm:text-sm font-medium text-neutral-300">Growth</span>
+					</div>
+
+					<!-- Essential Date/Time/Location Block -->
+					<div class="glass-panel p-5 sm:p-6 rounded-2xl mb-8 space-y-4">
+						<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+							<!-- Date & Time -->
+							<div class="flex items-start gap-3">
+								<div class="w-9 h-9 rounded-xl bg-neutral-800/80 border border-neutral-700/60 flex items-center justify-center shrink-0 text-rose-400">
+									<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+									</svg>
+								</div>
+								<div>
+									<span class="text-[11px] uppercase tracking-wider text-neutral-500 font-medium block">Date &amp; Heure</span>
+									<strong class="text-white font-semibold text-base">Jeudi 8 Octobre (8/10)</strong>
+									<p class="text-xs text-neutral-400">19h00 (7:00 PM)</p>
+								</div>
+							</div>
+
+							<!-- Venue -->
+							<div class="flex items-start gap-3">
+								<div class="w-9 h-9 rounded-xl bg-neutral-800/80 border border-neutral-700/60 flex items-center justify-center shrink-0 text-rose-400">
+									<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+									</svg>
+								</div>
+								<div>
+									<span class="text-[11px] uppercase tracking-wider text-neutral-500 font-medium block">Lieu / Location</span>
+									<strong class="text-white font-semibold text-base">2050 Rue Crescent</strong>
+									<p class="text-xs text-neutral-400">Montréal, QC H3G 2B8</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="pt-2 border-t border-neutral-800/70 flex flex-wrap items-center justify-between gap-3 text-xs">
+							<a 
+								href="https://maps.google.com/?q=2050+Rue+Crescent,+Montréal,+QC+H3G+2B8" 
+								target="_blank" 
+								rel="noopener noreferrer"
+								class="text-neutral-400 hover:text-white inline-flex items-center gap-1.5 transition-colors"
+							>
+								<span>Ouvrir dans Google Maps</span>
+								<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+								</svg>
+							</a>
+
+							<span class="text-neutral-500 text-[11px]">Downtown Montréal &bull; Métro Guy-Concordia / Peel</span>
+						</div>
+					</div>
+
+					<!-- CTAs -->
+					<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5">
+						<a 
+							href="https://calendar.app.google/3fWmctbUCmc3GxwbA" 
+							target="_blank" 
+							rel="noopener noreferrer"
+							class="inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-white hover:bg-neutral-200 text-black font-bold text-sm tracking-tight transition-all text-center shadow-lg"
+						>
+							Confirmer ma présence (RSVP) &rarr;
+						</a>
+
+						<button 
+							type="button"
+							id="calendar-download-btn"
+							onclick="downloadCalendarFile()"
+							class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full border border-neutral-700 bg-neutral-900/80 hover:bg-neutral-800 text-neutral-300 hover:text-white font-medium text-xs tracking-wide transition-all text-center"
+						>
+							<svg class="w-4 h-4 text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+							</svg>
+							<span>Ajouter au calendrier</span>
+						</button>
+					</div>
+
+					<p class="text-[11px] text-neutral-500 mt-3.5">
+						Événement privé sur invitation uniquement. Places strictement limitées pour privilégier la qualité des échanges.
+					</p>
+
+				</div>
+
+				<!-- Right Column: Flyer Showcase -->
+				<div class="lg:col-span-5 flex justify-center">
+					<div class="relative w-full max-w-sm sm:max-w-md">
+						<!-- Glow backdrop -->
+						<div class="absolute -inset-1 rounded-3xl bg-gradient-to-b from-rose-600/30 to-indigo-600/20 blur-xl opacity-60"></div>
+						
+						<!-- Flyer Container -->
+						<div class="relative rounded-2xl overflow-hidden border border-neutral-700/80 bg-neutral-900 shadow-2xl group">
+							<img 
+								src="images/promoters-meetup-flyer.jpg" 
+								alt="Promoters Meetup By Occasia Flyer" 
+								fetchpriority="high"
+								width="819"
+								height="1024"
+								class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+							/>
+							<div class="p-4 bg-neutral-950/90 border-t border-neutral-800 flex items-center justify-between text-xs">
+								<div class="flex items-center gap-2">
+									<span class="w-2 h-2 rounded-full bg-rose-500"></span>
+									<span class="text-neutral-300 font-medium">Jeudi 8/10 &bull; 19h</span>
+								</div>
+								<span class="text-neutral-500 font-mono text-[11px]">2050 Rue Crescent</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+		<!-- SECTION 2: THE PREMISE (Kevin's Voice) -->
+		<section id="about" class="max-w-6xl mx-auto px-5 sm:px-8 py-16 sm:py-24 border-b border-neutral-800/80">
+			<div class="max-w-3xl">
+				<p class="text-[11px] font-medium uppercase tracking-[0.25em] text-rose-400 mb-3">La Vision</p>
+				<h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-6">
+					Pourquoi ce meetup ?
+				</h2>
+				
+				<div class="space-y-5 text-base sm:text-lg text-neutral-300 font-light leading-relaxed">
+					<p>
+						La plupart des organisateurs et promoteurs à Montréal ne se croisent qu’en coup de vent derrière une cabine de DJ, pendant un soundcheck ou en se disputant les mêmes dates de fin de semaine.
+					</p>
+					<p>
+						On a bâti Occasia pour fournir l’infrastructure technologique derrière les événements (billetterie, scanners, conversion). Mais la tech n’a de valeur que si les personnes qui remplissent les salles grandissent et gagnent.
+					</p>
+					<p>
+						Ce jeudi, on réunit une sélection serrée des promoteurs et organisateurs afro, hip-hop et caribéens les plus actifs de la scène montréalaise. 
+					</p>
+					<p class="text-white font-normal">
+						Pas de discours corpo, pas de pitch pompeux. Juste un verre à la main, des vraies discussions sur nos chiffres, nos coûts d’acquisition et des opportunités concrètes de collaborer.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- SECTION 3: THE 5 PILLARS / TOPICS -->
+		<section id="pillars" class="max-w-6xl mx-auto px-5 sm:px-8 py-16 sm:py-24 border-b border-neutral-800/80">
+			<div class="text-center sm:text-left mb-12">
+				<p class="text-[11px] font-medium uppercase tracking-[0.25em] text-neutral-500 mb-3">Au programme</p>
+				<h2 class="font-display text-3xl sm:text-4xl font-bold tracking-tight text-white">
+					5 sujets au cœur de la soirée
+				</h2>
+				<p class="text-neutral-400 text-sm sm:text-base mt-2 max-w-xl">
+					Les vrais enjeux opérationnels partagés par ceux qui font tourner la culture et les salles à Montréal.
+				</p>
+			</div>
+
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+				
+				<!-- 01 Networking -->
+				<article class="glass-panel p-6 sm:p-7 rounded-2xl flex flex-col justify-between hover:border-neutral-700 transition-colors">
+					<div>
+						<span class="text-rose-400 font-mono text-xs font-semibold block mb-3">01 //</span>
+						<h3 class="font-display text-xl font-bold text-white mb-2">Networking</h3>
+						<p class="text-sm text-neutral-300 font-light leading-relaxed">
+							Échanger directement avec les organisateurs, DJs et responsables de salles qui font bouger la scène. Pas de superficialité, que des gens actifs sur le terrain.
+						</p>
+					</div>
+					<div class="pt-5 mt-4 border-t border-neutral-800/60 text-xs text-neutral-500">
+						Connexions directes &bull; Partenariats
+					</div>
+				</article>
+
+				<!-- 02 Marketing -->
+				<article class="glass-panel p-6 sm:p-7 rounded-2xl flex flex-col justify-between hover:border-neutral-700 transition-colors">
+					<div>
+						<span class="text-rose-400 font-mono text-xs font-semibold block mb-3">02 //</span>
+						<h3 class="font-display text-xl font-bold text-white mb-2">Marketing</h3>
+						<p class="text-sm text-neutral-300 font-light leading-relaxed">
+							Ce qui vend réellement des billets aujourd'hui. Sortir de la dépendance aveugle aux simples stories Instagram et créer du bouche-à-oreille viral et prévisible.
+						</p>
+					</div>
+					<div class="pt-5 mt-4 border-t border-neutral-800/60 text-xs text-neutral-500">
+						Stratégies de lancement &bull; Rétention
+					</div>
+				</article>
+
+				<!-- 03 Ads -->
+				<article class="glass-panel p-6 sm:p-7 rounded-2xl flex flex-col justify-between hover:border-neutral-700 transition-colors">
+					<div>
+						<span class="text-rose-400 font-mono text-xs font-semibold block mb-3">03 //</span>
+						<h3 class="font-display text-xl font-bold text-white mb-2">Ads &amp; Acquisition</h3>
+						<p class="text-sm text-neutral-300 font-light leading-relaxed">
+							Comment rentabiliser son budget publicitaire sur Meta et TikTok. Ciblage local, conversion réelle en billetterie et réduction du coût par billet vendu.
+						</p>
+					</div>
+					<div class="pt-5 mt-4 border-t border-neutral-800/60 text-xs text-neutral-500">
+						Meta Ads &bull; TikTok Ads &bull; ROI mesurable
+					</div>
+				</article>
+
+				<!-- 04 Investments -->
+				<article class="glass-panel p-6 sm:p-7 rounded-2xl flex flex-col justify-between hover:border-neutral-700 transition-colors">
+					<div>
+						<span class="text-rose-400 font-mono text-xs font-semibold block mb-3">04 //</span>
+						<h3 class="font-display text-xl font-bold text-white mb-2">Investments</h3>
+						<p class="text-sm text-neutral-300 font-light leading-relaxed">
+							Financer des plus gros line-ups, négocier avec des marques et des sponsors, et structurer des rachats de salles ou festivals sans mettre en péril sa trésorerie.
+						</p>
+					</div>
+					<div class="pt-5 mt-4 border-t border-neutral-800/60 text-xs text-neutral-500">
+						Sponsors &bull; Trésorerie &bull; Scaling
+					</div>
+				</article>
+
+				<!-- 05 Growth -->
+				<article class="glass-panel p-6 sm:p-7 rounded-2xl flex flex-col justify-between hover:border-neutral-700 transition-colors md:col-span-2 lg:col-span-2">
+					<div>
+						<span class="text-rose-400 font-mono text-xs font-semibold block mb-3">05 //</span>
+						<h3 class="font-display text-xl font-bold text-white mb-2">Growth &amp; Données d'audience</h3>
+						<p class="text-sm text-neutral-300 font-light leading-relaxed">
+							Pourquoi posséder sa liste de numéros et courriels change tout. Arrêter de payer les algorithmes pour reparler aux mêmes personnes qui aiment déjà vos soirées.
+						</p>
+					</div>
+					<div class="pt-5 mt-4 border-t border-neutral-800/60 text-xs text-neutral-500">
+						Propriété des données &bull; Fidélisation durable
+					</div>
+				</article>
+
+			</div>
+		</section>
+
+		<!-- SECTION 4: SCHEDULE / DÉROULEMENT -->
+		<section class="max-w-6xl mx-auto px-5 sm:px-8 py-16 sm:py-24 border-b border-neutral-800/80">
+			<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+				<div class="lg:col-span-4">
+					<p class="text-[11px] font-medium uppercase tracking-[0.25em] text-neutral-500 mb-3">Déroulement</p>
+					<h2 class="font-display text-3xl sm:text-4xl font-bold tracking-tight text-white mb-4">
+						La soirée en bref
+					</h2>
+					<p class="text-sm text-neutral-400 leading-relaxed">
+						Format décontracté et direct. Venez à l'heure pour ne pas manquer les présentations et les premiers échanges.
+					</p>
+				</div>
+
+				<div class="lg:col-span-8 space-y-4">
+					<div class="glass-panel p-5 rounded-xl flex items-start gap-4">
+						<span class="font-mono text-sm font-bold text-rose-400 shrink-0 pt-0.5">19h00</span>
+						<div>
+							<h4 class="font-semibold text-white text-base">Arrivée &amp; Verre de bienvenue</h4>
+							<p class="text-xs text-neutral-400 mt-1">Accueil des invités, tour de table informel et premières discussions.</p>
+						</div>
+					</div>
+
+					<div class="glass-panel p-5 rounded-xl flex items-start gap-4">
+						<span class="font-mono text-sm font-bold text-rose-400 shrink-0 pt-0.5">19h45</span>
+						<div>
+							<h4 class="font-semibold text-white text-base">Mot d'ouverture &amp; État des lieux par Occasia</h4>
+							<p class="text-xs text-neutral-400 mt-1">Aperçu rapide des tendances billetterie, coûts pub et perspectives pour la saison d'automne/hiver à Montréal.</p>
+						</div>
+					</div>
+
+					<div class="glass-panel p-5 rounded-xl flex items-start gap-4">
+						<span class="font-mono text-sm font-bold text-rose-400 shrink-0 pt-0.5">20h15</span>
+						<div>
+							<h4 class="font-semibold text-white text-base">Échanges ouverts &amp; Partage d'expériences</h4>
+							<p class="text-xs text-neutral-400 mt-1">Discussion libre sur les stratégies d'acquisition, partenariats croisés et retours d'expérience concrets.</p>
+						</div>
+					</div>
+
+					<div class="glass-panel p-5 rounded-xl flex items-start gap-4">
+						<span class="font-mono text-sm font-bold text-rose-400 shrink-0 pt-0.5">21h30</span>
+						<div>
+							<h4 class="font-semibold text-white text-base">Musique, Verres &amp; Social</h4>
+							<p class="text-xs text-neutral-400 mt-1">Réseautage libre, bonnes vibes et consolidation des liens.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- SECTION 5: RSVP SECTION -->
+		<section id="rsvp" class="max-w-4xl mx-auto px-5 sm:px-8 py-20 sm:py-28 text-center relative">
+			
+			<div class="glass-panel-glow p-8 sm:p-12 rounded-3xl relative overflow-hidden">
+				
+				<!-- Subtle indicator -->
+				<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-rose-500/10 border border-rose-500/30 text-rose-300 text-xs font-semibold uppercase tracking-wider mb-6">
+					<span>Confirmation requise</span>
+				</div>
+
+				<h2 class="font-display text-3xl sm:text-5xl font-bold tracking-tight text-white mb-4">
+					Réserve ta place
+				</h2>
+
+				<p class="text-neutral-300 text-sm sm:text-base font-light max-w-xl mx-auto mb-8 leading-relaxed">
+					Comme la capacité du lieu est limitée pour garantir un vrai échange entre professionnels, nous te demandons de confirmer ta présence au plus vite.
+				</p>
+
+				<!-- RSVP Action Button (Configurable target) -->
+				<div class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
+					<a 
+						id="main-rsvp-link"
+						href="https://calendar.app.google/3fWmctbUCmc3GxwbA" 
+						target="_blank" 
+						rel="noopener noreferrer"
+						class="w-full sm:w-auto flex-1 inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-white hover:bg-neutral-200 text-black font-bold text-sm tracking-tight transition-all shadow-xl shadow-rose-950/30"
+					>
+						<span>Confirmer mon RSVP</span>
+						<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+						</svg>
+					</a>
+
+					<button 
+						type="button"
+						onclick="copyEventDetails()"
+						id="copy-details-btn"
+						class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-4 rounded-xl border border-neutral-700 bg-neutral-900 hover:bg-neutral-800 text-neutral-300 text-xs font-medium transition-colors"
+					>
+						<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path>
+						</svg>
+						<span id="copy-text">Copier les infos</span>
+					</button>
+				</div>
+
+				<div class="mt-8 pt-6 border-t border-neutral-800/80 flex flex-wrap items-center justify-center gap-6 text-xs text-neutral-400">
+					<div>
+						<span class="text-neutral-500 uppercase tracking-wider text-[10px] block">Date</span>
+						<strong class="text-white font-medium">Jeudi 8 Octobre &bull; 19h</strong>
+					</div>
+					<span class="text-neutral-700">&bull;</span>
+					<div>
+						<span class="text-neutral-500 uppercase tracking-wider text-[10px] block">Lieu</span>
+						<strong class="text-white font-medium">2050 Rue Crescent, Montréal</strong>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+	</main>
+
+	<!-- Footer -->
+	<footer class="border-t border-neutral-800/80 bg-[#080808] py-10 text-xs text-neutral-500">
+		<div class="max-w-6xl mx-auto px-5 sm:px-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
+			<div class="flex items-center gap-2">
+				<span class="font-bold text-white uppercase tracking-tight">OCCASIA</span>
+				<span class="text-neutral-700">&bull;</span>
+				<span>Promoters Meetup</span>
+			</div>
+			
+			<div class="flex items-center gap-6 text-neutral-400">
+				<a href="https://maps.google.com/?q=2050+Rue+Crescent,+Montréal,+QC+H3G+2B8" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Plan d'accès</a>
+				<a href="/" class="hover:text-white transition-colors">Occasia.tech</a>
+			</div>
+
+			<p>&copy; 2026 Occasia. Tous droits réservés.</p>
+		</div>
+	</footer>
+
+	<!-- Logic & Calendar Helper -->
+	<script>
+		/**
+		 * RSVP LINK CONFIGURATION
+		 */
+		const RSVP_LINK = "https://calendar.app.google/3fWmctbUCmc3GxwbA";
+
+		// Set the link target dynamically
+		document.addEventListener('DOMContentLoaded', () => {
+			const linkEl = document.getElementById('main-rsvp-link');
+			if (linkEl && RSVP_LINK && RSVP_LINK !== "https://occasia.tech/promoters.html#rsvp") {
+				linkEl.href = RSVP_LINK;
+				linkEl.target = "_blank";
+				linkEl.rel = "noopener noreferrer";
+			}
+		});
+
+		// 1-Click Copy Event Details
+		function copyEventDetails() {
+			const text = "Promoters Meetup By Occasia\nDate: Jeudi 8 Octobre 2026 à 19h\nLieu: 2050 Rue Crescent, Montréal, QC H3G 2B8\nLien: " + window.location.href;
+			navigator.clipboard.writeText(text).then(() => {
+				const btnText = document.getElementById('copy-text');
+				if (btnText) {
+					btnText.textContent = "Copié !";
+					setTimeout(() => {
+						btnText.textContent = "Copier les infos";
+					}, 2500);
+				}
+			});
+		}
+
+		// Download ICS Calendar event
+		function downloadCalendarFile() {
+			const icsData = [
+				"BEGIN:VCALENDAR",
+				"VERSION:2.0",
+				"PRODID:-//Occasia//Promoters Meetup//EN",
+				"CALSCALE:GREGORIAN",
+				"METHOD:PUBLISH",
+				"BEGIN:VEVENT",
+				"SUMMARY:Promoters Meetup By Occasia",
+				"DESCRIPTION:Gathering for the biggest afro, hip-hop and Caribbean event hosts in the scene. Hosted by Occasia.",
+				"LOCATION:2050 Rue Crescent, Montréal, QC H3G 2B8",
+				"DTSTART:20261008T230000Z",
+				"DTEND:20261009T030000Z",
+				"STATUS:CONFIRMED",
+				"END:VEVENT",
+				"END:VCALENDAR"
+			].join("\r\n");
+
+			const blob = new Blob([icsData], { type: "text/calendar;charset=utf-8" });
+			const link = document.createElement("a");
+			link.href = window.URL.createObjectURL(blob);
+			link.setAttribute("download", "promoters-meetup-occasia.ics");
+			document.body.appendChild(link);
+			link.click();
+			document.body.removeChild(link);
+		}
+	</script>
+
+</body>
+</html>
