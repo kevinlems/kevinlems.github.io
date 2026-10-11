@@ -4,28 +4,34 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-	<title>Occasia</title>
+	<title>Occasia • Event &amp; Ticketing Infrastructure ($1/ticket)</title>
 	<link rel="icon" type="image/png" href="/images/logo.png" />
-	<meta name="title" content="Occasia" />
-	<meta name="description" content="Occasia builds relationships that drive revenue." />
+	<link rel="canonical" href="https://occasia.tech/" />
+	<meta name="title" content="Occasia • Event &amp; Ticketing Infrastructure ($1/ticket)" />
+	<meta name="description" content="Flat $1/ticket pricing, instant payouts, and 100% attendee data ownership for modern event organizers and venues." />
 	<meta name="theme-color" content="#080808" />
 
-	<!-- Open Graph / Twitter -->
+	<!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://occasia.tech/" />
 	<meta property="og:site_name" content="Occasia" />
-	<meta property="og:title" content="Occasia" />
-	<meta property="og:description" content="Occasia builds relationships that drive revenue." />
-	<meta property="og:image" content="https://images.unsplash.com/photo-1528605248644-14dd04022da1?q=80&w=1200&h=630&auto=format&fit=crop" />
+	<meta property="og:title" content="Occasia • Event &amp; Ticketing Infrastructure ($1/ticket)" />
+	<meta property="og:description" content="Flat $1/ticket pricing, instant payouts, and 100% attendee data ownership. Built for nightlife promoters, cultural summits, and business networks." />
+	<meta property="og:image" content="https://occasia.tech/images/hero_dashboard_mockup.jpg" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+
+	<!-- Twitter / X -->
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="Occasia" />
-	<meta name="twitter:description" content="Occasia builds relationships that drive revenue." />
-	<meta name="twitter:image" content="https://images.unsplash.com/photo-1528605248644-14dd04022da1?q=80&w=1200&h=630&auto=format&fit=crop" />
+	<meta name="twitter:url" content="https://occasia.tech/" />
+	<meta name="twitter:title" content="Occasia • Event &amp; Ticketing Infrastructure ($1/ticket)" />
+	<meta name="twitter:description" content="Flat $1/ticket pricing, instant payouts, and 100% attendee data ownership." />
+	<meta name="twitter:image" content="https://occasia.tech/images/hero_dashboard_mockup.jpg" />
 
 	<!-- Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
 	<!-- Meta Pixel Code -->
 	<script>
@@ -45,84 +51,456 @@
 	/></noscript>
 	<!-- End Meta Pixel Code -->
 
+	<!-- Apollo Website Tracker -->
 	<script>function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement("script");
 	o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,
 	o.onload=function(){window.trackingFunctions.onLoad({appId:"6a744160a370e800201b8b41"})},
 	document.head.appendChild(o)}initApollo();</script>
+
+	<!-- Vercel Web Analytics -->
+	<script>
+	window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+	</script>
+	<script defer src="/_vercel/insights/script.js"></script>
 	
 	<script src="https://cdn.tailwindcss.com"></script>
 
 	<style>
 		body {
-			font-family: 'Manrope', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+			font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 			background-color: #080808;
 			color: #ededed;
 			overflow-x: hidden;
 		}
 
 		.font-display {
-			font-family: 'Sora', sans-serif;
-		}
-
-		.route-card {
-			transition: border-color 180ms ease, background-color 180ms ease, transform 180ms ease;
-		}
-
-		.route-card:hover {
-			border-color: rgb(82 82 82);
-			background-color: rgb(23 23 23);
-			transform: translateY(-3px);
-		}
-
-		.route-card:focus-within {
-			border-color: rgb(163 163 163);
+			font-family: 'Space Grotesk', sans-serif;
 		}
 	</style>
 </head>
 
 <body class="min-h-screen bg-[#080808] text-[#ededed] antialiased selection:bg-neutral-800 selection:text-white">
-	<header class="border-b border-neutral-800/80">
-		<div class="max-w-6xl mx-auto px-5 sm:px-8 h-16 sm:h-20 flex items-center">
-			<a href="/" class="font-display text-lg font-bold tracking-tight text-white uppercase" aria-label="Occasia home">Occasia</a>
+
+	<!-- Header / Navigation -->
+	<header class="fixed top-0 w-full z-50 bg-[#080808]/90 backdrop-blur-md border-b border-neutral-800/70">
+		<div class="max-w-6xl mx-auto px-5 sm:px-8">
+			<div class="flex items-center justify-between h-16 sm:h-20">
+				<!-- Brand Logo -->
+				<a href="/" class="flex items-center gap-3">
+					<span class="text-lg font-bold tracking-tight text-white uppercase font-display">OCCASIA</span>
+					<span class="text-neutral-500 font-mono text-xs">/ SOFTWARE</span>
+				</a>
+
+				<!-- Desktop Nav Links -->
+				<nav class="hidden md:flex items-center gap-8 text-xs font-medium uppercase tracking-widest text-neutral-400">
+					<a href="#metrics" class="hover:text-white transition-colors">Traction</a>
+					<a href="#showcase" class="hover:text-white transition-colors">Case Studies</a>
+					<a href="#features" class="hover:text-white transition-colors">Pillars</a>
+					<a href="/contact.html" class="hover:text-white transition-colors">Contact</a>
+				</nav>
+
+				<!-- Right CTA -->
+				<div class="flex items-center gap-4">
+					<a href="https://app.occasia.tech" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-5 py-2 rounded-full border border-neutral-700 bg-neutral-900 hover:bg-neutral-800 text-white text-xs font-medium tracking-wide transition-all">
+						Open App &rarr;
+					</a>
+				</div>
+			</div>
 		</div>
 	</header>
 
-	<main>
-		<section class="max-w-6xl mx-auto px-5 sm:px-8 pt-20 sm:pt-28 pb-12 sm:pb-16">
-			<div class="max-w-3xl">
-				<p class="text-[11px] font-medium uppercase tracking-[0.25em] text-neutral-500 mb-5">Occasia</p>
-				<h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.04]">
-					Occasia builds relationships that drive revenue.
-				</h1>
-			</div>
-		</section>
+	<!-- SECTION 1: HERO -->
+	<section class="relative pt-32 pb-16 sm:pt-40 sm:pb-24 border-b border-neutral-800/80">
+		<div class="max-w-6xl mx-auto px-5 sm:px-8">
+			
+			<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
+				
+				<!-- Left Hero Content -->
+				<div class="lg:col-span-7 text-center lg:text-left">
+					
+					<!-- Architectural Pre-Header -->
+					<div class="flex items-center justify-center lg:justify-start gap-3 mb-5">
+						<span class="w-6 h-[1px] bg-neutral-600"></span>
+						<p class="text-[11px] sm:text-xs font-medium uppercase tracking-[0.25em] text-neutral-400">
+							Ticketing &amp; Audience Infrastructure
+						</p>
+					</div>
 
-		<section aria-label="Choose an Occasia product" class="max-w-6xl mx-auto px-5 sm:px-8 pb-20 sm:pb-28">
-			<div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-				<article class="route-card min-h-[19rem] p-7 sm:p-9 rounded-2xl border border-neutral-800 bg-neutral-900/50 flex flex-col">
-					<p class="text-[11px] font-medium uppercase tracking-[0.2em] text-neutral-500 mb-8">01</p>
-					<h2 class="font-display text-3xl sm:text-4xl font-bold tracking-tight text-white mb-4">B2B Sales</h2>
-					<p class="text-base text-neutral-300 font-light leading-relaxed max-w-md">
-						A relationship-led sales engine that puts you in front of the exact decision-makers you want to reach.
-					</p>
-					<a href="/b2b-sales.html" class="mt-auto pt-10 inline-flex items-center self-start text-sm font-semibold text-white border-b border-neutral-600 hover:border-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-4 focus:ring-offset-[#080808]">
-						See how it works <span aria-hidden="true" class="ml-2">&rarr;</span>
-					</a>
-				</article>
+					<!-- Headline -->
+					<h1 class="font-display text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.06] mb-6">
+						The Ticketing &amp; Audience Infrastructure for Modern Organizers.
+					</h1>
 
-				<article class="route-card min-h-[19rem] p-7 sm:p-9 rounded-2xl border border-neutral-800 bg-neutral-900/50 flex flex-col">
-					<p class="text-[11px] font-medium uppercase tracking-[0.2em] text-neutral-500 mb-8">02</p>
-					<h2 class="font-display text-3xl sm:text-4xl font-bold tracking-tight text-white mb-4">Ticketing &amp; Event Software</h2>
-					<p class="text-base text-neutral-300 font-light leading-relaxed max-w-md">
-						The platform powering RSVP, ticketing, and event operations — for Occasia and beyond.
+					<!-- Sub-Headline -->
+					<p class="text-base sm:text-lg text-neutral-300 font-light leading-relaxed max-w-xl mx-auto lg:mx-0 mb-8">
+						Flat $1/ticket pricing, instant payouts, and 100% attendee data ownership. Built for nightlife promoters, cultural summits, and business networks.
 					</p>
-					<a href="/software.html" class="mt-auto pt-10 inline-flex items-center self-start text-sm font-semibold text-white border-b border-neutral-600 hover:border-white transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-4 focus:ring-offset-[#080808]">
-						Explore the software <span aria-hidden="true" class="ml-2">&rarr;</span>
-					</a>
-				</article>
+
+					<!-- Primary CTAs -->
+					<div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+						<a href="https://app.occasia.tech" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-white hover:bg-neutral-200 text-black font-semibold text-sm tracking-tight transition-all">
+							Open App / Create Event &rarr;
+						</a>
+						<a href="#showcase" class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3.5 rounded-full border border-neutral-700 hover:bg-neutral-900 text-white text-sm font-medium tracking-tight transition-all">
+							View Productions &darr;
+						</a>
+					</div>
+
+				</div>
+
+				<!-- Right Visual: Dashboard Showcase -->
+				<div class="lg:col-span-5">
+					<div class="relative rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-900 shadow-2xl">
+						<img 
+							src="/images/hero_dashboard_mockup.jpg" 
+							alt="Occasia Organizer Dashboard and Scanner App" 
+							class="w-full h-[360px] sm:h-[440px] object-cover" 
+						/>
+						<div class="p-4 bg-neutral-900/95 border-t border-neutral-800 flex items-center justify-between text-xs">
+							<span class="text-neutral-400 font-medium">Flat $1.00 / Ticket Software</span>
+							<span class="text-neutral-500">Live Dashboard</span>
+						</div>
+					</div>
+				</div>
+
 			</div>
-		</section>
-	</main>
+
+		</div>
+	</section>
+
+	<!-- SECTION 2: PLATFORM TRACTION METRICS -->
+	<section id="metrics" class="py-16 sm:py-20 border-b border-neutral-800/80 bg-[#0c0c0c]">
+		<div class="max-w-6xl mx-auto px-5 sm:px-8">
+			
+			<div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center sm:text-left">
+				
+				<div class="p-6 rounded-2xl bg-neutral-900 border border-neutral-800">
+					<div class="font-display text-3xl sm:text-5xl font-bold text-white mb-1">$1M+</div>
+					<p class="text-xs uppercase tracking-wider text-neutral-400 font-medium">Ticket Volume Processed</p>
+				</div>
+
+				<div class="p-6 rounded-2xl bg-neutral-900 border border-neutral-800">
+					<div class="font-display text-3xl sm:text-5xl font-bold text-white mb-1">26,000+</div>
+					<p class="text-xs uppercase tracking-wider text-neutral-400 font-medium">Attendees Checked In</p>
+				</div>
+
+				<div class="p-6 rounded-2xl bg-neutral-900 border border-neutral-800">
+					<div class="font-display text-3xl sm:text-5xl font-bold text-white mb-1">300+</div>
+					<p class="text-xs uppercase tracking-wider text-neutral-400 font-medium">Live Productions Powered</p>
+				</div>
+
+				<div class="p-6 rounded-2xl bg-neutral-900 border border-neutral-800">
+					<div class="font-display text-3xl sm:text-5xl font-bold text-white mb-1">10,000+</div>
+					<p class="text-xs uppercase tracking-wider text-neutral-400 font-medium">Montreal Audience Reach</p>
+				</div>
+
+			</div>
+
+		</div>
+	</section>
+
+	<!-- SECTION 3: FLAGSHIP EVENT & PARTNER SHOWCASE -->
+	<section id="showcase" class="py-20 sm:py-28 border-b border-neutral-800/80">
+		<div class="max-w-6xl mx-auto px-5 sm:px-8">
+			
+			<div class="max-w-3xl mb-16">
+				<div class="flex items-center gap-3 mb-3">
+					<span class="w-6 h-[1px] bg-neutral-600"></span>
+					<p class="text-[11px] font-medium uppercase tracking-[0.25em] text-neutral-400">
+						Case Studies &amp; Proven Formats
+					</p>
+				</div>
+				<h2 class="font-display text-3xl sm:text-5xl font-bold tracking-tight text-white mb-4">
+					Flagship Productions &amp; Partner Ecosystem
+				</h2>
+				<p class="text-base text-neutral-400 font-light">
+					From stadium fan zones to premier nightlife venues and executive summits, Occasia powers Montreal’s top organizers.
+				</p>
+			</div>
+
+			<!-- 3 Flagship Event Case Cards -->
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+				
+				<!-- Case 1: Mondial Foot 26 -->
+				<div class="rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-900 flex flex-col justify-between">
+					<div>
+						<img 
+							src="/images/mondial_foot.jpg" 
+							alt="Mondial Foot 26 Fan Zone" 
+							class="w-full h-52 object-cover" 
+						/>
+						<div class="p-6">
+							<div class="text-xs font-mono text-neutral-400 uppercase tracking-widest mb-1">Large Scale Fan Zone</div>
+							<h3 class="text-xl font-bold text-white mb-2">Mondial Foot 26</h3>
+							<p class="text-sm text-neutral-400 font-light leading-relaxed">
+								6,000+ attendees. Handled full fan zone ticketing, multi-tier QR scanning, giant screen live logistics, and real-time crowd management.
+							</p>
+						</div>
+					</div>
+					<div class="px-6 pb-6 pt-2 text-xs font-mono text-neutral-400">
+						Capacity: 6,000+ &bull; Montreal
+					</div>
+				</div>
+
+				<!-- Case 2: Afro Business Club -->
+				<div class="rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-900 flex flex-col justify-between">
+					<div>
+						<img 
+							src="/images/afro_business_club.jpg" 
+							alt="Afro Business Club Executive Network" 
+							class="w-full h-52 object-cover" 
+						/>
+						<div class="p-6">
+							<div class="text-xs font-mono text-neutral-400 uppercase tracking-widest mb-1">Executive Network</div>
+							<h3 class="text-xl font-bold text-white mb-2">Afro Business Club</h3>
+							<p class="text-sm text-neutral-400 font-light leading-relaxed">
+								1,500+ active members. Member summits, high-level business mixers, and private attendee CRM data capture.
+							</p>
+						</div>
+					</div>
+					<div class="px-6 pb-6 pt-2 text-xs font-mono text-neutral-400">
+						1,500+ Members &bull; Executive Network
+					</div>
+				</div>
+
+				<!-- Case 3: Club Frame & Nightlife -->
+				<div class="rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-900 flex flex-col justify-between">
+					<div>
+						<img 
+							src="/images/club_frame.jpg" 
+							alt="Club Frame Nightlife MTL" 
+							class="w-full h-52 object-cover" 
+						/>
+						<div class="p-6">
+							<div class="text-xs font-mono text-neutral-400 uppercase tracking-widest mb-1">Nightlife &amp; Venues</div>
+							<h3 class="text-xl font-bold text-white mb-2">Club Frame MTL &amp; Venues</h3>
+							<p class="text-sm text-neutral-400 font-light leading-relaxed">
+								Weekly high-volume nightclub productions. Full venue data capture, VIP table ticketing, and sub-second offline door verification.
+							</p>
+						</div>
+					</div>
+					<div class="px-6 pb-6 pt-2 text-xs font-mono text-neutral-400">
+						Nightlife &bull; High Volume Entry
+					</div>
+				</div>
+
+			</div>
+
+			<!-- Featured Productions Header -->
+			<div class="pt-10 pb-6 border-t border-neutral-800 flex items-center justify-between">
+				<div>
+					<p class="text-xs font-mono text-neutral-500 uppercase tracking-widest mb-1">More Live Productions</p>
+					<h3 class="text-xl font-bold text-white">Featured Montreal Productions</h3>
+				</div>
+				<span class="text-xs font-mono text-neutral-500">Live on Occasia</span>
+			</div>
+
+			<!-- 4-Card Featured Productions Grid -->
+			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+				
+				<!-- Sun Day Terrace -->
+				<div class="rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-900 flex flex-col justify-between">
+					<div>
+						<img 
+							src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?q=80&w=800&auto=format&fit=crop" 
+							alt="Sun Day Terrace Outdoor Summer Series" 
+							class="w-full h-44 object-cover" 
+						/>
+						<div class="p-5">
+							<span class="text-[10px] font-mono text-neutral-400 uppercase tracking-widest block mb-1">Open-Air Series</span>
+							<h4 class="text-base font-bold text-white mb-1.5">Sun Day Terrace</h4>
+							<p class="text-xs text-neutral-400 font-light leading-relaxed">
+								Outdoor summer daytime music series, curated terrace vibes, and rapid mobile check-in.
+							</p>
+						</div>
+					</div>
+					<div class="px-5 pb-5 pt-1 text-[11px] font-mono text-neutral-400">
+						Summer Series &bull; MTL
+					</div>
+				</div>
+
+				<!-- F1 Weekend Montreal -->
+				<div class="rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-900 flex flex-col justify-between">
+					<div>
+						<img 
+							src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=800&auto=format&fit=crop" 
+							alt="F1 Weekend Montreal Nightlife" 
+							class="w-full h-44 object-cover" 
+						/>
+						<div class="p-5">
+							<span class="text-[10px] font-mono text-neutral-400 uppercase tracking-widest block mb-1">Grand Prix Hospitality</span>
+							<h4 class="text-base font-bold text-white mb-1.5">F1 Weekend MTL</h4>
+							<p class="text-xs text-neutral-400 font-light leading-relaxed">
+								High-volume nightlife productions, VIP table reservations, and express door access.
+							</p>
+						</div>
+					</div>
+					<div class="px-5 pb-5 pt-1 text-[11px] font-mono text-neutral-400">
+						VIP Hospitality &bull; Downtown
+					</div>
+				</div>
+
+				<!-- Connect & Sip -->
+				<div class="rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-900 flex flex-col justify-between">
+					<div>
+						<img 
+							src="/images/People Sitting on Chairs.jpg" 
+							alt="Connect and Sip Professional Mixer" 
+							class="w-full h-44 object-cover" 
+						/>
+						<div class="p-5">
+							<span class="text-[10px] font-mono text-neutral-400 uppercase tracking-widest block mb-1">Curated Mixer</span>
+							<h4 class="text-base font-bold text-white mb-1.5">Connect &amp; Sip</h4>
+							<p class="text-xs text-neutral-400 font-light leading-relaxed">
+								Intimate networking cocktail series connecting creative directors, founders, and industry leaders.
+							</p>
+						</div>
+					</div>
+					<div class="px-5 pb-5 pt-1 text-[11px] font-mono text-neutral-400">
+						Networking &bull; Private Lounge
+					</div>
+				</div>
+
+				<!-- Afro Connect Summit -->
+				<div class="rounded-2xl overflow-hidden border border-neutral-800 bg-neutral-900 flex flex-col justify-between">
+					<div>
+						<img 
+							src="/images/Audience Speech Speaker.jpg" 
+							alt="Afro Connect Summit Keynote Stage" 
+							class="w-full h-44 object-cover" 
+						/>
+						<div class="p-5">
+							<span class="text-[10px] font-mono text-neutral-400 uppercase tracking-widest block mb-1">Keynote Summit</span>
+							<h4 class="text-base font-bold text-white mb-1.5">Afro Connect Summit</h4>
+							<p class="text-xs text-neutral-400 font-light leading-relaxed">
+								Full-day cultural leadership summit with keynote stages, breakout panels, and badge access.
+							</p>
+						</div>
+					</div>
+					<div class="px-5 pb-5 pt-1 text-[11px] font-mono text-neutral-400">
+						Conference &bull; Keynotes
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</section>
+
+	<!-- SECTION 4: THE 4 CORE ORGANIZER PILLARS -->
+	<section id="features" class="py-20 sm:py-28 border-b border-neutral-800/80 bg-[#0c0c0c]">
+		<div class="max-w-6xl mx-auto px-5 sm:px-8">
+			
+			<div class="max-w-3xl mb-16">
+				<div class="flex items-center gap-3 mb-3">
+					<span class="w-6 h-[1px] bg-neutral-600"></span>
+					<p class="text-[11px] font-medium uppercase tracking-[0.25em] text-neutral-400">
+						Software Architecture
+					</p>
+				</div>
+				<h2 class="font-display text-3xl sm:text-5xl font-bold tracking-tight text-white mb-4">
+					The 4 Core Organizer Pillars
+				</h2>
+				<p class="text-base text-neutral-400 font-light">
+					Engineered to give event producers total control, higher margins, and direct communication channels.
+				</p>
+			</div>
+
+			<!-- 4 Pillars Grid -->
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8 border-t border-neutral-800">
+				
+				<!-- Pillar 1 -->
+				<div class="p-8 rounded-2xl bg-neutral-900 border border-neutral-800">
+					<span class="text-xs font-mono text-neutral-500 mb-3 block">01</span>
+					<h3 class="text-xl font-bold text-white mb-2">Flat $1.00 Fee</h3>
+					<p class="text-sm text-neutral-400 font-light leading-relaxed">
+						Keep your box office revenue. Eliminate traditional 7–10% platform cuts with a single transparent flat rate per paid ticket.
+					</p>
+				</div>
+
+				<!-- Pillar 2 -->
+				<div class="p-8 rounded-2xl bg-neutral-900 border border-neutral-800">
+					<span class="text-xs font-mono text-neutral-500 mb-3 block">02</span>
+					<h3 class="text-xl font-bold text-white mb-2">Audience Ownership</h3>
+					<p class="text-sm text-neutral-400 font-light leading-relaxed">
+						You own 100% of attendee contact data. Export emails, phone numbers, and past purchase history directly to your CRM at any time.
+					</p>
+				</div>
+
+				<!-- Pillar 3 -->
+				<div class="p-8 rounded-2xl bg-neutral-900 border border-neutral-800">
+					<span class="text-xs font-mono text-neutral-500 mb-3 block">03</span>
+					<h3 class="text-xl font-bold text-white mb-2">Sub-Second Door Scanner</h3>
+					<p class="text-sm text-neutral-400 font-light leading-relaxed">
+						High-speed, offline-capable mobile QR scanner built for rapid door entry at clubs, concerts, and stadium gates without bottleneck lines.
+					</p>
+				</div>
+
+				<!-- Pillar 4 -->
+				<div class="p-8 rounded-2xl bg-neutral-900 border border-neutral-800">
+					<span class="text-xs font-mono text-neutral-500 mb-3 block">04</span>
+					<h3 class="text-xl font-bold text-white mb-2">Network Audience Push</h3>
+					<p class="text-sm text-neutral-400 font-light leading-relaxed">
+						Tap into Occasia’s 10,000+ Montreal consumer reach. Featured placement across organic nightlife discovery feeds and targeted email blasts.
+					</p>
+				</div>
+
+			</div>
+
+		</div>
+	</section>
+
+	<!-- SECTION 5: LAUNCH CTA -->
+	<section class="py-20 sm:py-28">
+		<div class="max-w-4xl mx-auto px-5 sm:px-8 text-center">
+			
+			<div class="flex items-center justify-center gap-3 mb-4">
+				<span class="w-6 h-[1px] bg-neutral-600"></span>
+				<p class="text-[11px] font-medium uppercase tracking-[0.25em] text-neutral-400">
+					Get Started
+				</p>
+				<span class="w-6 h-[1px] bg-neutral-600"></span>
+			</div>
+
+			<h2 class="font-display text-3xl sm:text-5xl font-bold tracking-tight text-white mb-6">
+				Ready to Launch Your Next Event?
+			</h2>
+			<p class="text-base text-neutral-300 font-light max-w-xl mx-auto mb-8">
+				Set up your ticketing page in under 3 minutes with flat $1.00 fees, instant Stripe payouts, and full attendee data ownership.
+			</p>
+
+			<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+				<a href="https://app.occasia.tech" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-full bg-white hover:bg-neutral-200 text-black font-semibold text-sm tracking-tight transition-all">
+					Launch Event on App &rarr;
+				</a>
+				<a href="/contact.html" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-full border border-neutral-700 hover:bg-neutral-800 text-white text-sm font-medium tracking-tight transition-all">
+					Contact Our Team &rarr;
+				</a>
+			</div>
+
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="border-t border-neutral-800/80 bg-[#080808] py-10 text-xs text-neutral-500">
+		<div class="max-w-6xl mx-auto px-5 sm:px-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
+			<div class="flex items-center gap-2">
+				<span class="font-semibold text-neutral-300">OCCASIA</span>
+				<span class="text-neutral-700">&bull;</span>
+				<span>Event &amp; Ticketing Infrastructure</span>
+			</div>
+			<div class="flex flex-wrap items-center justify-center gap-6 text-neutral-400">
+				<a href="/" class="hover:text-white transition-colors">Platform</a>
+				<a href="#features" class="hover:text-white transition-colors">Features</a>
+				<a href="#showcase" class="hover:text-white transition-colors">Case Studies</a>
+				<a href="/privacy-policy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+				<a href="/terms-and-conditions.html" class="hover:text-white transition-colors">Terms of Service</a>
+				<a href="/contact.html" class="hover:text-white transition-colors">Contact</a>
+			</div>
+			<p>&copy; 2026 Occasia Event Services. All rights reserved.</p>
+		</div>
+	</footer>
+
 </body>
 
 </html>
